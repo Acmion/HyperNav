@@ -1,0 +1,128 @@
+// Hover color
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+.hn-item:hover
+{
+    color: $hn-item-hover-color;
+    background: $hn-item-hover-bg;
+}
+
+.hn-item.hn-active:hover
+{
+    color: $hn-item-active-hover-color;
+    background: $hn-item-active-hover-bg;
+}
+
+.hn-item.hn-active-child:hover
+{
+    color: $hn-item-active-child-hover-color;
+    background: $hn-item-active-child-hover-bg;
+}
+
+
+// Display
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+@include hn-expand-expanded-hover
+{
+    & > .hn-item
+    {
+        color: $hn-expand-expanded-item-color;
+        background: $hn-expand-expanded-item-bg;
+    }
+
+    & > .hn-item:hover
+    {
+        color: $hn-expand-expanded-item-hover-color;
+        background: $hn-expand-expanded-item-hover-bg;
+    }
+
+    & > .hn-item.hn-active
+    {
+        color: $hn-expand-expanded-item-active-color;
+        background: $hn-expand-expanded-item-active-bg;
+    }
+
+    & > .hn-item.hn-active:hover
+    {
+        color: $hn-expand-expanded-item-active-hover-color;
+        background: $hn-expand-expanded-item-active-hover-bg;
+    }
+
+    & > .hn-item.hn-active-child
+    {
+        color: $hn-expand-expanded-item-active-child-color;
+        background: $hn-expand-expanded-item-active-child-bg;
+    }
+
+    & > .hn-item.hn-active-child:hover
+    {
+        color: $hn-expand-expanded-item-active-child-hover-color;
+        background: $hn-expand-expanded-item-active-child-hover-bg;
+    }
+}
+
+@include hn-expand-expanded-cb
+{
+    & ~ .hn-item
+    {
+        color: $hn-expand-expanded-item-color;
+        background: $hn-expand-expanded-item-bg;
+    }
+
+    & ~ .hn-item:hover
+    {
+        color: $hn-expand-expanded-item-hover-color;
+        background: $hn-expand-expanded-item-hover-bg;
+    }
+
+    & ~ .hn-item.hn-active
+    {
+        color: $hn-expand-expanded-item-active-color;
+        background: $hn-expand-expanded-item-active-bg;
+    }
+
+    & ~ .hn-item.hn-active:hover
+    {
+        color: $hn-expand-expanded-item-active-hover-color;
+        background: $hn-expand-expanded-item-active-hover-bg;
+    }
+
+    & ~ .hn-item.hn-active-child
+    {
+        color: $hn-expand-expanded-item-active-child-color;
+        background: $hn-expand-expanded-item-active-child-bg;
+    }
+
+    & ~ .hn-item.hn-active-child:hover
+    {
+        color: $hn-expand-expanded-item-active-child-hover-color;
+        background: $hn-expand-expanded-item-active-child-hover-bg;
+    }
+}
+
+.hn-expand > .hn-checkbox:checked ~ .hn-overlay
+{
+    display: block;
+}
+
+@include hn-expand-body-expanded
+{
+    display: flex;
+}
+
+@include hn-side-collapsed
+{
+    width: auto;
+
+    & > .hn-section .hn-content
+    {
+        display: none;
+    }
+}

@@ -1,0 +1,29 @@
+@include hn-mode-search-active
+{
+    display: flex;
+
+    & ~ .hn-overlay-mode-search
+    {
+        display: block;
+    }
+}
+
+@include hn-mode-user-active
+{
+    display: flex;
+
+    & ~ .hn-overlay-mode-user
+    {
+        display: block;
+    }
+}
+
+@include hn-mode-extra-active
+{
+    display: flex;
+
+    & ~ .hn-overlay-mode-extra
+    {
+        display: block;
+    }
+}

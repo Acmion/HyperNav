@@ -1,0 +1,78 @@
+@include hn-desktop
+{
+    .hn-top > .hn-checkbox:not(.hn-hide-desktop):checked ~ .hn-nav 
+    {
+        & > .hn-section > .hn-input .hn-input-default
+        {
+            display: none;
+        }
+
+        & > .hn-section > .hn-input .hn-input-active
+        {
+            display: flex;
+        }
+    }
+
+    .hn-expand > .hn-checkbox:not(.hn-hide-desktop):checked ~ .hn-item.hn-input,
+    .hn-expand > .hn-checkbox:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
+    {
+        & .hn-input-default
+        {
+            display: none;
+        }
+
+        & .hn-input-active
+        {
+            display: flex;
+        }
+    }
+}
+
+@include hn-mobile
+{
+    .hn-top > .hn-checkbox:not(.hn-hide-mobile):checked ~ .hn-nav 
+    {
+        & > .hn-section > .hn-input .hn-input-default
+        {
+            display: none;
+        }
+
+        & > .hn-section > .hn-input .hn-input-active
+        {
+            display: flex;
+        }
+    }
+
+    .hn-expand > .hn-checkbox:not(.hn-hide-mobile):checked ~ .hn-item.hn-input,
+    .hn-expand > .hn-checkbox:not(.hn-hide-mobile):checked ~ .hn-item .hn-input
+    {
+        & .hn-input-default
+        {
+            display: none;
+        }
+
+        & .hn-input-active
+        {
+            display: flex;
+        }
+    }
+}
+
+
+.hn-input-default:hover
+{
+    color: $hn-input-hover-color;
+    background: $hn-input-hover-bg;
+}
+
+.hn-input-active:hover
+{
+    color: $hn-input-active-hover-color;
+    background: $hn-input-active-hover-bg;
+}
+
+.hn-icon .hn-input-active:hover,
+.hn-icon .hn-input-default:hover
+{
+    background: transparent;
+}

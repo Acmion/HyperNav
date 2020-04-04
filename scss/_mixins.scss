@@ -1,0 +1,75 @@
+@mixin hn-ie11
+{
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+    {  
+        @content;
+    }
+}
+
+@mixin hn-mobile 
+{
+    @media (max-width: $hn-mobile-breakpoint) 
+    { 
+        @content; 
+    }
+}
+
+@mixin hn-desktop
+{
+    @media (min-width: $hn-desktop-breakpoint)
+    {
+        @content;
+    }
+} 
+
+@mixin hn-expand-expanded-cb
+{
+    .hn-expand:not(.hn-no-click) > .hn-checkbox:checked
+    {
+        @content;
+    }
+
+    @include hn-mobile
+    {
+        .hn-expand.hn-no-click > .hn-checkbox:checked
+        {
+            @content;
+        }
+    }
+}
+
+@mixin hn-expand-expanded-hover
+{
+    @include hn-desktop
+    {
+        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover
+        {
+            @content;
+        }
+    }
+}
+
+@mixin hn-expand-body-expanded
+{
+    .hn-expand:not(.hn-no-click) > .hn-checkbox:checked ~ .hn-expand-body
+    {
+        @content;
+    }
+    
+    @include hn-desktop
+    {
+        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover > .hn-expand-body
+        {
+            @content;
+        }
+    }
+
+    @include hn-mobile
+    {
+        .hn-expand.hn-no-click > .hn-checkbox:checked ~ .hn-expand-body
+        {
+            @content;
+        }
+    }
+}
+

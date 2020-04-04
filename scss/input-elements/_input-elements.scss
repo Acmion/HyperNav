@@ -1,0 +1,47 @@
+.hn-checkbox
+{
+    display: none;
+}
+
+.hn-input
+{
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+}
+
+.hn-item > .hn-input
+{
+    margin-left: auto;
+}
+
+.hn-input-default,
+.hn-input-active
+{
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hn-input-active
+{
+    display: none;
+
+    color: $hn-input-active-color;
+    background: $hn-input-active-bg;
+}
+
+.hn-input-default
+{
+    display: flex;
+
+    color: $hn-input-color;
+    background: $hn-input-bg;
+}
+
+
+.hn-icon .hn-input-active,
+.hn-icon .hn-input-default
+{
+    background: transparent;
+}

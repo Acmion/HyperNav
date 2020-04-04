@@ -1,0 +1,38 @@
+:root
+{
+    --hn-bg: rgba(200, 200, 200, 1.00);
+    --hn-color: rgba(255, 255, 255, 1.00);
+    --hn-expand-body-bg: rgba(200, 200, 200, 1.00);
+
+    --hn-item-bg: rgba(0, 0, 0, 0.10);
+    --hn-item-color: rgba(255, 255, 255, 1.00);
+    --hn-item-hover-bg: rgba(0, 0, 0, 0.20);
+    --hn-item-hover-color: rgba(255, 255, 255, 1.00);
+    
+    --hn-item-active-bg: rgba(0, 0, 0, 0.30);
+    --hn-item-active-color: rgba(255, 255, 255, 1.00);
+    --hn-item-active-hover-bg: rgba(0, 0, 0, 0.40);
+    --hn-item-active-hover-color: rgba(255, 255, 255, 1.00);
+
+    --hn-item-active-child-bg: rgba(0, 0, 0, 0.20);
+    --hn-item-active-child-color: rgba(255, 255, 255, 1.00);
+    --hn-item-active-child-hover-bg: rgba(0, 0, 0, 0.30);
+    --hn-item-active-child-hover-color: rgba(255, 255, 255, 1.00);
+
+    --hn-expand-expanded-item-bg: rgba(0, 0, 0, 0.20);
+    --hn-expand-expanded-item-color: white;
+    --hn-expand-expanded-item-hover-bg: rgba(0, 0, 0, 0.30);
+    --hn-expand-expanded-item-hover-color: white;
+
+    --hn-expand-expanded-item-active-bg: rgba(0, 0, 0, 0.40);
+    --hn-expand-expanded-item-active-color: white;
+    --hn-expand-expanded-item-active-hover-bg: rgba(0, 0, 0, 0.50);
+    --hn-expand-expanded-item-active-hover-color: white;
+
+    --hn-expand-expanded-item-active-child-bg: rgba(0, 0, 0, 0.30);
+    --hn-expand-expanded-item-active-child-color: white;
+    --hn-expand-expanded-item-active-child-hover-bg: rgba(0, 0, 0, 0.40);
+    --hn-expand-expanded-item-active-child-hover-color: white;
+
+    --hn-overlay-bg: rgba(0, 0, 0, 0.40);
+}

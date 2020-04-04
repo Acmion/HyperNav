@@ -1,0 +1,15 @@
+@include hn-side-expanded
+{
+    .hn-hide-expanded
+    {
+        display: none !important;
+    }
+}
+
+@include hn-side-collapsed
+{
+    .hn-hide-collapsed
+    {
+        display: none !important;
+    }
+}

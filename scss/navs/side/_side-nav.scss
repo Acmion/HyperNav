@@ -1,0 +1,113 @@
+.hn-side
+{
+    z-index: $hn-side-z-index;
+}
+
+.hn-side > .hn-nav
+{
+    display: inline-flex;
+    flex-direction: column;
+
+    font-size: $hn-side-font-size;
+
+    & > .hn-section
+    {
+        flex-direction: inherit;
+    }
+
+    & .hn-item
+    {
+        min-height: $hn-side-item-min-height;
+    }
+    
+    & .hn-expand > .hn-item
+    {
+        position: relative;
+    }
+
+    & .hn-expand .hn-input-active,
+    & .hn-expand .hn-input-default
+    {
+        margin: $hn-side-input-margin;
+        padding: $hn-side-input-padding;
+    }
+
+    & .hn-content,
+    & .hn-icon
+    {
+        padding-top: $hn-side-item-spacing-vertical;
+        padding-bottom: $hn-side-item-spacing-vertical;    
+    }
+
+    & .hn-item > .hn-icon,
+    & .hn-link > .hn-icon
+    {
+        padding-left: $hn-side-item-spacing-horizontal;
+        padding-right: $hn-side-item-spacing-horizontal;
+    }
+
+    & .hn-item > .hn-content,
+    & .hn-link > .hn-content
+    {
+        padding-left: $hn-top-item-spacing-horizontal;
+        padding-right: $hn-side-item-spacing-horizontal;
+    }
+
+    & .hn-link > .hn-icon + .hn-content,
+    & .hn-item > .hn-icon + .hn-content
+    {
+        padding-left: 0;
+    }
+
+    @include hn-ie11
+    {
+        & .hn-link
+        {
+            flex: 1;
+        }
+
+        & .hn-content
+        {
+            flex: 1;
+        }
+    }
+}
+
+@include hn-side-expanded
+{
+    width: $hn-side-width;
+
+    & ~ .hn-overlay-nav
+    {
+        display: block;
+    }
+}
+
+@include hn-side-collapsed 
+{
+    & .hn-expand .hn-item .hn-input
+    {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+    }
+
+    & .hn-expand .hn-input .hn-input-default,
+    & .hn-expand .hn-input .hn-input-active
+    {
+        top: 0;
+        right: 0;
+        position: absolute;
+
+        width: $hn-side-collapsed-input-size;
+        height: $hn-side-collapsed-input-size;
+        font-size: $hn-side-collapsed-input-size;
+        
+        margin: $hn-side-collapsed-input-margin;
+        padding: $hn-side-collapsed-input-padding;
+    }
+}
+

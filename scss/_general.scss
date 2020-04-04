@@ -1,0 +1,251 @@
+// Depth 0
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+.hyper-nav
+{
+    position: relative;
+    display: inline-flex;
+    box-sizing: border-box;
+
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+
+    color: $hn-color;
+    background: $hn-bg;
+
+    & *
+    {
+        box-sizing: border-box;
+    }
+}
+
+.hn-full-width
+{
+    width: 100%;
+}
+
+.hn-fixed
+{
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.hn-nav
+{
+    width: 100%;
+    display: flex;
+    z-index: $hn-nav-z-index;
+}
+
+// Depth 1
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+.hn-section,
+.hn-section-end
+{
+    flex-shrink: 0;
+    display: flex;
+    align-items: stretch;
+    background: $hn-bg;
+}
+
+.hn-section-body
+{
+    flex-grow: 1;
+}
+
+.hn-section-end
+{
+    flex-grow: 1;
+    flex-direction: inherit;
+    justify-content: flex-end;
+}
+
+.hn-overlay
+{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+
+    z-index: $hn-overlay-z-index;
+    background: $hn-overlay-bg;
+}
+
+.hn-overlay-transparent
+{
+    background: transparent;
+}
+
+// Depth 2
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+.hn-item
+{
+    cursor: pointer;
+
+    flex-shrink: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+
+    background: $hn-item-bg;
+}
+
+.hn-item
+{
+    color: $hn-item-color;
+}
+
+.hn-item.hn-active
+{
+    color: $hn-item-active-color;
+    background: $hn-item-active-bg;
+}
+
+.hn-item.hn-active-child
+{
+    color: $hn-item-active-child-color;
+    background: $hn-item-active-child-bg;
+}
+
+
+.hn-spacer
+{
+    flex: 1;
+}
+
+.hn-expand
+{
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    position: relative;
+    flex-direction: column;
+
+    & > .hn-item
+    {
+        flex-grow: 1;
+    }
+}
+
+// Depth 2
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+.hn-expand-body
+{
+    min-width: 100%;
+    display: none;
+    flex-direction: inherit;
+    background: $hn-expand-body-bg;
+    z-index: $hn-overlay-z-index + 1;
+}
+
+// Depth X
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+// ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+.hn-menu
+{
+    align-items: center;
+
+    &.hn-menu-right
+    {
+        order: 999999;
+        margin-left: auto;
+    }
+
+}
+
+.hn-link,
+.hn-icon,
+.hn-content
+{
+    display: flex;
+    align-items: center;
+}
+
+.hn-icon
+{
+    flex-shrink: 0;
+}
+
+.hn-content
+{
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hn-content::after 
+{
+    // Bold text displacement fix
+    height: 0;
+    content: attr(data-hn-content);
+    font-weight: bold;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.hn-link
+{
+    flex: 1;
+    color: inherit;
+
+    &:hover
+    {
+        color: inherit;
+    }
+
+    @include hn-ie11
+    {
+        flex: 0 0 auto;
+    }
+}
+
+@include hn-desktop
+{
+    .hn-hide-desktop
+    {
+        display: none !important;
+    }
+}
+
+@include hn-mobile
+{
+    .hn-hide-mobile
+    {
+        display: none !important;
+    }    
+    
+}
+
+
+
+
+
+

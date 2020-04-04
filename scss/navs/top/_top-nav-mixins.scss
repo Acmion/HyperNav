@@ -1,0 +1,21 @@
+@mixin hn-top-expanded
+{
+    @include hn-mobile
+    {
+        .hyper-nav.hn-top > .hn-checkbox-nav:not(.hn-hide-mobile):checked ~ .hn-nav
+        {
+            @content;
+        }
+    }
+}
+
+@mixin hn-top-collapsed
+{
+    @include hn-mobile
+    {
+        .hyper-nav.hn-top > .hn-checkbox-nav:not(.hn-hide-mobile):not(:checked) ~ .hn-nav
+        {
+            @content;
+        }
+    }
+}

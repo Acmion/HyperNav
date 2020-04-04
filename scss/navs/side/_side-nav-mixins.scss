@@ -1,0 +1,36 @@
+@mixin hn-side-expanded 
+{
+    @include hn-mobile
+    {
+        .hyper-nav.hn-side > .hn-checkbox-nav:not(.hn-hide-mobile):checked ~ .hn-nav
+        {
+            @content;
+        }
+    }
+    
+    @include hn-desktop
+    {
+        .hyper-nav.hn-side > .hn-checkbox-nav:not(.hn-hide-desktop):checked ~ .hn-nav
+        {
+            @content;
+        }
+    }
+}
+
+@mixin hn-side-collapsed 
+{
+    @include hn-mobile
+    {
+        .hyper-nav.hn-side > .hn-checkbox-nav:not(.hn-hide-mobile):not(:checked) ~ .hn-nav
+        {
+            @content;
+        } 
+    }
+    @include hn-desktop
+    {
+        .hyper-nav.hn-side > .hn-checkbox-nav:not(.hn-hide-desktop):not(:checked) ~ .hn-nav
+        {
+            @content;
+        } 
+    }
+}

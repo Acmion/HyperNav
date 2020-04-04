@@ -1,0 +1,51 @@
+.hn-side-container
+{
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    position: absolute;
+    z-index: $hn-side-container-z-index;
+
+    & > .hyper-nav
+    {
+        height: 100%;
+        display: none;
+        width: $hn-side-width;
+        z-index: $hn-side-container-nav-z-index;
+    }
+
+    & .hn-overlay-side-container
+    {
+        z-index: $hn-side-container-overlay-z-index;
+    }
+}
+
+.hn-side-container-right
+{
+    right: 0;
+    left: unset;
+}
+
+.hn-side-container-top-offset
+{
+    top: $hn-top-height;
+    height: calc(100% - #{$hn-top-height});
+    z-index: $hn-side-container-top-offset-z-index;
+}
+
+.hn-side-container-fixed
+{
+    position: fixed;
+}
+
+
+.hn-checkbox-side-container:checked ~ .hyper-nav
+{
+    display: block;
+}
+
+.hn-checkbox-side-container:checked ~ .hn-overlay-side-container
+{
+    display: block;
+}
