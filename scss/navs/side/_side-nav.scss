@@ -26,7 +26,9 @@
     }
 
     & .hn-expand .hn-input-active,
-    & .hn-expand .hn-input-default
+    & .hn-expand .hn-input-default,
+    & .hn-align-input .hn-input-active,
+    & .hn-align-input .hn-input-default
     {
         margin: $hn-side-input-margin;
         padding: $hn-side-input-padding;
