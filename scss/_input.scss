@@ -4,7 +4,7 @@
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
-.hn-item:hover
+.hn-item:not(hn-item-disabled):hover
 {
     color: $hn-item-hover-color;
     background: $hn-item-hover-bg;
@@ -37,7 +37,7 @@
         background: $hn-expand-expanded-item-bg;
     }
 
-    & > .hn-item:hover
+    & > .hn-item:not(hn-item-disabled):hover
     {
         color: $hn-expand-expanded-item-hover-color;
         background: $hn-expand-expanded-item-hover-bg;
@@ -76,7 +76,7 @@
         background: $hn-expand-expanded-item-bg;
     }
 
-    & ~ .hn-item:hover
+    & ~ .hn-item:not(hn-item-disabled):hover
     {
         color: $hn-expand-expanded-item-hover-color;
         background: $hn-expand-expanded-item-hover-bg;
