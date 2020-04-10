@@ -126,6 +126,10 @@
     background: $hn-item-active-child-bg;
 }
 
+.hn-item-disabled
+{
+    cursor: default;
+}
 
 .hn-spacer
 {
