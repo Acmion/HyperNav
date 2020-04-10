@@ -4,4 +4,18 @@
     {
         display: flex;
     }
+
+    .hn-input-state-mode-#{$i}:checked ~ .hn-nav
+    {
+        & .hn-input-mode-#{$i} .hn-input-default
+        {
+            display: none;
+        }
+
+        & .hn-input-mode-#{$i} .hn-input-active
+        {
+            display: flex;
+        }
+    }
+    
 }

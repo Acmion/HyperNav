@@ -57,10 +57,10 @@
             border: $hn-top-desktop-expand-body-border;
             background: $hn-top-desktop-expand-body-bg;
         }
-        
+
         & > .hn-nav .hn-expand-body
         {
-            box-shadow: 0 3px 5px black;
+            box-shadow: $hn-top-desktop-expand-body-shadow;
         }
         & .hn-expand.hn-expand-left > .hn-expand-body
         {
