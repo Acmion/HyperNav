@@ -13,8 +13,8 @@
         }
     }
 
-    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item.hn-input,
-    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
+    .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item.hn-input,
+    .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
     {
         & .hn-input-default
         {
@@ -43,8 +43,8 @@
         }
     }
 
-    .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked ~ .hn-item.hn-input,
-    .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked ~ .hn-item .hn-input
+    .hn-input-state:not(.hn-hide-mobile):checked ~ .hn-item.hn-input,
+    .hn-input-state:not(.hn-hide-mobile):checked ~ .hn-item .hn-input
     {
         & .hn-input-default
         {
