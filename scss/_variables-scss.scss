@@ -14,6 +14,7 @@ $hn-side-container-top-offset-z-index: $hn-top-z-index - 1;
 $hn-side-container-nav-z-index: $hn-side-container-z-index + 1;
 $hn-side-container-overlay-z-index: $hn-side-container-z-index - 1;
 
+$hn-mode-count: 4;
 $hn-nesting-max-depth: 3;
 
 $hn-bg: var(--hn-bg);

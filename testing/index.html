@@ -30,49 +30,33 @@
 <body style="position: relative; overflow-y: scroll;">
 
     <nav class="hyper-nav hn-top hn-top-shadow" id="hnh">
-        <input type="checkbox" class="hn-checkbox hn-checkbox-nav hn-hide-mobile" id="cb">
-        <input type="checkbox" class="hn-checkbox hn-checkbox-nav hn-hide-desktop" id="mcb">
-        <input type="checkbox" class="hn-checkbox hn-checkbox-search" id="scb">
-        <input type="checkbox" class="hn-checkbox hn-checkbox-user" id="ucb">
-        <input type="checkbox" class="hn-checkbox hn-checkbox-extra" id="ecb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="mcb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-0" id="scb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-1" id="ucb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-2" id="ecb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-none" id="none">
 
         <div class="hn-nav">
             <div class="hn-section hn-section-brand">
-                <label for="cb" class="hn-item hn-input hn-hide-mobile">
-                    <span class="hn-icon">
-                        <span class="hn-input-default">
-                            <i class="ri-menu-line"></i>
-                        </span>
-                        <span class="hn-input-active">
-                            <i class="ri-close-line"></i>
-                        </span>
-                    </span>
-                </label>
 
-                <label for="mcb" class="hn-item hn-input hn-hide-desktop">
-                    <span class="hn-icon">
-                        <span class="hn-input-default">
-                            <i class="ri-menu-line"></i>
-                        </span>
-                        <span class="hn-input-active">
-                            <i class="ri-close-line"></i>
-                        </span>
-                    </span>
-                </label>
+                <div class="hn-item hn-input hn-input-nav hn-hide-desktop">
+                    <label class="hn-icon hn-input-default" for="mcb">
+                        <i class="ri-menu-line"></i>
+                    </label>
+                    <label class="hn-icon hn-input-active" for="none">
+                        <i class="ri-close-line"></i>
+                    </label>
+                </div>
 
-                <label for="sccb" class="hn-item hn-input ">
+                <label for="sccb" class="hn-item hn-input">
                     <span class="hn-icon">
-                        <span class="hn-input-default hn-input-active">
-                            <i class="ri-side-bar-line"></i>
-                        </span>
+                        <i class="ri-side-bar-line"></i>
                     </span>
                 </label>
 
                 <label for="ssccb" class="hn-item hn-input ">
                     <span class="hn-icon">
-                        <span class="hn-input-default hn-input-active">
-                            <i class="ri-side-bar-line"></i>
-                        </span>
+                        <i class="ri-side-bar-line"></i>
                     </span>
                 </label>
 
@@ -166,7 +150,7 @@
                 </a>
 
                 <div class="hn-expand hn-no-hover hn-expand-mega">
-                    <input type="checkbox" class="hn-checkbox" id="cb1">
+                    <input type="checkbox" class="hn-input-state" id="cb1">
 
                     <label class="hn-item hn-input" for="cb1">
                         <i class="hn-icon fas fa-user">
@@ -207,7 +191,7 @@
                 </div>
 
                 <div class="hn-expand hn-expand-left">
-                    <input type="checkbox" class="hn-checkbox" id="cb111">
+                    <input type="checkbox" class="hn-input-state" id="cb111">
 
                     <label class="hn-item hn-input" for="cb111">
                         <i class="hn-icon fas fa-user">
@@ -244,7 +228,7 @@
                 </div>
 
                 <div class="hn-expand hn-no-hover-off hn-expand-center">
-                    <input type="checkbox" class="hn-checkbox" id="cb3">
+                    <input type="checkbox" class="hn-input-state" id="cb3">
 
                     <div class="hn-item">
                         <a class="hn-link">
@@ -282,7 +266,7 @@
                             </div>
                         </a>
                         <div class="hn-expand hn-expand-left hn-no-hover">
-                            <input type="checkbox" class="hn-checkbox" id="cb4">
+                            <input type="checkbox" class="hn-input-state" id="cb4">
 
                             <div class="hn-item hn-active">
                                 <a class="hn-link">
@@ -325,7 +309,7 @@
                         </div>
 
                         <div class="hn-expand">
-                            <input type="checkbox" class="hn-checkbox" id="cb456">
+                            <input type="checkbox" class="hn-input-state" id="cb456">
 
                             <div class="hn-item hn-active">
                                 <a class="hn-link">
@@ -384,7 +368,7 @@
             </div>
         </div>
 
-        <div class="hn-mode hn-mode-search">
+        <div class="hn-mode hn-mode-0">
             <div class="hn-mode-top hn-nav">
                 <div class="hn-section hn-section-brand">
                     <a class="hn-item">
@@ -409,7 +393,7 @@
             <div class="hn-mode-content hn-nav">
                 <div class="hn-section hn-section-body">
                     <div class="hn-expand hn-no-hover hn-expand-mega">
-                        <input type="checkbox" class="hn-checkbox" id="cb555">
+                        <input type="checkbox" class="hn-input-state" id="cb555">
 
                         <label class="hn-item hn-input" for="cb555">
                             <i class="hn-icon fas fa-user">
@@ -441,7 +425,7 @@
                                 </div>
                             </a>
                             <div class="hn-expand ">
-                                <input type="checkbox" class="hn-checkbox" id="cb5555">
+                                <input type="checkbox" class="hn-input-state" id="cb5555">
 
                                 <label class="hn-item hn-input" for="cb5555">
                                     <i class="hn-icon fas fa-user">
@@ -481,42 +465,22 @@
             </div>
         </div>
 
-        <div class="hn-mode hn-mode-user">
+
+        <div class="hn-mode hn-mode-1">
 
         </div>
 
-        <div class="hn-mode hn-mode-extra">
+        <div class="hn-mode hn-mode-2">
 
         </div>
 
-        <!--
-        <div class="hn-search">
-            <input type="search" class="hn-search-box">
-            <input type="submit" class="hn-search-button" id="search-btn">
-            <label for="scb">
-                <i class="fas fa-search fa-3x"></i>
-            </label>
-        </div>
-        -->
-        <label for="cb" class="hn-overlay hn-overlay-nav hn-hide-mobile">
-        </label>
-
-        <label for="mcb" class="hn-overlay hn-overlay-nav hn-hide-desktop">
-        </label>
-
-        <label for="scb" class="hn-overlay hn-overlay-mode-search">
-        </label>
-
-        <label for="ucb" class="hn-overlay hn-overlay-mode-user">
-        </label>
-
-        <label for="ecb" class="hn-overlay hn-overlay-mode-extra">
+        <label for="none" class="hn-overlay">
         </label>
 
     </nav>
 
     <div class="hn-side-container">
-        <input type="checkbox" class="hn-checkbox hn-checkbox-side-container" id="sccb">
+        <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="sccb">
 
         <nav class="hyper-nav hn-side">
             <div class="hn-nav" for="null-hnv">
@@ -567,7 +531,7 @@
                     </a>
 
                     <div class="hn-expand hn-no-hover hn-expand-mega" for="null-hnv">
-                        <input type="checkbox" class="hn-checkbox" id="cb1-hnv" for="null-hnv">
+                        <input type="checkbox" class="hn-input-state" id="cb1-hnv" for="null-hnv">
 
                         <label class="hn-item hn-input" for="cb1-hnv">
                             <i class="hn-icon fas fa-user" for="null-hnv">
@@ -608,7 +572,7 @@
                     </div>
 
                     <div class="hn-expand hn-no-hover-off hn-expand-center" for="null-hnv">
-                        <input type="checkbox" class="hn-checkbox" id="cb3-hnv" for="null-hnv">
+                        <input type="checkbox" class="hn-input-state" id="cb3-hnv" for="null-hnv">
 
                         <div class="hn-item" for="null-hnv">
                             <a class="hn-link" for="null-hnv">
@@ -646,7 +610,7 @@
                                 </div>
                             </a>
                             <div class="hn-expand hn-expand-left hn-no-hover" for="null-hnv">
-                                <input type="checkbox" class="hn-checkbox" id="cb4-hnv" for="null-hnv">
+                                <input type="checkbox" class="hn-input-state" id="cb4-hnv" for="null-hnv">
 
                                 <div class="hn-item hn-active" for="null-hnv">
                                     <a class="hn-link" for="null-hnv">
@@ -703,7 +667,7 @@
     </div>
 
     <div class="hn-side-container hn-side-container-top-offset">
-        <input type="checkbox" class="hn-checkbox hn-checkbox-side-container" id="ssccb">
+        <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="ssccb">
 
         <nav class="hyper-nav hn-side">
             <div class="hn-nav">

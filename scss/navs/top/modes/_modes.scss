@@ -6,7 +6,6 @@
     position: absolute;
     flex-wrap: wrap;
 
-    min-height: $hn-top-height;
     z-index: $hn-mode-z-index;
 }
 
@@ -18,7 +17,7 @@
 .hn-mode-top
 {
     width: 100%;
-    height: 100%;
+    height: $hn-top-height;
 
     top: 0;
     left: 0;
@@ -31,7 +30,7 @@
 {
     width: 100%;
 
-    top: 100%;
+    top: $hn-top-height;
     left: 0;
     z-index: 0;
 

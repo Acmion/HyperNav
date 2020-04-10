@@ -40,12 +40,12 @@
 }
 
 
-.hn-checkbox-side-container:checked ~ .hyper-nav
+.hn-input-state-side-container:checked ~ .hyper-nav
 {
     display: block;
 }
 
-.hn-checkbox-side-container:checked ~ .hn-overlay-side-container
+.hn-input-state-side-container:checked ~ .hn-overlay-side-container
 {
     display: block;
 }

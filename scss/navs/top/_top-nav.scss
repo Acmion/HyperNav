@@ -48,16 +48,20 @@
             position: static;
             width: 100%;
         }
-
-        @include hn-desktop
-        {
-            border: $hn-top-desktop-expand-body-border;
-            background: $hn-top-desktop-expand-body-bg;
-        }
     }
 
     @include hn-desktop
     {
+        & > .hn-nav .hn-expand > .hn-expand-body
+        {
+            border: $hn-top-desktop-expand-body-border;
+            background: $hn-top-desktop-expand-body-bg;
+        }
+        
+        & > .hn-nav .hn-expand-body
+        {
+            box-shadow: 0 3px 5px black;
+        }
         & .hn-expand.hn-expand-left > .hn-expand-body
         {
             left: -100%;
@@ -148,11 +152,6 @@
     & .hn-hide-expanded
     {
         display: none !important;
-    }
-
-    & ~ .hn-overlay-nav
-    {
-        display: block;
     }
 }
 

@@ -1,29 +1,7 @@
-@include hn-mode-search-active
+@for $i from 0 through $hn-mode-count - 1
 {
-    display: flex;
-
-    & ~ .hn-overlay-mode-search
+    .hn-input-state-mode-#{$i}:checked ~ .hn-mode-#{$i}
     {
-        display: block;
-    }
-}
-
-@include hn-mode-user-active
-{
-    display: flex;
-
-    & ~ .hn-overlay-mode-user
-    {
-        display: block;
-    }
-}
-
-@include hn-mode-extra-active
-{
-    display: flex;
-
-    & ~ .hn-overlay-mode-extra
-    {
-        display: block;
+        display: flex;
     }
 }

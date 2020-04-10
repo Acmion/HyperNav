@@ -24,14 +24,14 @@
 
 @mixin hn-expand-expanded-cb
 {
-    .hn-expand:not(.hn-no-click) > .hn-checkbox:checked
+    .hn-expand:not(.hn-no-click) > .hn-input-state:checked
     {
         @content;
     }
 
     @include hn-mobile
     {
-        .hn-expand.hn-no-click > .hn-checkbox:checked
+        .hn-expand.hn-no-click > .hn-input-state:checked
         {
             @content;
         }
@@ -51,7 +51,7 @@
 
 @mixin hn-expand-body-expanded
 {
-    .hn-expand:not(.hn-no-click) > .hn-checkbox:checked ~ .hn-expand-body
+    .hn-expand:not(.hn-no-click) > .hn-input-state:checked ~ .hn-expand-body
     {
         @content;
     }
@@ -66,7 +66,7 @@
 
     @include hn-mobile
     {
-        .hn-expand.hn-no-click > .hn-checkbox:checked ~ .hn-expand-body
+        .hn-expand.hn-no-click > .hn-input-state:checked ~ .hn-expand-body
         {
             @content;
         }

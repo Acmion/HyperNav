@@ -76,11 +76,6 @@
 @include hn-side-expanded
 {
     width: $hn-side-width;
-
-    & ~ .hn-overlay-nav
-    {
-        display: block;
-    }
 }
 
 @include hn-side-collapsed 

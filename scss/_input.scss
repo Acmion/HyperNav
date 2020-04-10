@@ -107,11 +107,6 @@
     }
 }
 
-.hn-expand > .hn-checkbox:checked ~ .hn-overlay
-{
-    display: block;
-}
-
 @include hn-expand-body-expanded
 {
     display: flex;

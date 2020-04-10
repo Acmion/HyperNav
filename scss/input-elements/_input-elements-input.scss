@@ -1,20 +1,20 @@
 @include hn-desktop
 {
-    .hn-top > .hn-checkbox:not(.hn-hide-desktop):checked ~ .hn-nav 
+    .hn-top > .hn-input-state-nav:not(.hn-hide-desktop):checked ~ .hn-nav 
     {
-        & > .hn-section > .hn-input .hn-input-default
+        & .hn-input-nav .hn-input-default
         {
             display: none;
         }
 
-        & > .hn-section > .hn-input .hn-input-active
+        & .hn-input-nav .hn-input-active
         {
             display: flex;
         }
     }
 
-    .hn-expand > .hn-checkbox:not(.hn-hide-desktop):checked ~ .hn-item.hn-input,
-    .hn-expand > .hn-checkbox:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
+    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item.hn-input,
+    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
     {
         & .hn-input-default
         {
@@ -30,21 +30,21 @@
 
 @include hn-mobile
 {
-    .hn-top > .hn-checkbox:not(.hn-hide-mobile):checked ~ .hn-nav 
+    .hn-top > .hn-input-state-nav:not(.hn-hide-mobile):checked ~ .hn-nav 
     {
-        & > .hn-section > .hn-input .hn-input-default
+        & .hn-input-nav .hn-input-default
         {
             display: none;
         }
 
-        & > .hn-section > .hn-input .hn-input-active
+        & .hn-input-nav .hn-input-active
         {
             display: flex;
         }
     }
 
-    .hn-expand > .hn-checkbox:not(.hn-hide-mobile):checked ~ .hn-item.hn-input,
-    .hn-expand > .hn-checkbox:not(.hn-hide-mobile):checked ~ .hn-item .hn-input
+    .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked ~ .hn-item.hn-input,
+    .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked ~ .hn-item .hn-input
     {
         & .hn-input-default
         {
@@ -59,13 +59,13 @@
 }
 
 
-.hn-input-default:hover
+.hn-input-default:not(.hn-icon):hover
 {
     color: $hn-input-hover-color;
     background: $hn-input-hover-bg;
 }
 
-.hn-input-active:hover
+.hn-input-active:not(.hn-icon):hover
 {
     color: $hn-input-active-hover-color;
     background: $hn-input-active-hover-bg;
@@ -75,4 +75,9 @@
 .hn-icon .hn-input-default:hover
 {
     background: transparent;
+}
+
+.hn-input-state:not(.hn-input-state-none):checked ~ .hn-overlay
+{
+    display: block;
 }
