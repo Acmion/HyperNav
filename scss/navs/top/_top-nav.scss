@@ -125,6 +125,21 @@
     }
 }
 
+@include hn-desktop
+{
+    // Align items center only for desktop and in
+    // the top bar.
+    .hn-top .hn-content
+    {
+        align-items: center;
+    }
+
+    .hn-top .hn-expand-body .hn-content
+    {
+        align-items: flex-start;
+    }
+}
+
 @include hn-mobile
 {
     .hn-top > .hn-nav
@@ -145,6 +160,8 @@
             max-height: calc(100vh - #{$hn-top-height});
         }
     }
+
+    
 }
 
 @include hn-top-expanded
