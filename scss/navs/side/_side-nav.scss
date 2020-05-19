@@ -34,6 +34,11 @@
         padding: $hn-side-input-padding;
     }
 
+    & .hn-icon
+    {
+        width: $hn-side-icon-width;
+    }
+
     & .hn-content,
     & .hn-icon
     {
@@ -101,10 +106,13 @@
 
         width: $hn-side-collapsed-input-size;
         height: $hn-side-collapsed-input-size;
-        font-size: $hn-side-collapsed-input-size;
+        font-size: $hn-side-collapsed-input-font-size;
         
         margin: $hn-side-collapsed-input-margin;
         padding: $hn-side-collapsed-input-padding;
+
+        color: $hn-side-collapsed-input-color;
+        background: $hn-side-collapsed-input-bg;
     }
 }
 
