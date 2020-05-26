@@ -109,7 +109,8 @@
     background: $hn-item-bg;
 }
 
-.hn-item
+.hn-item,
+.hn-item:visited
 {
     color: $hn-item-color;
 }
@@ -225,12 +226,14 @@
     visibility: hidden;
 }
 
-.hn-link
+.hn-link,
+.hn-link:visited
 {
     flex: 1;
     color: inherit;
 
-    &:hover
+    &:hover,
+    &:focus
     {
         color: inherit;
     }
