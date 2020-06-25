@@ -3,6 +3,11 @@
     z-index: $hn-side-z-index;
 }
 
+.hn-side.hn-shadow
+{
+    box-shadow: $hn-side-shadow;
+}
+
 .hn-side > .hn-nav
 {
     display: inline-flex;
@@ -19,51 +24,50 @@
     {
         min-height: $hn-side-item-min-height;
     }
-    
+
+    & .hn-link
+    {
+        padding-top: $hn-side-link-padding-top;
+        padding-right: $hn-side-link-padding-right;
+        padding-bottom: $hn-side-link-padding-bottom;
+        padding-left: $hn-side-link-padding-left;
+    }
+
+    & .hn-input
+    {
+        & .hn-input-active,
+        & .hn-input-default
+        {
+            min-height: $hn-side-item-min-height;
+        }
+    }
+
+    & .hn-input:not(.hn-item)
+    {
+        width: $hn-side-input-width;
+    }
+
     & .hn-expand > .hn-item
     {
         position: relative;
+    
+        & > .hn-link
+        {
+            padding-right: #{$hn-side-input-width};
+        }
     }
 
-    & .hn-expand .hn-input-active,
-    & .hn-expand .hn-input-default,
-    & .hn-align-input .hn-input-active,
-    & .hn-align-input .hn-input-default
+    & .hn-expand > .hn-item > .hn-link
     {
-        margin: $hn-side-input-margin;
-        padding: $hn-side-input-padding;
+        padding-top: $hn-side-expand-link-padding-top;
+        padding-right: $hn-side-expand-link-padding-right;
+        padding-bottom: $hn-side-expand-link-padding-bottom;
+        padding-left: $hn-side-expand-link-padding-left;
     }
 
     & .hn-icon
     {
         width: $hn-side-icon-width;
-    }
-
-    & .hn-content,
-    & .hn-icon
-    {
-        padding-top: $hn-side-item-spacing-vertical;
-        padding-bottom: $hn-side-item-spacing-vertical;    
-    }
-
-    & .hn-item > .hn-icon,
-    & .hn-link > .hn-icon
-    {
-        padding-left: $hn-side-item-spacing-horizontal;
-        padding-right: $hn-side-item-spacing-horizontal;
-    }
-
-    & .hn-item > .hn-content,
-    & .hn-link > .hn-content
-    {
-        padding-left: $hn-top-item-spacing-horizontal;
-        padding-right: $hn-side-item-spacing-horizontal;
-    }
-
-    & .hn-link > .hn-icon + .hn-content,
-    & .hn-item > .hn-icon + .hn-content
-    {
-        padding-left: 0;
     }
 
     @include hn-ie11
@@ -100,6 +104,8 @@
     & .hn-expand .hn-input .hn-input-default,
     & .hn-expand .hn-input .hn-input-active
     {
+        min-height: 0;
+
         top: 0;
         right: 0;
         position: absolute;

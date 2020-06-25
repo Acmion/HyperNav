@@ -1,0 +1,32 @@
+.hn-nav
+{
+    @include hn-mobile
+    {
+        $expand-selector: '.hn-expand-body';
+
+        @for $i from 1 through $hn-nesting-max-depth  
+        {
+            & #{$expand-selector} .hn-link
+            {
+                padding-left: calc(#{$i} * #{$hn-top-nesting-indentation} + #{$hn-top-link-padding-left});
+            }
+
+            $expand-selector: $expand-selector + ' ' + '.hn-expand-body';
+        }
+    }
+}
+
+.hn-mode .hn-mode-content.hn-nav
+{
+    $expand-selector: '.hn-expand-body';
+
+    @for $i from 1 through $hn-nesting-max-depth  
+    {
+        & #{$expand-selector} .hn-link
+        {
+            padding-left: calc(#{$i} * #{$hn-top-nesting-indentation} + #{$hn-top-link-padding-left});
+        }
+
+        $expand-selector: $expand-selector + ' ' + '.hn-expand-body';
+    }
+}

@@ -1,6 +1,6 @@
 @include hn-desktop
 {
-    .hn-top > .hn-input-state-nav:not(.hn-hide-desktop):checked ~ .hn-nav 
+    .hn-input-state-nav:not(.hn-hide-desktop):checked ~ .hn-nav 
     {
         & .hn-input-nav .hn-input-default
         {
@@ -30,7 +30,7 @@
 
 @include hn-mobile
 {
-    .hn-top > .hn-input-state-nav:not(.hn-hide-mobile):checked ~ .hn-nav 
+    .hn-input-state-nav:not(.hn-hide-mobile):checked ~ .hn-nav 
     {
         & .hn-input-nav .hn-input-default
         {

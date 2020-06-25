@@ -7,7 +7,7 @@
     position: absolute;
     z-index: $hn-side-container-z-index;
 
-    & > .hyper-nav
+    & > .hn-menu
     {
         height: 100%;
         display: none;
@@ -40,7 +40,7 @@
 }
 
 
-.hn-input-state-side-container:checked ~ .hyper-nav
+.hn-input-state-side-container:checked ~ .hn-menu
 {
     display: block;
 }

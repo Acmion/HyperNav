@@ -1,0 +1,23 @@
+.hn-side > .hn-nav
+{
+    $expand-selector: '.hn-expand-body';
+
+    @for $i from 1 through $hn-nesting-max-depth  
+    {
+        & #{$expand-selector} .hn-item .hn-link
+        {
+            padding-left: calc(#{$i} * #{$hn-side-nesting-indentation} + #{$hn-side-link-padding-left});
+        }
+
+        $expand-selector: $expand-selector + ' ' + '.hn-expand-body';
+    }
+    
+}
+
+@include hn-side-collapsed
+{
+    .hn-link
+    {
+        padding-left: #{$hn-side-link-padding-left} !important;
+    }
+}   

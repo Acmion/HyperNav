@@ -1,0 +1,28 @@
+@include hn-desktop
+{
+    .hn-top .hn-expand > .hn-expand-body-animation-delay
+    {
+        display: flex;
+        visibility: hidden;
+        transition: all 0s 0.2s;
+    }
+
+    // Always show on hover
+    .hn-top .hn-expand:hover > .hn-expand-body-animation-delay
+    {
+        visibility: visible !important;
+    }
+
+    // Show also on input checked
+    .hn-top .hn-expand > .hn-input-state:checked ~ .hn-expand-body-animation-delay
+    {
+        visibility: visible;
+    }
+    
+
+    // Do not show if parent menu is not visible
+    .hn-top .hn-expand:not(:hover) > .hn-input-state:not(:checked) ~ .hn-expand-body .hn-expand > .hn-input-state:checked ~ .hn-expand-body-animation-delay
+    {
+        visibility: hidden !important;
+    }
+}

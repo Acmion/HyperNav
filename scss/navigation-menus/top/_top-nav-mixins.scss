@@ -2,7 +2,7 @@
 {
     @include hn-mobile
     {
-        .hyper-nav.hn-top > .hn-input-state-nav:not(.hn-hide-mobile):checked ~ .hn-nav
+        .hn-menu.hn-top > .hn-input-state-nav:not(.hn-hide-mobile):checked ~ .hn-nav
         {
             @content;
         }
@@ -13,7 +13,7 @@
 {
     @include hn-mobile
     {
-        .hyper-nav.hn-top > .hn-input-state-nav:not(.hn-hide-mobile):not(:checked) ~ .hn-nav
+        .hn-menu.hn-top > .hn-input-state-nav:not(.hn-hide-mobile):not(:checked) ~ .hn-nav
         {
             @content;
         }

@@ -8,8 +8,16 @@
 
 @include hn-side-collapsed
 {
-    .hn-hide-collapsed
+    width: auto;
+
+    & .hn-hide-collapsed
     {
         display: none !important;
     }
+
+    & > .hn-section .hn-content
+    {
+        display: none;
+    }
+
 }

@@ -1,12 +1,14 @@
 .hn-input-state
 {
-    display: none;
+    top: 110vh;
+    position: fixed;
 }
 
 .hn-input
 {
     display: flex;
-    align-items: stretch;
+    justify-content: center;
+    
     cursor: pointer;
 
     & > label
@@ -14,6 +16,12 @@
         cursor: pointer;
     }
 }
+
+.hn-input:not(.hn-item)
+{
+    align-items: flex-start;
+}
+
 
 .hn-item > .hn-input
 {

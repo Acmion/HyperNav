@@ -4,7 +4,7 @@
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
-.hyper-nav
+.hn-menu
 {
     position: relative;
     display: inline-flex;
@@ -19,16 +19,12 @@
 
     color: $hn-color;
     background: $hn-bg;
-
-    & *
-    {
-        box-sizing: border-box;
-    }
 }
 
-.hn-full-width
+[class^="hn"]
 {
-    width: 100%;
+    outline: none;
+    box-sizing: border-box;
 }
 
 .hn-fixed
@@ -161,11 +157,15 @@
 
 .hn-expand-body
 {
-    min-width: 100%;
     display: none;
     flex-direction: inherit;
     background: $hn-expand-body-bg;
     z-index: $hn-overlay-z-index + 1;
+}
+
+.hn-section > .hn-expand > .hn-expand-body
+{
+    min-width: 100%;
 }
 
 // Depth X
@@ -173,18 +173,6 @@
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
-
-.hn-menu
-{
-    align-items: center;
-
-    &.hn-menu-right
-    {
-        order: 999999;
-        margin-left: auto;
-    }
-
-}
 
 .hn-link,
 .hn-icon,
@@ -199,11 +187,7 @@
 .hn-icon
 {
     flex-shrink: 0;
-}
-
-.hn-icon-auto
-{
-    width: auto !important;
+    justify-content: center;
 }
 
 .hn-content

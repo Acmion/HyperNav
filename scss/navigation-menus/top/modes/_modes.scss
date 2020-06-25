@@ -35,6 +35,12 @@
     z-index: 0;
 
     position: absolute;
+
+    & .hn-section-body
+    {
+        height: auto;
+        max-height: calc(100vh - #{$hn-top-height});
+    }
 }
 
 .hn-mode-content.hn-nav

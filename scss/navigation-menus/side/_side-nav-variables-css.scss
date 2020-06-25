@@ -1,0 +1,30 @@
+:root
+{
+    --hn-side-width: 20rem;
+    --hn-side-icon-width: 2.4rem;
+    --hn-side-font-size: 1.4rem;
+    --hn-side-shadow: 0 0 2rem 0 #000;
+
+    --hn-side-item-min-height: 4rem;
+
+    --hn-side-link-padding-top: 1rem;
+    --hn-side-link-padding-right: 1rem;
+    --hn-side-link-padding-bottom: 1rem;
+    --hn-side-link-padding-left: 1rem;
+
+    --hn-side-expand-link-padding-top: var(--hn-side-link-padding-top);
+    --hn-side-expand-link-padding-right: var(--hn-side-link-padding-right);
+    --hn-side-expand-link-padding-bottom: var(--hn-side-link-padding-bottom);
+    --hn-side-expand-link-padding-left: var(--hn-side-link-padding-bottom);
+
+    --hn-side-input-width: 4rem;
+
+    --hn-side-collapsed-input-size: 1rem;
+    --hn-side-collapsed-input-font-size: 1rem;
+    --hn-side-collapsed-input-margin: 0rem;
+    --hn-side-collapsed-input-padding: 0rem;
+    --hn-side-collapsed-input-bg: red;
+    --hn-side-collapsed-input-color: white;
+
+    --hn-side-nesting-indentation: 1rem;
+}

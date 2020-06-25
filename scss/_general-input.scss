@@ -4,22 +4,29 @@
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
+
 .hn-item:not(.hn-item-disabled):hover,
-.hn-item:not(.hn-item-disabled):focus
+.hn-item:not(.hn-item-disabled):focus,
+.hn-item:not(.hn-item-disabled) > .hn-link:hover,
+.hn-item:not(.hn-item-disabled) > .hn-link:focus
 {
     color: $hn-item-hover-color;
     background: $hn-item-hover-bg;
 }
 
 .hn-item.hn-active:hover,
-.hn-item.hn-active:focus
+.hn-item.hn-active:focus,
+.hn-item.hn-active > .hn-link:hover,
+.hn-item.hn-active > .hn-link:focus
 {
     color: $hn-item-active-hover-color;
     background: $hn-item-active-hover-bg;
 }
 
 .hn-item.hn-active-child:hover,
-.hn-item.hn-active-child:focus
+.hn-item.hn-active-child:focus,
+.hn-item.hn-active-child > .hn-link:hover,
+.hn-item.hn-active-child > .hn-link:focus
 {
     color: $hn-item-active-child-hover-color;
     background: $hn-item-active-child-hover-bg;
@@ -121,12 +128,3 @@
     display: flex;
 }
 
-@include hn-side-collapsed
-{
-    width: auto;
-
-    & > .hn-section .hn-content
-    {
-        display: none;
-    }
-}

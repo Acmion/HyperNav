@@ -1,0 +1,27 @@
+:root
+{
+    --hn-top-height: 5rem;
+    --hn-top-icon-width: 2.4rem;
+    --hn-top-font-size: 1.6rem;
+    --hn-top-shadow: 0px 0rem 1rem 0px #000;
+
+    --hn-top-item-min-height: 4rem;
+    
+    --hn-top-link-padding-top: 1rem;
+    --hn-top-link-padding-right: 1rem;
+    --hn-top-link-padding-bottom: 1rem;
+    --hn-top-link-padding-left: 1rem;
+
+    --hn-top-expand-link-padding-top: var(--hn-top-link-padding-top);
+    --hn-top-expand-link-padding-right: 0;
+    --hn-top-expand-link-padding-bottom: var(--hn-top-link-padding-bottom);
+    --hn-top-expand-link-padding-left: var(--hn-top-link-padding-bottom);
+
+    --hn-top-input-width: 3rem;
+    
+    --hn-top-nesting-indentation: 1rem;
+    --hn-top-desktop-expand-body-bg: var(--hn-bg);
+    --hn-top-desktop-expand-body-border: thin solid red;
+    --hn-top-desktop-expand-body-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4), -0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4), 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+
+}

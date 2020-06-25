@@ -1,0 +1,23 @@
+.hn-input-state:focus ~ .hn-item .hn-input,
+.hn-input-state:focus ~ .hn-item.hn-input,
+.hn-input-state-nav:focus ~ .hn-nav .hn-input-nav
+{
+    color: $hn-item-hover-color !important;
+    background: $hn-item-hover-bg  !important;
+}
+
+.hn-input-state:focus ~ .hn-item.hn-active .hn-input,
+.hn-input-state:focus ~ .hn-item.hn-active.hn-input,
+.hn-input-state-nav:focus ~ .hn-nav .hn-input-nav
+{
+    color: $hn-item-active-hover-color !important;
+    background: $hn-item-active-hover-bg !important;
+}
+
+.hn-input-state:focus ~ .hn-item.hn-active-child .hn-input,
+.hn-input-state:focus ~ .hn-item.hn-active-child.hn-input,
+.hn-input-state-nav:focus ~ .hn-nav .hn-input-nav
+{
+    color: $hn-item-active-child-hover-color !important;
+    background: $hn-item-active-child-hover-bg !important;
+}
