@@ -14,14 +14,15 @@
     }
 
     // Show also on input checked
-    .hn-top .hn-expand > .hn-input-state:checked ~ .hn-expand-body-animation-delay
+    .hn-top .hn-expand:not(.hn-no-click) > .hn-input-state:checked ~ .hn-expand-body-animation-delay
     {
         visibility: visible;
     }
     
 
     // Do not show if parent menu is not visible
-    .hn-top .hn-expand:not(:hover) > .hn-input-state:not(:checked) ~ .hn-expand-body .hn-expand > .hn-input-state:checked ~ .hn-expand-body-animation-delay
+    .hn-top .hn-expand:not(:hover) > .hn-input-state:not(:checked) ~ .hn-expand-body .hn-expand > .hn-input-state:checked ~ .hn-expand-body-animation-delay,
+    .hn-top .hn-expand.hn-no-click:not(:hover) > .hn-input-state:checked ~ .hn-expand-body .hn-expand > .hn-input-state:checked ~ .hn-expand-body-animation-delay
     {
         visibility: hidden !important;
     }

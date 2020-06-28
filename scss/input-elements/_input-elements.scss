@@ -20,19 +20,11 @@
 .hn-input:not(.hn-item)
 {
     align-items: flex-start;
-}
 
+    color: $hn-input-color;
+    background: $hn-input-bg;
 
-.hn-item > .hn-input
-{
-    margin-left: auto;
-}
-
-.hn-input-default,
-.hn-input-active
-{
-    align-items: center;
-    justify-content: center;
+    
 }
 
 .hn-input-active
@@ -45,24 +37,20 @@
     display: flex;
 }
 
-.hn-input-active:not(.hn-icon)
-{
-    display: none;
 
-    color: $hn-input-active-color;
-    background: $hn-input-active-bg;
+.hn-item > .hn-input
+{
+    margin-left: auto;
 }
 
-.hn-input-default:not(.hn-icon)
+.hn-input-default,
+.hn-input-active
 {
-    display: flex;
+    flex-grow: 1;
 
-    color: $hn-input-color;
-    background: $hn-input-bg;
-}
+    align-items: center;
+    justify-content: center;
 
-.hn-icon .hn-input-active,
-.hn-icon .hn-input-default
-{
-    background: transparent;
+    // IE11 bug fix. The height is overridden in other places.
+    height: 0px;
 }

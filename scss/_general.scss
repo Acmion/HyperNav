@@ -95,6 +95,7 @@
 
 .hn-item
 {
+    max-width: 100%;
     cursor: pointer;
 
     flex-shrink: 0;
@@ -213,18 +214,14 @@
 .hn-link,
 .hn-link:visited
 {
-    flex: 1;
+    flex-grow: 1;
     color: inherit;
+    overflow-wrap: break-word;
 
     &:hover,
     &:focus
     {
         color: inherit;
-    }
-
-    @include hn-ie11
-    {
-        flex: 0 0 auto;
     }
 }
 

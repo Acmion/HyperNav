@@ -1,0 +1,5 @@
+.hn-input-state-side-container:checked ~ .hn-side-container .hn-menu,
+.hn-input-state-side-container:checked ~ .hn-side-container .hn-overlay
+{
+    display: block;
+}

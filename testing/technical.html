@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="../dist/hyper-nav.min.css" />
 
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/technical-variables.css" />
 
         <script src="lib/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
         <script>
@@ -45,9 +46,7 @@
 
                     <!-- ------- -->
 
-                    <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="hn-side-container-cb-1">
-
-                    <label class="hn-item hn-input hn-input-side-container" for="hn-side-container-cb-1">
+                    <label class="hn-item hn-input" for="hn-side-container-cb-1">
                         <span class="hn-link">
                             <span class="hn-icon">
                                 <i class="ri-side-bar-line"></i>
@@ -60,6 +59,8 @@
 
 
                     <div class="hn-side-container hn-side-container-fixed">
+                        <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="hn-side-container-cb-1">
+
                         <nav class="hn-menu hn-side " style="width: 25rem;">
                             <div class="hn-nav">
                                 <div class="hn-section hn-section-brand">
@@ -239,9 +240,7 @@
 
                     <!-- ------- -->
                     
-                    <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="hn-side-container-cb-2">
-
-                    <label class="hn-item hn-input hn-input-side-container" for="hn-side-container-cb-2">
+                    <label class="hn-item hn-input" for="hn-side-container-cb-2">
                         <span class="hn-link">
                             <span class="hn-icon">
                                 <i class="ri-side-bar-line"></i>
@@ -252,7 +251,10 @@
                         </span>
                     </label>
                     
+                    
                     <div class="hn-side-container hn-side-container-fixed hn-side-container-top-offset">
+                        <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="hn-side-container-cb-2">
+                    
                         <nav class="hn-menu hn-side " style="width: 25rem;">
                             <div class="hn-nav">
                                 <div class="hn-section hn-section-brand">
@@ -325,9 +327,6 @@
                                         </li>
                                         <li>
                                             Mexico
-                                        </li>
-                                        <li>
-                                            Brazil
                                         </li>
                                     </ul>
                                 </div>
@@ -778,9 +777,9 @@
             </label>
         </nav>
 
-        <div style="display: flex;min-height: 100%; height: 100%;">
-            <div style="margin-top: 5rem;">
-                <nav class="hn-menu hn-side hn-height-100">
+        <div style="display: flex; min-height: 100%">
+            <div>
+                <nav class="hn-menu hn-side hn-height-100" style="top: 5rem;">
                     <!-- The collapsible state element. -->
                     <input type="checkbox" class="hn-input-state hn-input-state-nav" id="hn-side-cb" checked>
 
@@ -1143,17 +1142,9 @@
                         layout should be extended if needed and used as the main testing ground
                         for HyperNav. 
                     </p>
-                    <p id="color-notice">
-                        The complete spectrum of color options, which can easily be controlled by 
-                        variables, is not showcased in this document. See <a href="technical.html">technical.html</a>
-                        for a more complete assessment of how colors can be utilized. Note that technical.html
-                        is also incomplete in regard to what can be achieved with HyperNav from a coloring 
-                        perspective.
-                    </p>
                     <p>
                         This example is not completely keyboard accessible, due to the usage of modes
-                        in the top navigation bar and some other settings. Accessibility could be implemented
-                        with JavaScript. See more information in the <a href="">documentation</a>.
+                        in the top navigation bar. See more information in the <a href="">documentation</a>.
                     </p>
                     <p>
                         <strong>Note:</strong> No JavaScript, except a CSS variable ponyfill for IE11, is
@@ -1313,8 +1304,8 @@
                         </h4>
                         <p>
                             Dropdown menu that expands to the left. Delay animation. Split button. Not clickable on desktop,
-                            only hoverable, not keyboard accessible. Child item (National) is marked as active, which should 
-                            represent the currently active page.
+                            only hoverable. Child item (National) is marked as active, which should represent the currently 
+                            active page.
                         </p>
 
                         <h4>
@@ -1442,8 +1433,6 @@
                         <p>
                             Dropdown menu with one sublevel. Split button. No icon.
                         </p>
-
-                        <div style="height: 10rem"></div>
 
                     </div>
                 </div>

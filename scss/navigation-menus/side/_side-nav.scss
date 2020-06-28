@@ -1,5 +1,7 @@
 .hn-side
 {
+    max-height: 100%;
+    overflow: auto;
     z-index: $hn-side-z-index;
 }
 
@@ -35,8 +37,8 @@
 
     & .hn-input
     {
-        & .hn-input-active,
-        & .hn-input-default
+        & > .hn-input-active,
+        & > .hn-input-default
         {
             min-height: $hn-side-item-min-height;
         }
@@ -45,6 +47,7 @@
     & .hn-input:not(.hn-item)
     {
         width: $hn-side-input-width;
+        min-width: $hn-side-input-width;
     }
 
     & .hn-expand > .hn-item
@@ -68,6 +71,13 @@
     & .hn-icon
     {
         width: $hn-side-icon-width;
+    }
+
+    & .hn-expand > .hn-expand-body
+    {
+        position: static;
+        border: none !important;
+        box-shadow: none !important;
     }
 
     @include hn-ie11
@@ -94,9 +104,7 @@
     & .hn-expand .hn-item .hn-input
     {
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        right: 0;
 
         position: absolute;
     }

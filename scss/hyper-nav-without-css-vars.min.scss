@@ -25,6 +25,7 @@
 @import 'navigation-menus/top/modes/modes-mixins';
 @import 'navigation-menus/top/modes/modes';
 @import 'navigation-menus/top/modes/modes-input';
+@import 'navigation-menus/top/modes/modes-input-keyboard-accessibility';
 
 @import 'navigation-menus/top/animations/expand-body-delay-animation';
 
@@ -33,6 +34,9 @@
 @import 'navigation-menus/side/side-nav-mixins';
 @import 'navigation-menus/side/side-nav';
 @import 'navigation-menus/side/side-nav-nesting';
-@import 'navigation-menus/side/side-container';
 @import 'navigation-menus/side/side-nav-input';
+
+@import 'navigation-menus/side/side-container/side-container';
+@import 'navigation-menus/side/side-container/side-container-input';
+@import 'navigation-menus/side/side-container/side-container-input-keyboard-accessibility';
 

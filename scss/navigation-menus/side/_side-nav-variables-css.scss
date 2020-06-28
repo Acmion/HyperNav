@@ -23,8 +23,8 @@
     --hn-side-collapsed-input-font-size: 1rem;
     --hn-side-collapsed-input-margin: 0rem;
     --hn-side-collapsed-input-padding: 0rem;
-    --hn-side-collapsed-input-bg: red;
-    --hn-side-collapsed-input-color: white;
+    --hn-side-collapsed-input-bg: var(--hn-input-hover-bg);
+    --hn-side-collapsed-input-color: var(--hn-input-hover-color);
 
     --hn-side-nesting-indentation: 1rem;
 }

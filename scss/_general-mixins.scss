@@ -42,8 +42,8 @@
 {
     @include hn-desktop
     {
-        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover,
-        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):focus
+        // Focus does not help, bc .hn-expand is not focusable
+        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover
         {
             @content;
         }
@@ -59,8 +59,8 @@
     
     @include hn-desktop
     {
-        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover > .hn-expand-body,
-        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):focus > .hn-expand-body
+        // Focus does not help, bc .hn-expand is not focusable
+        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover > .hn-expand-body
         {
             @content;
         }

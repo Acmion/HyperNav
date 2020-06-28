@@ -1,0 +1,6 @@
+.hn-input-state-side-container:focus ~ .hn-input-side-container,
+.hn-input-state-side-container:focus ~ .hn-side-container .hn-input-side-container
+{
+    color: $hn-item-hover-color;
+    background: $hn-item-hover-bg;  
+}

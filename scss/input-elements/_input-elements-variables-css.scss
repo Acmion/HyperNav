@@ -1,13 +1,16 @@
 :root
 {
 
-    --hn-input-bg: rgba(255, 0, 0, 1.00);
+    --hn-input-bg: rgba(246, 119, 119, 1.00);
     --hn-input-color: rgba(255, 255, 255, 1.00);
-    --hn-input-hover-bg: rgba(200, 0, 0, 1.00);
-    --hn-input-hover-color: rgba(255, 255, 255, 1.00);
-    --hn-input-active-bg: rgba(160, 0, 0, 1.00);
-    --hn-input-active-color: rgba(255, 255, 255, 1.00);
-    --hn-input-active-hover-bg: rgba(120, 0, 0, 1.00);
-    --hn-input-active-hover-color: rgba(255, 255, 255, 1.00);
+
+    --hn-input-hover-bg: rgba(244, 83, 83, 1.00);
+    --hn-input-hover-color: var(--hn-input-color);
+
+    --hn-input-active-bg: var(--hn-input-bg);
+    --hn-input-active-color: var(--hn-input-color);
+
+    --hn-input-active-hover-bg: var(--hn-input-hover-bg);
+    --hn-input-active-hover-color: var(--hn-input-hover-color);
 
 }

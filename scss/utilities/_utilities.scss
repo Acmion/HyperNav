@@ -6,11 +6,42 @@
 
 .hn-width-100
 {
-    width: 100%;
+    width: 100% !important;
+}
+
+.hn-width-100vw
+{
+    width: 100vw !important;
 }
 
 
 .hn-height-100
 {
-    height: 100%;
+    height: 100% !important;
+}
+
+@include hn-mobile
+{
+    .hn-mobile-width-100
+    {
+        width: 100% !important;
+    }
+
+    .hn-mobile-width-100vw
+    {
+        width: 100vw !important;
+    }
+}
+
+@include hn-desktop
+{
+    .hn-desktop-width-100
+    {
+        width: 100% !important;
+    }
+
+    .hn-desktop-width-100vw
+    {
+        width: 100vw !important;
+    }
 }

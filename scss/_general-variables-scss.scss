@@ -2,17 +2,20 @@ $hn-mobile-breakpoint: 767px;
 $hn-desktop-breakpoint: 768px;
 
 $hn-base-z-index: 1000;
-$hn-top-z-index: $hn-base-z-index;
-$hn-side-z-index: $hn-top-z-index - 10;
+$hn-mode-z-index: $hn-base-z-index + 1000000;
+$hn-top-z-index: $hn-base-z-index + 100000;
+$hn-side-z-index: $hn-base-z-index  + 10000;
+$hn-nav-z-index: $hn-base-z-index + 1000;
+$hn-overlay-z-index: $hn-base-z-index + 100;
 
-$hn-nav-z-index: $hn-base-z-index;
-$hn-mode-z-index: $hn-base-z-index + 1;
-$hn-overlay-z-index: $hn-nav-z-index - 1;
+$hn-side-container-z-index: $hn-mode-z-index + 3;
+$hn-side-container-nav-z-index: $hn-mode-z-index + 2;
+$hn-side-container-overlay-z-index: $hn-mode-z-index + 1;
 
-$hn-side-container-z-index: $hn-top-z-index + 10;
-$hn-side-container-top-offset-z-index: $hn-top-z-index - 1;
-$hn-side-container-nav-z-index: $hn-side-container-z-index + 1;
-$hn-side-container-overlay-z-index: $hn-side-container-z-index - 1;
+$hn-side-container-top-offset-z-index: $hn-base-z-index + 4;
+$hn-side-container-top-offset-menu-z-index: $hn-base-z-index + 3;
+$hn-side-container-top-offset-nav-z-index: $hn-base-z-index + 2;
+$hn-side-container-top-offset-overlay-z-index: $hn-base-z-index + 1;
 
 $hn-mode-count: 4;
 $hn-nesting-max-depth: 3;

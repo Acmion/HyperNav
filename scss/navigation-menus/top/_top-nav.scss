@@ -60,6 +60,14 @@
         & > .hn-expand-body
         {
             width: 100%;
+
+            & .hn-expand-body
+            {
+                top: 100%;
+                left: 0;
+                width: 100%;
+            }
+
         }
     }
 
@@ -113,8 +121,8 @@
         }
         & .hn-expand.hn-expand-left > .hn-expand-body
         {
-            left: unset;
             right: 100%;
+            left: auto;
         }
 
         & .hn-section > .hn-expand > .hn-expand-body
@@ -126,7 +134,7 @@
         & .hn-section > .hn-expand.hn-expand-left > .hn-expand-body
         {
             right: 0;
-            left: unset;
+            left: auto;
         }
 
         & .hn-section > .hn-expand.hn-expand-center > .hn-expand-body

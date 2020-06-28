@@ -13,7 +13,7 @@
     --hn-top-link-padding-left: 1rem;
 
     --hn-top-expand-link-padding-top: var(--hn-top-link-padding-top);
-    --hn-top-expand-link-padding-right: 0;
+    --hn-top-expand-link-padding-right: 0.4rem;
     --hn-top-expand-link-padding-bottom: var(--hn-top-link-padding-bottom);
     --hn-top-expand-link-padding-left: var(--hn-top-link-padding-bottom);
 
@@ -21,7 +21,6 @@
     
     --hn-top-nesting-indentation: 1rem;
     --hn-top-desktop-expand-body-bg: var(--hn-bg);
-    --hn-top-desktop-expand-body-border: thin solid red;
+    --hn-top-desktop-expand-body-border: transparent;
     --hn-top-desktop-expand-body-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4), -0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4), 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
-
 }
