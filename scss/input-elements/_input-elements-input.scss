@@ -13,8 +13,8 @@
         }
     }
 
-    .hn-expand:not(.hn-no-click) > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item.hn-input,
-    .hn-expand:not(.hn-no-click) > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
+    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item.hn-input,
+    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
     {
         & .hn-input-default
         {
@@ -27,7 +27,7 @@
         }
     }
 
-    .hn-expand:not(.hn-no-click) > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
+    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
     {
         color: $hn-input-active-color;
         background: $hn-input-active-bg;

@@ -1,6 +1,6 @@
 @include hn-desktop
 {
-    .hn-expand:not(.hn-no-click) > .hn-input-state:not(.hn-hide-desktop):focus ~ .hn-item
+    .hn-expand > .hn-input-state:not(.hn-hide-desktop):focus ~ .hn-item
     {
         &,
         &.hn-input
@@ -30,7 +30,7 @@
         }
     }
 
-    .hn-expand:not(.hn-no-click) > .hn-input-state:not(.hn-hide-desktop):checked:focus ~ .hn-item .hn-input
+    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked:focus ~ .hn-item .hn-input
     {
         color: $hn-input-active-hover-color;
         background: $hn-input-active-hover-bg;

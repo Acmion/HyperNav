@@ -24,17 +24,9 @@
 
 @mixin hn-expand-expanded-cb
 {
-    .hn-expand:not(.hn-no-click) > .hn-input-state:checked
+    .hn-expand > .hn-input-state:checked
     {
         @content;
-    }
-
-    @include hn-mobile
-    {
-        .hn-expand.hn-no-click > .hn-input-state:checked
-        {
-            @content;
-        }
     }
 }
 
@@ -52,7 +44,7 @@
 
 @mixin hn-expand-body-expanded
 {
-    .hn-expand:not(.hn-no-click) > .hn-input-state:checked ~ .hn-expand-body
+    .hn-expand > .hn-input-state:checked ~ .hn-expand-body
     {
         @content;
     }
@@ -61,14 +53,6 @@
     {
         // Focus does not help, bc .hn-expand is not focusable
         .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover > .hn-expand-body
-        {
-            @content;
-        }
-    }
-
-    @include hn-mobile
-    {
-        .hn-expand.hn-no-click > .hn-input-state:checked ~ .hn-expand-body
         {
             @content;
         }
