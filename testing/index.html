@@ -2,6 +2,9 @@
 
 <html>
     <head>
+        <title>
+            HyperNav Default Theme
+        </title>
         <link rel="stylesheet" href="lib/remixicon/remixicon.css" />
 
         <link rel="stylesheet" href="../dist/hyper-nav.min.css" />
@@ -9,9 +12,9 @@
         <link rel="stylesheet" href="css/main.css" />
 
         <script src="lib/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
-        <script>
-            cssVars();
-        </script>
+
+        <script src="js/theme-loader.js"></script>
+
     </head>
 
     <body>
@@ -26,8 +29,13 @@
                 <div class="hn-section hn-section-brand">
                     <div class="hn-item">
                         <a class="hn-link" href="#">
+                            <span class="hn-icon hn-size-auto" style="padding-right: 0.4rem">
+                                <img src="https://cdn.acmion.com/acmion/assets/hyper-nav/icon.svg" style="height: 3rem" />
+                            </span>
                             <span class="hn-content">
-                                <img src="https://cdn.acmion.com/acmion/assets/hyper-nav/logo.svg" style="height: 3rem" />
+                                <strong>
+                                    HyperNav
+                                </strong>
                             </span>
                         </a>
                     </div>
@@ -520,7 +528,7 @@
                         </div>
                     </div>
 
-                    <div class="hn-expand hn-expand-left hn-no-click">
+                    <div class="hn-expand hn-expand-left">
                         <input type="checkbox" class="hn-input-state" id="hn-shipping-cb">
                     
                         <div class="hn-item hn-active-child">
@@ -685,15 +693,7 @@
                             <div class="hn-item">
                                 <a class="hn-link" href="#">
                                     <div class="hn-content">
-                                        More Settings 1
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="hn-item">
-                                <a class="hn-link" href="#">
-                                    <div class="hn-content">
-                                        More Settings 2
+                                        Account
                                     </div>
                                 </a>
                             </div>
@@ -712,24 +712,25 @@
                 </div>
                 <div class="hn-mode-content hn-nav">
                     <div class="hn-section hn-section-body">
-                        
-                        <input type="checkbox" class="hn-input-state" id="hn-cb-setting-1">
-                        
-                        <label class="hn-item hn-input" for="hn-cb-setting-1">
-                            <span class="hn-link">
-                                <span class="hn-content">
-                                    Checkbox Setting
+                        <div class="hn-expand">
+                            <input type="checkbox" class="hn-input-state" id="hn-cb-setting-1">
+                            
+                            <label class="hn-item hn-input" for="hn-cb-setting-1">
+                                <span class="hn-link">
+                                    <span class="hn-content">
+                                        Checkbox Setting
+                                    </span>
                                 </span>
-                            </span>
-                            <span class="hn-input">
-                                <span class="hn-input-default">
-                                    <i class="ri-checkbox-blank-line"></i>
+                                <span class="hn-input">
+                                    <span class="hn-input-default">
+                                        <i class="ri-checkbox-blank-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-checkbox-line"></i>
+                                    </span>
                                 </span>
-                                <span class="hn-input-active">
-                                    <i class="ri-checkbox-line"></i>
-                                </span>
-                            </span>
-                        </label>
+                            </label>
+                        </div>
 
                         <div class="hn-expand">
                             <input type="checkbox" class="hn-input-state" id="hn-account-cb">
@@ -1136,16 +1137,19 @@
                     <h1>
                         HyperNav
                     </h1>
+                    <h2 id="hyper-nav-theme-name-element">
+                        Theme: 
+                    </h2>
                     <p>
                         This an example that showcases nearly everything that HyperNav is capable of.
-                        The layout is relatively complex and contains some slight inconsistencies 
+                        The layout is relatively complex and contains some inconsistencies 
                         (such as different types of dropdown menus) for complete coverage. This 
                         layout should be extended if needed and used as the main testing ground
                         for HyperNav. 
                     </p>
                     <p id="color-notice">
                         The complete spectrum of color options, which can easily be controlled by 
-                        variables, is not showcased in this document. See <a href="technical.html">technical.html</a>
+                        variables, is not showcased in the default theme. See <a href="technical.html">technical.html</a>
                         for a more complete assessment of how colors can be utilized. Note that technical.html
                         is also incomplete in regard to what can be achieved with HyperNav from a coloring 
                         perspective.
@@ -1170,7 +1174,7 @@
                     <p>
                         This page showcases as much as possible. This means that there is lots of
                         content, inconsistencies and mismatches on this page. Due to the amount of content,
-                        this page should be viewed so that:
+                        this page should be viewed so that either:
                         <strong>
                             <ul>
                                 <li>
@@ -1204,6 +1208,23 @@
 
                         <a href="https://acmion.com">
                             Acmion
+                        </a>
+                    </p>
+                    <br />
+
+                    <!-- ------ -->
+                    
+                    <h2>
+                        HyperNav Themes
+                    </h2>
+                    
+                    <p>
+                        <a href="index.html" target="_parent">
+                            Default
+                        </a>
+                    
+                        <a href="technical.html" target="_parent">
+                            Technical
                         </a>
                     </p>
                     <br />
@@ -1312,9 +1333,8 @@
                             Shipping
                         </h4>
                         <p>
-                            Dropdown menu that expands to the left. Delay animation. Split button. Not clickable on desktop,
-                            only hoverable, not keyboard accessible. Child item (National) is marked as active, which should 
-                            represent the currently active page.
+                            Dropdown menu that expands to the left. Delay animation. Split button. Child item (National) is marked 
+                            as active, which should represent the currently active page.
                         </p>
 
                         <h4>
@@ -1581,6 +1601,10 @@
 
         </div>
 
+        <script>
+            loadTheme();
+            cssVars();
+        </script>
 
     </body>
 </html>

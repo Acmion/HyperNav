@@ -35,7 +35,7 @@ a
 
 h1
 {
-    margin-top: 0;
+    margin: 0;
 }
 
 ul
@@ -44,51 +44,10 @@ ul
     list-style: none;
 }
 
-
-/* Bootstrap container */
-
-.container 
+#hyper-nav-theme-name-element
 {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-left: 0px;
+    margin-top: 0;
 }
-
-@media (min-width: 576px) 
-{
-    .container 
-    {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) 
-{
-    .container 
-    {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) 
-{
-    .container 
-    {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) 
-{
-    .container 
-    {
-        max-width: 1140px;
-    }
-}
-
 
 #content-container,
 #content-hn-container
@@ -147,5 +106,49 @@ ul
     .continent-countries
     {
         width: 100%;
+    }
+}
+
+/* Bootstrap container */
+
+.container 
+{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-left: 0px;
+}
+
+@media (min-width: 576px) 
+{
+    .container 
+    {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) 
+{
+    .container 
+    {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) 
+{
+    .container 
+    {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) 
+{
+    .container 
+    {
+        max-width: 1140px;
     }
 }
