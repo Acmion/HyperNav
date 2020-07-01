@@ -2,7 +2,8 @@
 HyperNav is an advanced and interactive navigation framework that works without JavaScript. 
 
 ## Demo
-[Default theme demo](https://acmion.github.io/HyperNav/testing/index.html)
+[HyperNav Complete](https://acmion.github.io/HyperNav/testing/complete.html)
+[HyperNav Natural](https://acmion.github.io/HyperNav/testing/natural.html)
 
 ## Documentation
 Coming soon.
