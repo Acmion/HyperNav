@@ -24,6 +24,11 @@
 
 .hn-top 
 {
+    & .hn-nav
+    {
+        z-index: $hn-nav-z-index;
+    }
+    
     & .hn-item
     {
         min-height: $hn-top-item-min-height;

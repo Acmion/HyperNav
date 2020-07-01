@@ -18,7 +18,7 @@ function loadTheme()
     if (inIframe())
     {
         var hash = document.location.hash;
-        hyperNavThemeName = hash.substr(1);
+        hyperNavThemeName = decodeURIComponent(hash.substr(1));
 
         if (hash == "#Technical")
         {
@@ -28,6 +28,14 @@ function loadTheme()
 
             document.head.appendChild(stylesheetLinkElement);
         }
+        else if (hash == "#DefaultMono")
+        {
+            var stylesheetLinkElement = document.createElement("link");
+            stylesheetLinkElement.rel = "stylesheet";
+            stylesheetLinkElement.href = "../dist/themes/default-mono/variables.min.css";
+
+            document.head.appendChild(stylesheetLinkElement);
+        }  
     }
 
     hyperNavThemeNameElement.innerHTML = "Theme: " + hyperNavThemeName;

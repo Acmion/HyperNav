@@ -15,15 +15,12 @@ body
     height: 100%;
     margin: 0;
     font-size: 1.6rem;
-    overflow: hidden;
 }
 
 main
 {
     width: 100%;
-    overflow: auto;
     margin-top: var(--hn-top-height);
-    max-height: calc(100vh - var(--hn-top-height));
 
     display: flex;
 }
@@ -36,6 +33,7 @@ a
 h1
 {
     margin: 0;
+    line-height: 100%;
 }
 
 ul
@@ -44,15 +42,83 @@ ul
     list-style: none;
 }
 
+#hn-logo:hover .hn-icon,
+#hn-logo:focus .hn-icon
+{
+    filter: saturate(2);
+}
+
 #hyper-nav-theme-name-element
 {
     margin-top: 0;
 }
 
+/* Some "hacks" to make the shadow look better and so that the left menu is sticky. Not on IE11. */
+
+#hn-side-sticky-container
+{
+    z-index: 1;
+    position: sticky; 
+    top: var(--hn-top-height); 
+    margin-top: var(--hn-top-height);
+}
+
+#hn-side-sticky-container .hn-side .hn-nav
+{
+    min-height: calc(100vh - var(--hn-top-height));
+}
+
+#hn-side-sticky-container .hn-side .hn-nav
+{
+    overflow: auto;
+    max-height: calc(100vh - var(--hn-top-height));
+}
+
+@media not screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
+{  
+    #hn-side-sticky-container
+    {
+        z-index: initial;
+        position: initial; 
+        top: 0; 
+        margin-top: var(--hn-top-height);
+        height: 100%;
+    }
+
+    #hn-side-sticky-container .hn-side .hn-nav
+    {
+        min-height: auto;
+    }
+
+    #hn-side-sticky-container .hn-side .hn-nav
+    {
+        overflow: initial;
+        max-height: 9999999999px;
+    }
+}
+
 #content-container,
 #content-hn-container
 {
-    padding: 1rem;
+    padding: 1.6rem;
+}
+
+#content-top-shadow
+{
+    position: fixed; 
+    left: 0;
+    top: var(--hn-top-height); 
+    width: 100%; 
+    box-shadow: 0 0 1rem 0.2rem #000;
+}
+
+#content-side-shadow
+{
+    position: absolute; 
+    left: 0;
+    top: 0; 
+    height: 100%; 
+    box-shadow: 0 0 1rem 0.2rem #000;
 }
 
 #details h3
@@ -107,6 +173,13 @@ ul
     {
         width: 100%;
     }
+}
+
+.theme-h-space
+{
+    width: 2rem;
+    height: 1px;
+    display: inline-block;
 }
 
 /* Bootstrap container */

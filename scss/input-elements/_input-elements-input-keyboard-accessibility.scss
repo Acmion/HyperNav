@@ -5,35 +5,35 @@
         &,
         &.hn-input
         {
-            color: $hn-item-hover-color;
-            background: $hn-item-hover-bg;
+            color: $hn-item-hover-color !important;
+            background: $hn-item-hover-bg !important;
         }
 
         &.hn-active,
         &.hn-active.hn-input
         {
-            color: $hn-item-active-hover-color;
-            background: $hn-item-active-hover-bg;
+            color: $hn-item-active-hover-color !important;
+            background: $hn-item-active-hover-bg !important;
         }
 
         &.hn-active-child,
         &.hn-active-child.hn-input
         {
-            color: $hn-item-active-child-hover-color;
-            background: $hn-item-active-child-hover-bg;
+            color: $hn-item-active-child-hover-color !important;
+            background: $hn-item-active-child-hover-bg !important;
         }
 
         & .hn-input
         {
-            color: $hn-input-hover-color;
-            background: $hn-input-hover-bg;
+            color: $hn-input-hover-color !important;
+            background: $hn-input-hover-bg !important;
         }
     }
 
     .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked:focus ~ .hn-item .hn-input
     {
-        color: $hn-input-active-hover-color;
-        background: $hn-input-active-hover-bg;
+        color: $hn-input-active-hover-color !important;
+        background: $hn-input-active-hover-bg !important;
     }
 }
 
@@ -44,40 +44,40 @@
         &,
         &.hn-input
         {
-            color: $hn-item-hover-color;
-            background: $hn-item-hover-bg;
+            color: $hn-item-hover-color !important;
+            background: $hn-item-hover-bg !important;
         }
 
         &.hn-active,
         &.hn-active.hn-input
         {
-            color: $hn-item-active-hover-color;
-            background: $hn-item-active-hover-bg;
+            color: $hn-item-active-hover-color !important;
+            background: $hn-item-active-hover-bg !important;
         }
 
         &.hn-active-child,
         &.hn-active-child.hn-input
         {
-            color: $hn-item-active-child-hover-color;
-            background: $hn-item-active-child-hover-bg;
+            color: $hn-item-active-child-hover-color !important;
+            background: $hn-item-active-child-hover-bg !important;
         }
 
         & .hn-input
         {
-            color: $hn-input-hover-color;
-            background: $hn-input-hover-bg;
+            color: $hn-input-hover-color !important;
+            background: $hn-input-hover-bg !important;
         }
     }
 
     .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked:focus ~ .hn-item .hn-input
     {
-        color: $hn-input-active-hover-color;
-        background: $hn-input-active-hover-bg;
+        color: $hn-input-active-hover-color !important;
+        background: $hn-input-active-hover-bg !important;
     }
 }
 
 .hn-input-state-nav:focus ~ .hn-nav .hn-input-nav
 {
-    color: $hn-item-hover-color;
-    background: $hn-item-hover-bg;
+    color: $hn-item-hover-color !important;
+    background: $hn-item-hover-bg !important;
 }
