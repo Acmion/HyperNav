@@ -30,3 +30,17 @@
 
     --hn-overlay-bg: rgba(0, 0, 0, 0.6);
 }
+
+// Partial override
+// @import '../../navigation-menus/side/side-nav-variables-css';
+:root
+{
+    --hn-side-collapsed-input-size: 1.2rem;
+    --hn-side-collapsed-input-font-size: 1.2rem;
+
+    --hn-side-collapsed-input-bg: transparent;
+    --hn-side-collapsed-input-color: inherit;
+    
+    --hn-side-collapsed-input-hover-bg: transparent;
+    --hn-side-collapsed-input-hover-color: var(--hn-item-hover-color);
+}

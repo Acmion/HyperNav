@@ -112,7 +112,8 @@ ul
     box-shadow: 0 0 1rem 0.2rem #000;
 }
 
-#content-side-shadow
+#content-side-shadow,
+#content-side-shadow-mobile
 {
     position: absolute; 
     left: 0;

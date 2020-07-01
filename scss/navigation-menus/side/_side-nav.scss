@@ -104,28 +104,36 @@
     {
         top: 0;
         right: 0;
+        min-width: 0;
 
         position: absolute;
+        align-items: center;
+        
+        font-size: $hn-side-collapsed-input-font-size;
+
+        width: $hn-side-collapsed-input-size;
+        height: $hn-side-collapsed-input-size;
+        
+        color: $hn-side-collapsed-input-color;
+        background: $hn-side-collapsed-input-bg;
     }
 
     & .hn-expand .hn-input .hn-input-default,
     & .hn-expand .hn-input .hn-input-active
     {
         min-height: 0;
-
-        top: 0;
-        right: 0;
-        position: absolute;
-
-        width: $hn-side-collapsed-input-size;
-        height: $hn-side-collapsed-input-size;
-        font-size: $hn-side-collapsed-input-font-size;
         
         margin: $hn-side-collapsed-input-margin;
         padding: $hn-side-collapsed-input-padding;
-
-        color: $hn-side-collapsed-input-color;
-        background: $hn-side-collapsed-input-bg;
+        
     }
+
+    & .hn-expand .hn-link:focus ~ .hn-input,
+    & .hn-expand .hn-item:hover .hn-input
+    {
+        color: $hn-side-collapsed-input-hover-color;
+        background: $hn-side-collapsed-input-hover-bg;
+    }
+
 }
 

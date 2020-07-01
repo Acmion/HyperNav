@@ -1,43 +1,57 @@
-function inIframe()
+function initializeThemeLoader()
 {
-    try
+    var themeButtons = document.querySelectorAll("#theme-button-container button");
+
+    for (var i = 0; i < themeButtons.length; i++)
     {
-        return window.top != window.self;
-    }
-    catch (e)
-    {
-        return true;
+        themeButtons[i].onclick = generateThemeButtonClickFunction(themeButtons[i]);
     }
 }
 
-function loadTheme()
+function generateThemeButtonClickFunction(button)
 {
-    var hyperNavThemeName = "Default";
-    var hyperNavThemeNameElement = document.getElementById("hyper-nav-theme-name-element");
-
-    if (inIframe())
+    return function ()
     {
-        var hash = document.location.hash;
-        hyperNavThemeName = decodeURIComponent(hash.substr(1));
+        loadTheme(button.dataset.theme);
+    };
+}
 
-        if (hash == "#Technical")
-        {
-            var stylesheetLinkElement = document.createElement("link");
-            stylesheetLinkElement.rel = "stylesheet";
-            stylesheetLinkElement.href = "../dist/themes/technical/variables.min.css";
+function loadTheme(theme)
+{
+    // Quite bad code
+    // Document grows and grows and grows
+    // Affects performance?
 
-            document.head.appendChild(stylesheetLinkElement);
-        }
-        else if (hash == "#DefaultMono")
-        {
-            var stylesheetLinkElement = document.createElement("link");
-            stylesheetLinkElement.rel = "stylesheet";
-            stylesheetLinkElement.href = "../dist/themes/default-mono/variables.min.css";
-
-            document.head.appendChild(stylesheetLinkElement);
-        }  
-    }
-
+    var hyperNavThemeName = theme;
+    var hyperNavThemeNameElement = document.getElementById("hyper-nav-theme-name-element");
     hyperNavThemeNameElement.innerHTML = "Theme: " + hyperNavThemeName;
+
+    if (theme == "Default")
+    {
+        var stylesheetLinkElement = document.createElement("link");
+        stylesheetLinkElement.rel = "stylesheet";
+        stylesheetLinkElement.href = "../dist/hyper-nav-css-vars.min.css";
+
+        document.head.appendChild(stylesheetLinkElement);
+    }
+    else if (theme == "Default Mono")
+    {
+        var stylesheetLinkElement = document.createElement("link");
+        stylesheetLinkElement.rel = "stylesheet";
+        stylesheetLinkElement.href = "../dist/themes/default-mono/variables.min.css";
+
+        document.head.appendChild(stylesheetLinkElement);
+    }  
+    else if (theme == "Technical")
+    {
+        var stylesheetLinkElement = document.createElement("link");
+        stylesheetLinkElement.rel = "stylesheet";
+        stylesheetLinkElement.href = "../dist/themes/technical/variables.min.css";
+
+        document.head.appendChild(stylesheetLinkElement);
+    }
+    
+    cssVars();
+
 }
 

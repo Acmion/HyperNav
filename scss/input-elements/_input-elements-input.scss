@@ -38,6 +38,11 @@
             background: $hn-input-active-hover-bg;
         }
     }
+
+    .hn-input-state:not(.hn-hide-desktop):not(.hn-input-state-none):checked ~ .hn-overlay:not(.hn-hide-desktop)
+    {
+        display: block;
+    }
 }
 
 @include hn-mobile
@@ -69,7 +74,7 @@
         }
     }
 
-    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-item .hn-input
+    .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked ~ .hn-item .hn-input
     {
         color: $hn-input-active-color;
         background: $hn-input-active-bg;
@@ -79,6 +84,11 @@
             color: $hn-input-active-hover-color;
             background: $hn-input-active-hover-bg;
         }
+    }
+
+    .hn-input-state:not(.hn-hide-mobile):not(.hn-input-state-none):checked ~ .hn-overlay:not(.hn-hide-mobile)
+    {
+        display: block;
     }
 }
 
@@ -90,10 +100,7 @@
     background: $hn-input-hover-bg;
 }
 
-.hn-input-state:not(.hn-input-state-none):checked ~ .hn-overlay
-{
-    display: block;
-}
+
 
 .hn-input-state:not(.hn-input-state-none):not(.hn-input-state-nav):not(.hn-input-state-side-container):checked ~ .hn-overlay
 {
@@ -107,6 +114,6 @@
     // with the nav button.
     .hn-input-state.hn-input-state-nav:checked ~ .hn-overlay
     {
-        display: none;
+        display: none !important;
     }
 }
