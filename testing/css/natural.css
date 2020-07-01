@@ -1,0 +1,31 @@
+#content-side-shadow-mobile
+{
+    display: none;
+    left: auto; 
+    right: 0; 
+    z-index: -1;
+}
+
+@media (max-width: 767px)
+{
+    #hn-side-sticky-container
+    {
+        position: fixed; 
+        margin-top: 0;
+    }
+
+    #content-side-shadow
+    {
+        display: none;
+    }
+
+    #content-side-shadow-mobile
+    {
+        display: block;
+    }
+
+    main
+    {
+        margin-left: 4.4rem;;
+    }
+}
