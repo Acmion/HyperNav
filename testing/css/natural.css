@@ -11,8 +11,10 @@
     #hn-side-sticky-container
     {
         position: fixed; 
-        margin-top: 0;
+        top: 0;
     }
+
+    
 
     #content-side-shadow
     {
@@ -27,5 +29,13 @@
     main
     {
         margin-left: 4.4rem;;
+    }
+}
+
+@media not screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (max-width: 767px)
+{
+    #hn-side-sticky-container
+    {
+        margin-top: var(--hn-top-height);
     }
 }

@@ -79,7 +79,7 @@ ul
     #hn-side-sticky-container
     {
         z-index: initial;
-        position: initial; 
+        position: static; 
         top: 0; 
         margin-top: var(--hn-top-height);
         height: 100%;
@@ -92,7 +92,7 @@ ul
 
     #hn-side-sticky-container .hn-side .hn-nav
     {
-        overflow: initial;
+        overflow: visible;
         max-height: 9999999999px;
     }
 }
@@ -100,7 +100,7 @@ ul
 #content-container,
 #content-hn-container
 {
-    padding: 1.6rem;
+    padding: 2.4rem;
 }
 
 #content-top-shadow
