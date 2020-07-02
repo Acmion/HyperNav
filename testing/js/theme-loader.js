@@ -34,11 +34,11 @@ function loadTheme(theme)
 
         document.head.appendChild(stylesheetLinkElement);
     }
-    else if (theme == "Default Mono")
+    else if (theme == "Highlight")
     {
         var stylesheetLinkElement = document.createElement("link");
         stylesheetLinkElement.rel = "stylesheet";
-        stylesheetLinkElement.href = "../dist/themes/default-mono/variables.min.css";
+        stylesheetLinkElement.href = "../dist/themes/highlight/variables.min.css";
 
         document.head.appendChild(stylesheetLinkElement);
     }  

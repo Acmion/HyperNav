@@ -9,12 +9,12 @@
     --hn-item-hover-bg: rgba(86, 86, 86, 1.00);
     --hn-item-hover-color: rgba(238, 239, 240, 1.00);
     
-    --hn-item-active-bg: rgba(246, 119, 119, 0.40);
-    --hn-item-active-color: var(--hn-color);
+    --hn-item-active-bg: rgba(0, 0, 0, 0.40);
+    --hn-item-active-color: rgba(255, 255, 255, 1.00);
     --hn-item-active-hover-bg: var(--hn-item-hover-bg);
     --hn-item-active-hover-color: var(--hn-item-hover-color);
 
-    --hn-item-active-child-bg: rgba(246, 119, 119, 0.20);
+    --hn-item-active-child-bg: rgba(0, 0, 0, 0.30);
     --hn-item-active-child-color: var(--hn-color);
     --hn-item-active-child-hover-bg: var(--hn-item-hover-bg);
     --hn-item-active-child-hover-color: var(--hn-item-hover-color);
@@ -34,5 +34,7 @@
     --hn-expand-expanded-item-active-child-hover-bg: var(--hn-item-active-child-hover-bg);
     --hn-expand-expanded-item-active-child-hover-color: var(--hn-item-active-child-hover-color);
 
-    --hn-overlay-bg: rgba(0, 0, 0, 0.40);
+
+
+    --hn-overlay-bg: rgba(0, 0, 0, 0.6);
 }

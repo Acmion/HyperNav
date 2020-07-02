@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
         <title>
             HyperNav Default Theme
@@ -15,18 +14,16 @@
         <link rel="stylesheet" href="../dist/hyper-nav.min.css" />
 
         <link rel="stylesheet" href="css/main.css" />
-        <link rel="stylesheet" href="css/natural.css" />
-
-        <script src="lib/css-vars-ponyfill/css-vars-ponyfill.min.js"></script>
-
-        <script src="js/theme-loader.js"></script>
 
     </head>
 
     <body>
 
         <nav class="hn-menu hn-top hn-fixed">
-            <input type="checkbox" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="hn-nav-cb">
+            <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="hn-nav-cb">
+            <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-0" id="hn-search-cb">
+            <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-1" id="hn-settings-cb">
+            <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-none" id="hn-none">
 
             <div class="hn-nav">
                 <div class="hn-section hn-section-brand">
@@ -43,21 +40,248 @@
                         </a>
                     </div>
 
-                    <div class="hn-spacer">
+                    <div class="hn-item">
+                        <a class="hn-link" href="#none">
+                            <span class="hn-icon">
+                                <i class="ri-home-3-line"></i>
+                            </span>
+                            <span class="hn-content">
+                                Home
+                            </span>
+                        </a>
                     </div>
 
-                    <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-nav-cb">
+                    <!-- ------- -->
+
+                    <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="hn-side-container-cb-1">
+
+                    <label class="hn-item hn-input hn-input-side-container" for="hn-side-container-cb-1">
                         <span class="hn-link">
+                            <span class="hn-icon">
+                                <i class="ri-side-bar-line"></i>
+                            </span>
                             <span class="hn-content">
-                                <span class="hn-input-active ">
-                                    <i class="ri-close-line"></i>
-                                </span>
-                                <span class="hn-input-default">
-                                    <i class="ri-menu-line"></i>
-                                </span>
+                                Side Menu 1
                             </span>
                         </span>
                     </label>
+
+
+                    <div class="hn-side-container hn-side-container-fixed">
+                        <nav class="hn-menu hn-side " style="width: 25rem;">
+                            <div class="hn-nav">
+                                <div class="hn-section hn-section-brand">
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-content">
+                                                Vehicles
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="hn-expand hn-no-hover">
+                                        <input type="checkbox" class="hn-input-state" id="hn-pickups-cb">
+                        
+                                        <label class="hn-item hn-input" for="hn-pickups-cb">
+                                            <span class="hn-link">
+                                                <span class="hn-content">
+                                                    Pickups
+                                                </span>
+                                            </span>
+                                            <span class="hn-input">
+                                                <span class="hn-input-default">
+                                                    <i class="ri-add-line"></i>
+                                                </span>
+                                                <span class="hn-input-active">
+                                                    <i class="ri-subtract-line"></i>
+                                                </span>
+                                            </span>
+                                        </label>
+                        
+                                        <div class="hn-expand-body">
+                                            <div class="hn-item">
+                                                <a class="hn-link" href="#none">
+                                                    <span class="hn-content">
+                                                        Huge
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="hn-item">
+                                                <a class="hn-link" href="#none">
+                                                    <span class="hn-content">
+                                                        Medium
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="hn-expand hn-no-hover">
+                                        <input type="checkbox" class="hn-input-state" id="hn-motorcycles-cb">
+                        
+                                        <label class="hn-item hn-input" for="hn-motorcycles-cb">
+                                            <span class="hn-link">
+                                                <span class="hn-content">
+                                                    Motorcycles
+                                                </span>
+                                            </span>
+                                            <span class="hn-input">
+                                                <span class="hn-input-default">
+                                                    <i class="ri-add-line"></i>
+                                                </span>
+                                                <span class="hn-input-active">
+                                                    <i class="ri-subtract-line"></i>
+                                                </span>
+                                            </span>
+                                        </label>
+                        
+                                        <div class="hn-expand-body">
+                                            <div class="hn-item">
+                                                <a class="hn-link" href="#none">
+                                                    <span class="hn-content">
+                                                        Classic
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="hn-item">
+                                                <a class="hn-link" href="#none">
+                                                    <span class="hn-content">
+                                                        Modern
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                    <div class="hn-expand hn-no-hover">
+                                        <input type="checkbox" class="hn-input-state" id="hn-bicycles-cb">
+                        
+                                        <div class="hn-item">
+                                            <a class="hn-link" href="#none">
+                                                <div class="hn-content">
+                                                    Bicycles
+                                                </div>
+                                            </a>
+                        
+                                            <label class="hn-input" for="hn-bicycles-cb">
+                                                <span class="hn-input-default">
+                                                    <i class="ri-add-line"></i>
+                                                </span>
+                                                <span class="hn-input-active">
+                                                    <i class="ri-subtract-line"></i>
+                                                </span>
+                                            </label>
+                                        </div>
+                        
+                                        <div class="hn-expand-body hn-no-hover">
+                                            <div class="hn-item">
+                                                <a class="hn-link" href="#none">
+                                                    <span class="hn-content">
+                                                        Mountain Bikes
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div class="hn-item">
+                                                <a class="hn-link" href="#none">
+                                                    <span class="hn-content">
+                                                        City Bikes
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
+                                </div>
+                            </div>
+                        </nav>
+
+                        <label class="hn-overlay" for="hn-side-container-cb-1">
+                        </label>
+                    </div>
+
+                    <!-- ------------- -->
+
+                    <!-- ------- -->
+                    
+                    <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="hn-side-container-cb-2">
+                    
+                    <label class="hn-item hn-input hn-input-side-container" for="hn-side-container-cb-2">
+                        <span class="hn-link">
+                            <span class="hn-icon">
+                                <i class="ri-side-bar-line"></i>
+                            </span>
+                            <span class="hn-content">
+                                Side Menu 2
+                            </span>
+                        </span>
+                    </label>
+                    
+                    <div class="hn-side-container hn-side-container-fixed hn-side-container-top-offset">
+                        <nav class="hn-menu hn-side " style="width: 25rem;">
+                            <div class="hn-nav">
+                                <div class="hn-section hn-section-brand">
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-content">
+                                                Biceps
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-content">
+                                                Triceps
+                                            </span>
+                                        </a>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </nav>
+                    
+                        <label class="hn-overlay hn-side-container-top-offset" for="hn-side-container-cb-2">
+                        </label>
+                    </div>
+                    
+                    <!-- ------------- -->
+
+                    <div class="hn-spacer">
+                    </div>
+
+                    <div class="hn-item hn-input hn-input-mode-1 hn-hide-desktop">
+                        <label class="hn-link hn-input-default hn-size-auto" for="hn-settings-cb">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-settings-3-line"></i>
+                            </span>
+                        </label>
+                    
+                        <label class="hn-link hn-input-active hn-size-auto" for="hn-none">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-close-line"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <label class="hn-item hn-input hn-input-mode-0 hn-hide-desktop" for="hn-search-cb">
+                        <span class="hn-link hn-input-default hn-size-auto">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-search-line"></i>
+                            </span>
+                        </span>
+                    </label>
+
+                    <div class="hn-item hn-input hn-input-nav hn-hide-desktop">
+                        <label class="hn-link hn-input-default hn-size-auto" for="hn-nav-cb">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-menu-line"></i>
+                            </span>
+                        </label>
+
+                        <label class="hn-link hn-input-active hn-size-auto" for="hn-none">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-close-line"></i>
+                            </span>
+                        </label>
+                    </div>
 
                 </div>
                 <div class="hn-section hn-section-body">
@@ -75,14 +299,14 @@
 
                     <div class="hn-expand hn-expand-mega">
                         <input type="checkbox" class="hn-input-state" id="hn-countries-cb">
-
+                    
                         <div class="hn-item">
                             <a class="hn-link" href="#none">
                                 <div class="hn-content">
                                     Countries
                                 </div>
                             </a>
-
+                    
                             <label class="hn-input" for="hn-countries-cb">
                                 <span class="hn-input-default">
                                     <i class="ri-add-line"></i>
@@ -91,7 +315,7 @@
                                     <i class="ri-subtract-line"></i>
                                 </span>
                             </label>
-
+                    
                         </div>
 
                         <div class="hn-expand-body">
@@ -164,19 +388,19 @@
                                 </div>
                             </div>
                         </div>
-
+                    
                     </div>
 
                     <div class="hn-expand">
                         <input type="checkbox" class="hn-input-state" id="hn-products-cb">
-
+                    
                         <div class="hn-item">
                             <a class="hn-link" href="#none">
                                 <div class="hn-content">
                                     Products
                                 </div>
                             </a>
-
+                    
                             <label class="hn-input hn-hide-mobile" for="hn-products-cb">
                                 <span class="hn-input-default">
                                     <i class="ri-add-line"></i>
@@ -185,7 +409,7 @@
                                     <i class="ri-subtract-line"></i>
                                 </span>
                             </label>
-
+                    
                             <label class="hn-input hn-hide-desktop" for="hn-products-cb">
                                 <span class="hn-input-default">
                                     <i class="ri-arrow-down-s-line"></i>
@@ -195,7 +419,7 @@
                                 </span>
                             </label>
                         </div>
-
+                    
                         <div class="hn-expand-body" style="width: 200px">
                             <div class="hn-item">
                                 <a class="hn-link" href="#none">
@@ -215,14 +439,14 @@
 
                             <div class="hn-expand">
                                 <input type="checkbox" class="hn-input-state" id="hn-power-tools-cb">
-
+                            
                                 <div class="hn-item">
                                     <a class="hn-link" href="#none">
                                         <div class="hn-content">
                                             Power Tools
                                         </div>
                                     </a>
-
+                            
                                     <label class="hn-input" for="hn-power-tools-cb">
                                         <span class="hn-input-default">
                                             <i class="ri-add-line"></i>
@@ -255,7 +479,7 @@
 
                     <div class="hn-expand hn-expand-center hn-no-hover">
                         <input type="checkbox" class="hn-input-state" id="hn-team-cb">
-
+                    
                         <label class="hn-item hn-input" for="hn-team-cb">
                             <span class="hn-link">
                                 <span class="hn-content">
@@ -271,7 +495,7 @@
                                 </span>
                             </span>
                         </label>
-
+                    
                         <div class="hn-expand-body" style="width: 200px">
                             <div class="hn-item">
                                 <a class="hn-link" href="#none">
@@ -306,14 +530,14 @@
 
                     <div class="hn-expand hn-expand-left">
                         <input type="checkbox" class="hn-input-state" id="hn-shipping-cb">
-
+                    
                         <div class="hn-item hn-active-child">
                             <a class="hn-link" href="#none">
                                 <div class="hn-content">
                                     Shipping
                                 </div>
                             </a>
-
+                        
                             <label class="hn-input" for="hn-shipping-cb">
                                 <span class="hn-input-default">
                                     <i class="ri-add-line"></i>
@@ -323,7 +547,7 @@
                                 </span>
                             </label>
                         </div>
-
+                    
                         <div class="hn-expand-body hn-expand-body-animation-delay" style="width: 200px">
                             <div class="hn-item hn-active">
                                 <a class="hn-link" href="#none">
@@ -348,14 +572,14 @@
                             </div>
                             <div class="hn-expand hn-expand-left">
                                 <input type="checkbox" class="hn-input-state" id="hn-shipping-solutions-cb">
-
+                            
                                 <div class="hn-item">
                                     <a class="hn-link" href="#none">
                                         <div class="hn-content">
                                             Solutions
                                         </div>
                                     </a>
-
+                                
                                     <label class="hn-input" for="hn-shipping-solutions-cb">
                                         <span class="hn-input-default">
                                             <i class="ri-add-line"></i>
@@ -365,7 +589,7 @@
                                         </span>
                                     </label>
                                 </div>
-
+                            
                                 <div class="hn-expand-body hn-expand-body-animation-delay">
                                     <div class="hn-item">
                                         <a class="hn-link" href="#none">
@@ -393,10 +617,165 @@
                         </div>
                     </div>
 
+                    <div class="hn-item hn-input hn-input-mode-1 hn-hide-mobile">
+                        <label class="hn-link hn-input-default hn-size-auto" for="hn-settings-cb">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-settings-3-line"></i>
+                            </span>
+                        </label>
+                    
+                        <label class="hn-link hn-input-active hn-size-auto" for="hn-none">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-close-line"></i>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <label class="hn-item hn-input hn-input-mode-0 hn-hide-mobile" for="hn-search-cb">
+                        <span class="hn-link hn-input-default hn-size-auto">
+                            <span class="hn-icon hn-size-auto">
+                                <i class="ri-search-line"></i>
+                            </span>
+                        </span>
+                    </label>
+
+
                 </div>
             </div>
 
-            <label class="hn-overlay" for="hn-nav-cb">
+            <div class="hn-mode hn-mode-0">
+                <div class="hn-mode-top">
+                    <div class="hn-nav">
+                        <div class="hn-section hn-section-brand">
+            
+                            <div class="hn-item hn-item-disabled" style="flex: 1">
+                                <div class="hn-link">
+                                    <div class="hn-content" style="width: 100%">
+                                        <div style="width: 100%; display: flex">
+                                            <input type="text" placeholder="Search" style="flex: 1">
+                                            <button>
+                                                Go
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <label class="hn-item hn-input hn-input-mode-0 " for="hn-none">
+                                <span class="hn-link">
+                                    <span class="hn-icon hn-size-auto">
+                                        <span class="hn-input-active hn-input-default">
+                                            <i class="ri-close-line"></i>
+                                        </span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hn-mode hn-mode-1">
+                <div class="hn-mode-top">
+                    <div class="hn-nav">
+                        <div class="hn-section hn-section-brand">
+                            <label class="hn-item hn-input hn-input-mode-0 " for="hn-none">
+                                <span class="hn-link">
+                                    <span class="hn-content">
+                                        Settings
+                                    </span>
+                                </span>
+                            </label>
+
+                            <div class="hn-spacer">
+                            </div>
+
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <div class="hn-content">
+                                        Account
+                                    </div>
+                                </a>
+                            </div>
+
+                            <label class="hn-item hn-input hn-input-mode-0 " for="hn-none">
+                                <span class="hn-link">
+                                    <span class="hn-icon hn-size-auto">
+                                        <span class="hn-input-active hn-input-default">
+                                            <i class="ri-close-line"></i>
+                                        </span>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="hn-mode-content hn-nav">
+                    <div class="hn-section hn-section-body">
+                        <div class="hn-expand">
+                            <input type="checkbox" class="hn-input-state" id="hn-cb-setting-1">
+                            
+                            <label class="hn-item hn-input" for="hn-cb-setting-1">
+                                <span class="hn-link">
+                                    <span class="hn-content">
+                                        Checkbox Setting
+                                    </span>
+                                </span>
+                                <span class="hn-input">
+                                    <span class="hn-input-default">
+                                        <i class="ri-checkbox-blank-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-checkbox-line"></i>
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="hn-expand">
+                            <input type="checkbox" class="hn-input-state" id="hn-account-cb">
+                        
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <div class="hn-content">
+                                        Account
+                                    </div>
+                                </a>
+                        
+                                <label class="hn-input" for="hn-account-cb">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+                        
+                            <div class="hn-expand-body">
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Information
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Orders
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            
+                </div>
+            </div>
+
+            <label class="hn-overlay" for="hn-none">
             </label>
         </nav>
 
@@ -405,31 +784,13 @@
                 <div id="hn-side-sticky-container">
                     <nav class="hn-menu hn-side hn-height-100">
                         <!-- The collapsible state element. -->
-                        <input type="checkbox" class="hn-input-state hn-input-state-nav hn-hide-mobile" id="hn-side-cb" checked>
-                        <input type="checkbox" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="hn-side-mobile-cb">
+                        <input type="checkbox" class="hn-input-state hn-input-state-nav" id="hn-side-cb" checked>
 
-                        
                         <div class="hn-nav">
                             <div class="hn-section hn-section-brand">
 
                                 <!-- The collapsible state input element. -->
-                                <label class="hn-item hn-input hn-input-nav hn-hide-mobile" for="hn-side-cb">
-                                    <span class="hn-link">
-                                        <span class="hn-icon">
-                                            <span class="hn-input-default">
-                                                <i class="ri-logout-box-r-line"></i>
-                                            </span>
-                                            <span class="hn-input-active">
-                                                <i class="ri-logout-box-line"></i>
-                                            </span>
-                                        </span>
-                                        <span class="hn-content">
-                                            Collapse
-                                        </span>
-                                    </span>
-                                </label>
-
-                                <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-side-mobile-cb">
+                                <label class="hn-item hn-input hn-input-nav" for="hn-side-cb">
                                     <span class="hn-link">
                                         <span class="hn-icon">
                                             <span class="hn-input-default">
@@ -458,7 +819,7 @@
 
                                 <div class="hn-expand">
                                     <input type="checkbox" class="hn-input-state" id="hn-nebulas-cb">
-
+                                
                                     <label class="hn-item hn-input" for="hn-nebulas-cb">
                                         <span class="hn-link">
                                             <span class="hn-icon">
@@ -477,7 +838,7 @@
                                             </span>
                                         </span>
                                     </label>
-
+                                
                                     <div class="hn-expand-body">
                                         <div class="hn-item">
                                             <a class="hn-link" href="#none">
@@ -514,7 +875,7 @@
 
                                 <div class="hn-expand">
                                     <input type="checkbox" class="hn-input-state" id="hn-stars-cb">
-
+                                
                                     <label class="hn-item hn-input" for="hn-stars-cb">
                                         <span class="hn-link">
                                             <span class="hn-icon">
@@ -533,11 +894,11 @@
                                             </span>
                                         </span>
                                     </label>
-
+                                
                                     <div class="hn-expand-body">
                                         <div class="hn-expand">
                                             <input type="checkbox" class="hn-input-state" id="hn-stars-milky-way-cb">
-
+                                        
                                             <label class="hn-item hn-input" for="hn-stars-milky-way-cb">
                                                 <span class="hn-link">
                                                     <span class="hn-icon">
@@ -556,7 +917,7 @@
                                                     </span>
                                                 </span>
                                             </label>
-
+                                        
                                             <div class="hn-expand-body">
                                                 <div class="hn-item">
                                                     <a class="hn-link" href="#none">
@@ -583,7 +944,7 @@
 
                                         <div class="hn-expand">
                                             <input type="checkbox" class="hn-input-state" id="hn-stars-other-cb">
-
+                                        
                                             <label class="hn-item hn-input" for="hn-stars-other-cb">
                                                 <span class="hn-link">
                                                     <span class="hn-icon">
@@ -602,7 +963,7 @@
                                                     </span>
                                                 </span>
                                             </label>
-
+                                        
                                             <div class="hn-expand-body">
                                                 <div class="hn-item">
                                                     <a class="hn-link" href="#none">
@@ -641,7 +1002,7 @@
 
                                 <div class="hn-expand">
                                     <input type="checkbox" class="hn-input-state" id="hn-planets-cb">
-
+                                
                                     <div class="hn-item">
                                         <a class="hn-link" href="#none">
                                             <span class="hn-icon">
@@ -651,7 +1012,7 @@
                                                 Planets
                                             </div>
                                         </a>
-
+                                
                                         <label class="hn-input" for="hn-planets-cb">
                                             <span class="hn-input-default">
                                                 <i class="ri-add-line"></i>
@@ -661,7 +1022,7 @@
                                             </span>
                                         </label>
                                     </div>
-
+                                
                                     <div class="hn-expand-body hn-expand-body-animation-delay">
                                         <div class="hn-item">
                                             <a class="hn-link" href="#none">
@@ -710,7 +1071,7 @@
 
                                 <div class="hn-expand">
                                     <input type="checkbox" class="hn-input-state" id="hn-multiline-cb">
-
+                                
                                     <div class="hn-item">
                                         <a class="hn-link" href="#none">
                                             <span class="hn-icon">
@@ -721,7 +1082,7 @@
                                                 long
                                             </div>
                                         </a>
-
+                                
                                         <label class="hn-input" for="hn-multiline-cb">
                                             <span class="hn-input-default">
                                                 <i class="ri-add-line"></i>
@@ -731,7 +1092,7 @@
                                             </span>
                                         </label>
                                     </div>
-
+                                
                                     <div class="hn-expand-body hn-expand-body-animation-delay">
                                         <div class="hn-item">
                                             <a class="hn-link" href="#none">
@@ -768,13 +1129,7 @@
 
                             </div>
                         </div>
-
-                        <label class="hn-overlay hn-hide-desktop" style="z-index: -1;" for="hn-side-mobile-cb">
-                        </label>
-                        
                     </nav>
-                    <div id="content-side-shadow-mobile"></div>
-
                 </div>
             </div>
 
@@ -782,30 +1137,34 @@
                 <div id="content-container" class="container hn-mobile-width-100">
 
                     <h1>
-                        HyperNav Natural
+                        HyperNav No JavaScript
                     </h1>
                     <h2 id="hyper-nav-theme-name-element">
                         Theme: Default
                     </h2>
                     <p>
-                        This is an example that showcases a natural menu layout built in HyperNav.
-                        The layout contains some inconsistencies (such as different types of dropdown menus) 
-                        for complete coverage. This layout should be extended if needed and used as a 
-                        testing ground for HyperNav.
+                        This an example that showcases nearly everything that HyperNav is capable of.
+                        The layout is relatively complex and contains some inconsistencies 
+                        (such as different types of dropdown menus) for complete coverage. This 
+                        layout should be extended if needed and used as the main testing ground
+                        for HyperNav. 
                     </p>
                     <p id="color-notice">
-                        The complete spectrum of color options, which can easily be controlled by
+                        The complete spectrum of color options, which can easily be controlled by 
                         variables, is not showcased in the default theme. See the technical theme
                         for a more complete assessment of how colors can be utilized. Note that the technical theme
-                        is also incomplete in regard to what can be achieved with HyperNav from a coloring
+                        is also incomplete in regard to what can be achieved with HyperNav from a coloring 
                         perspective.
                     </p>
                     <p>
-                        This example is keyboard accessible.
+                        This example is not completely keyboard accessible, due to the usage of modes
+                        in the top navigation bar and some other settings. Accessibility could be implemented
+                        with JavaScript. See more information in the <a href="https://acmion.com">documentation</a>.
                     </p>
                     <p>
-                        <strong>Note:</strong> No JavaScript, except a CSS variable ponyfill for IE11 and theme
-                        switching logic, is utilized on this page. Everything is built with HTML and CSS.
+                        <strong>Note:</strong> No JavaScript is utilized on this page. Everything is built with HTML and CSS.
+                        This page will not work on IE11, due to the usage of CSS variables. Compiling HyperNav from source
+                        with only SCSS variables is possible, thus, enabling IE11 functionality.
                     </p>
 
                     <br />
@@ -816,14 +1175,26 @@
                         Important
                     </h2>
                     <p>
-                        This page should be viewed so that:
+                        This page showcases as much as possible. This means that there is lots of
+                        content, inconsistencies and mismatches on this page. Due to the amount of content,
+                        this page should be viewed so that either:
                         <strong>
                             <ul>
                                 <li>
-                                    Viewport width &gt;= 250px
+                                    Viewport width &gt;= 1120px
+                                </li>
+                                <li>
+                                    Or
+                                </li>
+                                <li>
+                                    680px &lt;= Viewport width &lt;= 767px
                                 </li>
                             </ul>
                         </strong>
+
+                        The mobile-desktop breakpoint for HyperNav is, by default, at 768px and could be changed
+                        in your own project if necessary. However, for this page the default values for HyperNav
+                        will be used. 
                     </p>
 
                     <br />
@@ -835,13 +1206,13 @@
                     </h2>
 
                     <p>
-                        <a href="https://acmion.com" target="_parent">
+                        <a href="https://acmion.com">
                             HyperNav documentation
                         </a>
 
                         <br />
 
-                        <a href="https://acmion.com" target="_parent">
+                        <a href="https://acmion.com">
                             Acmion
                         </a>
                     </p>
@@ -856,15 +1227,15 @@
                         <a href="complete.html">
                             HyperNav Complete
                         </a>
-                    
+                        
                         <br />
-                    
+                        
                         <a href="natural.html">
                             HyperNav Natural
                         </a>
 
                         <br />
-                        
+
                         <a href="no-js.html">
                             HyperNav No JavaScript
                         </a>
@@ -877,23 +1248,9 @@
                     <h2>
                         HyperNav Themes
                     </h2>
-
+                    
                     <p id="theme-button-container">
-                        <button data-theme="Default">
-                            Default
-                        </button>
-
-                        <span class="theme-h-space"></span>
-
-                        <button data-theme="Highlight">
-                            Highlight
-                        </button>
-
-                        <span class="theme-h-space"></span>
-
-                        <button data-theme="Technical">
-                            Technical
-                        </button>
+                        Switching themes not possible without JavaScript. 
                     </p>
                     <br />
 
@@ -919,10 +1276,10 @@
                             Split Button
                         </h4>
                         <p>
-                            A button that has a link and a secondary button. These items
-                            can be navigated to. Note that all the links on this page
+                            A button that has a link and a secondary button. These items 
+                            can be navigated to. Note that all the links on this page 
                             have <strong>href="#none"</strong>, which means that no navigation
-                            will occur.
+                            will occur. 
                         </p>
 
                         <h4>
@@ -942,8 +1299,8 @@
                             Top Navigation Menu
                         </h3>
                         <p>
-                            The top navigation menu is a standard navigation menu that supports a wide
-                            variety of content.
+                            The top navigation menu is a standard navigation menu that supports a wide 
+                            variety of content. 
                         </p>
 
                         <h4>
@@ -964,7 +1321,7 @@
                             Side Menu 2
                         </h4>
                         <p>
-                            Toggles the visibility of a side menu that is offsetted from the top. Not really a
+                            Toggles the visibility of a side menu that is offsetted from the top. Not really a 
                             good combination with the hamburger menu on the current page, but the menu is still
                             showcased for coverage.
                         </p>
@@ -1001,7 +1358,7 @@
                             Shipping
                         </h4>
                         <p>
-                            Dropdown menu that expands to the left. Delay animation. Split button. Child item (National) is marked
+                            Dropdown menu that expands to the left. Delay animation. Split button. Child item (National) is marked 
                             as active, which should represent the currently active page.
                         </p>
 
@@ -1028,7 +1385,7 @@
 
                         <br />
                         <br />
-
+                        
                         <!-- ------------------ -->
 
                         <h3>
@@ -1098,7 +1455,7 @@
                             Right Side Navigation Menu (Centered on mobile)
                         </h3>
                         <p>
-                            A standard vertical navigation menu without anything too fancy. The menu
+                            A standard vertical navigation menu without anything too fancy. The menu 
                             does support icons, but they are not as critical as in the collapsible
                             side menu.
                         </p>
@@ -1109,21 +1466,21 @@
                         <p>
                             Navigation item without an icon.
                         </p>
-
+                        
                         <h4>
                             Roses
                         </h4>
                         <p>
                             Dropdown menu with one sublevel. Full button. No icon.
                         </p>
-
+                        
                         <h4>
                             Orchids
                         </h4>
                         <p>
                             Dropdown menu with one sublevel. Full button. No icon.
                         </p>
-
+                        
                         <h4>
                             Lilies
                         </h4>
@@ -1146,10 +1503,10 @@
                                         </span>
                                     </a>
                                 </div>
-
+                    
                                 <div class="hn-expand">
                                     <input type="checkbox" class="hn-input-state" id="hn-roses-cb">
-
+                    
                                     <label class="hn-item hn-input" for="hn-roses-cb">
                                         <span class="hn-link">
                                             <span class="hn-content">
@@ -1165,7 +1522,7 @@
                                             </span>
                                         </span>
                                     </label>
-
+                    
                                     <div class="hn-expand-body">
                                         <div class="hn-item">
                                             <a class="hn-link" href="#none">
@@ -1183,10 +1540,10 @@
                                         </div>
                                     </div>
                                 </div>
-
+                    
                                 <div class="hn-expand">
                                     <input type="checkbox" class="hn-input-state" id="hn-orchids-cb">
-
+                    
                                     <label class="hn-item hn-input" for="hn-orchids-cb">
                                         <span class="hn-link">
                                             <span class="hn-content">
@@ -1202,7 +1559,7 @@
                                             </span>
                                         </span>
                                     </label>
-
+                                    
                                     <div class="hn-expand-body">
                                         <div class="hn-item">
                                             <a class="hn-link" href="#none">
@@ -1220,17 +1577,17 @@
                                         </div>
                                     </div>
                                 </div>
-
+                    
                                 <div class="hn-expand">
                                     <input type="checkbox" class="hn-input-state" id="hn-lilies-cb">
-
+                    
                                     <div class="hn-item">
                                         <a class="hn-link" href="#none">
                                             <div class="hn-content">
                                                 Lilies
                                             </div>
                                         </a>
-
+                    
                                         <label class="hn-input" for="hn-lilies-cb">
                                             <span class="hn-input-default">
                                                 <i class="ri-add-line"></i>
@@ -1240,7 +1597,7 @@
                                             </span>
                                         </label>
                                     </div>
-
+                    
                                     <div class="hn-expand-body hn-expand-body-animation-delay">
                                         <div class="hn-item">
                                             <a class="hn-link" href="#none">
@@ -1258,7 +1615,7 @@
                                         </div>
                                     </div>
                                 </div>
-
+                    
                             </div>
                         </div>
                     </nav>
@@ -1268,15 +1625,8 @@
                 <div id="content-side-shadow"></div>
 
             </main>
-
+            
 
         </div>
-
-        <script>
-            initializeThemeLoader();
-            cssVars();
-        </script>
-
     </body>
-
 </html>

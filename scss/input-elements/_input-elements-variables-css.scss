@@ -1,11 +1,10 @@
 :root
 {
+    --hn-input-bg: transparent;
+    --hn-input-color: inherit;
 
-    --hn-input-bg: rgba(246, 119, 119, 1.00);
-    --hn-input-color: rgba(255, 255, 255, 1.00);
-
-    --hn-input-hover-bg: rgba(244, 83, 83, 1.00);
-    --hn-input-hover-color: var(--hn-input-color);
+    --hn-input-hover-bg: rgba(0, 0, 0, 0.2);
+    --hn-input-hover-color: inherit;
 
     --hn-input-active-bg: var(--hn-input-bg);
     --hn-input-active-color: var(--hn-input-color);
