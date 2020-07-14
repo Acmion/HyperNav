@@ -190,6 +190,10 @@
     justify-content: center;
 }
 
+.hn-content
+{
+    flex-direction: column;
+}
 
 .hn-content::after 
 {

@@ -4,7 +4,7 @@ HyperNav is an advanced and interactive navigation framework that works without 
 ## Demo
 [HyperNav Complete](https://acmion.github.io/HyperNav/testing/complete.html)  
 [HyperNav Natural](https://acmion.github.io/HyperNav/testing/natural.html)  
-[HyperNav No JavaScript*](https://acmion.github.io/HyperNav/testing/natural.html)  
+[HyperNav No JavaScript*](https://acmion.github.io/HyperNav/testing/no-js.html)  
 
 *HyperNav does not depend on any JavaScript, but currently switching the theme in the demos is implemented with JS. "HyperNav No JavaScript" has no JS whatsoever, which means that theme switching is not possible. 
 
