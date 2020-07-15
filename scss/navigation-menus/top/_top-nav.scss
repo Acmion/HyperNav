@@ -154,6 +154,11 @@
     {
         width: $hn-top-icon-width;
     }
+
+    & .hn-content
+    {
+        align-items: flex-start;
+    }
 }
 
 
