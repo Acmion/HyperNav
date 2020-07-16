@@ -7,7 +7,7 @@
 .hn-menu
 {
     position: relative;
-    display: inline-flex;
+    display: flex;
     box-sizing: border-box;
 
     -webkit-touch-callout: none; 
@@ -190,6 +190,8 @@
     justify-content: center;
 }
 
+// Bold text displacement fix
+
 .hn-content
 {
     flex-direction: column;
@@ -197,13 +199,27 @@
 
 .hn-content::after 
 {
-    // Bold text displacement fix
     height: 0;
     content: attr(data-hn-content);
     font-weight: bold;
     color: transparent;
     overflow: hidden;
     visibility: hidden;
+}
+
+// Bold text displacement fix does not work on IE11 => Disable it
+
+@include hn-ie11
+{
+    .hn-content
+    {
+        flex-direction: row;
+    }
+
+    .hn-content::after 
+    {
+        display: none;
+    }
 }
 
 .hn-link,

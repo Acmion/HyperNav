@@ -11,7 +11,7 @@
 
 .hn-side > .hn-nav
 {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
 
     font-size: $hn-side-font-size;
