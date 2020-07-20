@@ -530,8 +530,11 @@
                 for (var i = 0; i < hnLinks.length; i++)
                 {
                     var hnLink = hnLinks[i];
-                    hnLink.onclick = onHnLinkClickGenerator(hnLink);
-                    hnLink.href = "#" + hnLink.querySelector(".hn-content").innerText.trim().replace(/ /g, "-");
+                    if(hnLink.tagName == "A")
+                    {
+                        hnLink.onclick = onHnLinkClickGenerator(hnLink);
+                        hnLink.href = "#" + hnLink.querySelector(".hn-content").innerText.trim().replace(/ /g, "-");
+                    }
                 }
 
                 for (var i = 0; i < hnInputs.length; i++)
@@ -548,7 +551,7 @@
             {
                 return function ()
                 {
-                    var stateElement = hnInput.parentElement.parentElement.querySelector(".hn-input-state");
+                    var stateElement = document.getElementById(hnInput.getAttribute("for"));
                     stateElement.onfocus = onHnStateElementFocusGenerator(stateElement);
                 };
             }

@@ -520,8 +520,11 @@
                 for (var i = 0; i < hnLinks.length; i++)
                 {
                     var hnLink = hnLinks[i];
-                    hnLink.onclick = onHnLinkClickGenerator(hnLink);
-                    hnLink.href = "#" + hnLink.querySelector(".hn-content").innerText.trim().replace(/ /g, "-");
+                    if (hnLink.tagName == "A")
+                    {
+                        hnLink.onclick = onHnLinkClickGenerator(hnLink);
+                        hnLink.href = "#" + hnLink.querySelector(".hn-content").innerText.trim().replace(/ /g, "-");
+                    }
                 }
 
                 for (var i = 0; i < hnFullButtons.length; i++)
@@ -538,7 +541,7 @@
             {
                 return function ()
                 {
-                    var hnFullButtonStateElement = hnFullButton.parentElement.querySelector(".hn-input-state");
+                    var hnFullButtonStateElement = document.getElementById(hnFullButton.getAttribute("for"));
                     hnFullButtonStateElement.onfocus = onHnFullButtonStateElementFocusGenerator(hnFullButtonStateElement);
                 };
             }
