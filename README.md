@@ -13,7 +13,7 @@ HyperNav is an advanced and interactive navigation framework that works without 
 These demos relate to new(at least to the developer) UI and UX concepts regarding navigation menus, which can be created with HyperNav. HyperNav is not
 the central piece of these demos, which is why they should primarily be evaluated from an UI and UX perspective. 
 
-[Nested Iconified Side Navigation Menu (Full Button Demo)](https://acmion.github.io/HyperNav/testing/nested-iconified-side-nav-menu-full-buttons.html)
+[Nested Iconified Side Navigation Menu (Full Button Demo)](https://acmion.github.io/HyperNav/testing/nested-iconified-side-nav-menu-full-buttons.html)  
 [Nested Iconified Side Navigation Menu (Split Button Demo)](https://acmion.github.io/HyperNav/testing/nested-iconified-side-nav-menu-split-buttons.html)
 
 ## Documentation
