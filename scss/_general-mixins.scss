@@ -24,10 +24,22 @@
 
 @mixin hn-expand-expanded-cb
 {
-    .hn-expand > .hn-input-state:checked
+    @include hn-desktop
     {
-        @content;
+        .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked
+        {
+            @content;
+        }
     }
+
+    @include hn-mobile()
+    {
+        .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked
+        {
+            @content;
+        }
+    }
+    
 }
 
 @mixin hn-expand-expanded-hover
@@ -44,10 +56,13 @@
 
 @mixin hn-expand-body-expanded
 {
-    .hn-expand > .hn-input-state:checked ~ .hn-expand-body
+    @include hn-expand-expanded-cb
     {
-        @content;
-    }
+        & ~ .hn-expand-body
+        {
+            @content;
+        }
+    } 
     
     @include hn-desktop
     {
