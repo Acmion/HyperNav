@@ -14,7 +14,7 @@
     }
 
     // Show also on input checked
-    .hn-top .hn-expand > .hn-input-state:checked ~ .hn-expand-body-animation-delay
+    .hn-top .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-expand-body-animation-delay
     {
         visibility: visible;
     }
