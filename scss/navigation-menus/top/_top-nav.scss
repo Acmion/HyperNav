@@ -159,6 +159,8 @@
     {
         align-items: flex-start;
     }
+
+    
 }
 
 
@@ -174,6 +176,41 @@
     .hn-top .hn-expand-body .hn-content
     {
         align-items: flex-start;
+    }
+
+    // On desktop, allow hn-input within hn-link (the entire button is a link, but looks the same as a split button)
+    // TODO: Generalize also for .hn-side??
+    .hn-top .hn-link 
+    {
+        // Disable hover color changes
+        & .hn-input
+        {
+            color: inherit !important;
+            background: inherit !important;
+        }
+
+        // Set top level hn-input-* height
+        & .hn-input-active,
+        & .hn-input-default
+        {
+            height: calc(var(--hn-top-item-min-height) - var(--hn-top-expand-link-padding-top) - var(--hn-top-expand-link-padding-bottom));
+        }
+    }
+
+    // Sub levels auto height
+    .hn-top .hn-nav > .hn-section > .hn-expand > .hn-item .hn-link
+    {
+        & .hn-input-active,
+        & .hn-input-default
+        {
+            height: auto;
+        }
+    }
+
+    // Align hn-input to top
+    .hn-top .hn-expand .hn-expand .hn-item .hn-link .hn-input
+    {
+        align-self: flex-start;
     }
 }
 
