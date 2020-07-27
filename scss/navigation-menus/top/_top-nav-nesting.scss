@@ -6,7 +6,8 @@
 
         @for $i from 1 through $hn-nesting-max-depth  
         {
-            & #{$expand-selector} .hn-link
+            & #{$expand-selector} .hn-link,
+            & #{$expand-selector} .hn-expand .hn-link
             {
                 padding-left: calc(#{$i} * #{$hn-top-nesting-indentation} + #{$hn-top-link-padding-left});
             }
@@ -22,7 +23,8 @@
 
     @for $i from 1 through $hn-nesting-max-depth  
     {
-        & #{$expand-selector} .hn-link
+        & #{$expand-selector} .hn-link,
+        & #{$expand-selector} .hn-expand .hn-link
         {
             padding-left: calc(#{$i} * #{$hn-top-nesting-indentation} + #{$hn-top-link-padding-left});
         }

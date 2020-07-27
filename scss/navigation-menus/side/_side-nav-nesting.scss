@@ -4,7 +4,9 @@
 
     @for $i from 1 through $hn-nesting-max-depth  
     {
-        & #{$expand-selector} .hn-item .hn-link
+        & #{$expand-selector} .hn-link,
+        & #{$expand-selector} .hn-expand .hn-link
+
         {
             padding-left: calc(#{$i} * #{$hn-side-nesting-indentation} + #{$hn-side-link-padding-left});
         }
