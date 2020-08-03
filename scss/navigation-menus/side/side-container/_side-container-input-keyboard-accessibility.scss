@@ -1,6 +1,9 @@
-.hn-input-state-side-container:focus ~ .hn-input-side-container,
-.hn-input-state-side-container:focus ~ .hn-side-container .hn-input-side-container
+.hn-menu:not(.hn-menu-no-focus)
 {
-    color: $hn-item-hover-color;
-    background: $hn-item-hover-bg;  
+    .hn-input-state-side-container:focus ~ .hn-input-side-container,
+    .hn-input-state-side-container:focus ~ .hn-side-container .hn-input-side-container
+    {
+        color: $hn-item-hover-color;
+        background: $hn-item-hover-bg;  
+    }
 }

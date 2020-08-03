@@ -1,8 +1,11 @@
-@for $i from 0 through $hn-mode-count - 1
+.hn-menu:not(.hn-menu-no-focus)
 {
-    .hn-input-state-mode-#{$i}:focus ~ .hn-nav .hn-input-mode-#{$i}
+    @for $i from 0 through $hn-mode-count - 1
     {
-        color: $hn-item-hover-color;
-        background: $hn-item-hover-bg;  
+        .hn-input-state-mode-#{$i}:focus ~ .hn-nav .hn-input-mode-#{$i}
+        {
+            color: $hn-item-hover-color;
+            background: $hn-item-hover-bg;  
+        }
     }
 }

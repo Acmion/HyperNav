@@ -128,12 +128,24 @@
         
     }
 
-    & .hn-expand .hn-link:focus ~ .hn-input,
     & .hn-expand .hn-item:hover .hn-input
     {
+        // Same 1
         color: $hn-side-collapsed-input-hover-color;
         background: $hn-side-collapsed-input-hover-bg;
     }
 
 }
 
+.hn-menu:not(.hn-menu-no-focus)
+{
+    @include hn-side-collapsed 
+    {
+        & .hn-expand .hn-link:focus ~ .hn-input
+        {
+            // Same 1
+            color: $hn-side-collapsed-input-hover-color;
+            background: $hn-side-collapsed-input-hover-bg;
+        }
+    }
+}

@@ -1,83 +1,87 @@
-@include hn-desktop
+.hn-menu:not(.hn-menu-no-focus)
 {
-    .hn-expand > .hn-input-state:not(.hn-hide-desktop):focus ~ .hn-item
+    @include hn-desktop
     {
-        &,
-        &.hn-input
+        .hn-expand > .hn-input-state:not(.hn-hide-desktop):focus ~ .hn-item
         {
-            color: $hn-item-hover-color !important;
-            background: $hn-item-hover-bg !important;
+            &,
+            &.hn-input
+            {
+                color: $hn-item-hover-color !important;
+                background: $hn-item-hover-bg !important;
+            }
+
+            &.hn-active,
+            &.hn-active.hn-input
+            {
+                color: $hn-item-active-hover-color !important;
+                background: $hn-item-active-hover-bg !important;
+            }
+
+            &.hn-active-child,
+            &.hn-active-child.hn-input
+            {
+                color: $hn-item-active-child-hover-color !important;
+                background: $hn-item-active-child-hover-bg !important;
+            }
+
+            & .hn-input
+            {
+                color: $hn-input-hover-color !important;
+                background: $hn-input-hover-bg !important;
+            }
         }
 
-        &.hn-active,
-        &.hn-active.hn-input
+        .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked:focus ~ .hn-item .hn-input
         {
-            color: $hn-item-active-hover-color !important;
-            background: $hn-item-active-hover-bg !important;
-        }
-
-        &.hn-active-child,
-        &.hn-active-child.hn-input
-        {
-            color: $hn-item-active-child-hover-color !important;
-            background: $hn-item-active-child-hover-bg !important;
-        }
-
-        & .hn-input
-        {
-            color: $hn-input-hover-color !important;
-            background: $hn-input-hover-bg !important;
+            color: $hn-input-active-hover-color !important;
+            background: $hn-input-active-hover-bg !important;
         }
     }
 
-    .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked:focus ~ .hn-item .hn-input
+    @include hn-mobile
     {
-        color: $hn-input-active-hover-color !important;
-        background: $hn-input-active-hover-bg !important;
-    }
-}
+        .hn-expand > .hn-input-state:not(.hn-hide-mobile):focus ~ .hn-item
+        {
+            &,
+            &.hn-input
+            {
+                color: $hn-item-hover-color !important;
+                background: $hn-item-hover-bg !important;
+            }
 
-@include hn-mobile
-{
-    .hn-expand > .hn-input-state:not(.hn-hide-mobile):focus ~ .hn-item
+            &.hn-active,
+            &.hn-active.hn-input
+            {
+                color: $hn-item-active-hover-color !important;
+                background: $hn-item-active-hover-bg !important;
+            }
+
+            &.hn-active-child,
+            &.hn-active-child.hn-input
+            {
+                color: $hn-item-active-child-hover-color !important;
+                background: $hn-item-active-child-hover-bg !important;
+            }
+
+            & .hn-input
+            {
+                color: $hn-input-hover-color !important;
+                background: $hn-input-hover-bg !important;
+            }
+        }
+
+        .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked:focus ~ .hn-item .hn-input
+        {
+            color: $hn-input-active-hover-color !important;
+            background: $hn-input-active-hover-bg !important;
+        }
+    }
+
+    .hn-input-state-nav:focus ~ .hn-nav .hn-input-nav
     {
-        &,
-        &.hn-input
-        {
-            color: $hn-item-hover-color !important;
-            background: $hn-item-hover-bg !important;
-        }
-
-        &.hn-active,
-        &.hn-active.hn-input
-        {
-            color: $hn-item-active-hover-color !important;
-            background: $hn-item-active-hover-bg !important;
-        }
-
-        &.hn-active-child,
-        &.hn-active-child.hn-input
-        {
-            color: $hn-item-active-child-hover-color !important;
-            background: $hn-item-active-child-hover-bg !important;
-        }
-
-        & .hn-input
-        {
-            color: $hn-input-hover-color !important;
-            background: $hn-input-hover-bg !important;
-        }
+        color: $hn-item-hover-color !important;
+        background: $hn-item-hover-bg !important;
     }
 
-    .hn-expand > .hn-input-state:not(.hn-hide-mobile):checked:focus ~ .hn-item .hn-input
-    {
-        color: $hn-input-active-hover-color !important;
-        background: $hn-input-active-hover-bg !important;
-    }
-}
-
-.hn-input-state-nav:focus ~ .hn-nav .hn-input-nav
-{
-    color: $hn-item-hover-color !important;
-    background: $hn-item-hover-bg !important;
 }
