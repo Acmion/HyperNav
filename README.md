@@ -17,7 +17,7 @@ the central piece of these demos, which is why they should primarily be evaluate
 [Nested Iconified Side Navigation Menu (Split Button Demo)](https://acmion.github.io/HyperNav/testing/nested-iconified-side-nav-menu-split-buttons.html)
 
 ## Documentation
-The documentation is hosted on [hyper-nav.acmion.com](hyper-nav.acmion.com).  
+The documentation is hosted on [https://hyper-nav.acmion.com](https://hyper-nav.acmion.com).  
 The documenation source code repository is [https://github.com/Acmion/HyperNav-Documentation/](https://github.com/Acmion/HyperNav-Documentation/).
 
 ## Building From Source
