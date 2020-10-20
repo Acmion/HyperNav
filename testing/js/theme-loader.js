@@ -30,7 +30,7 @@ function loadTheme(theme)
     {
         var stylesheetLinkElement = document.createElement("link");
         stylesheetLinkElement.rel = "stylesheet";
-        stylesheetLinkElement.href = "../dist/hyper-nav-css-vars.min.css";
+        stylesheetLinkElement.href = "../dist/hyper-nav-default.min.css";
 
         document.head.appendChild(stylesheetLinkElement);
     }
@@ -41,12 +41,20 @@ function loadTheme(theme)
         stylesheetLinkElement.href = "../dist/themes/highlight/variables.min.css";
 
         document.head.appendChild(stylesheetLinkElement);
-    }  
+    }
     else if (theme == "Technical")
     {
         var stylesheetLinkElement = document.createElement("link");
         stylesheetLinkElement.rel = "stylesheet";
         stylesheetLinkElement.href = "../dist/themes/technical/variables.min.css";
+
+        document.head.appendChild(stylesheetLinkElement);
+    }
+    else if (theme == "Bluelight")
+    {
+        var stylesheetLinkElement = document.createElement("link");
+        stylesheetLinkElement.rel = "stylesheet";
+        stylesheetLinkElement.href = "../dist/themes/bluelight/variables.min.css";
 
         document.head.appendChild(stylesheetLinkElement);
     }

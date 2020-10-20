@@ -1,0 +1,61 @@
+@import '../../general-variables-css';
+@import '../../navigation-menus/top/top-nav-variables-css';
+@import '../../navigation-menus/side/side-nav-variables-css';
+
+// Replace 
+// @import '../../input-elements/input-elements-variables-css';
+:root
+{
+    --hn-input-bg: transparent;
+    --hn-input-color: var(--hn-color);
+
+    --hn-input-hover-bg: rgba(255, 255, 255, 0.1);
+    --hn-input-hover-color: var(--hn-input-color);
+
+    --hn-input-active-bg: var(--hn-input-bg);
+    --hn-input-active-color: var(--hn-input-color);
+
+    --hn-input-active-hover-bg: var(--hn-input-hover-bg);
+    --hn-input-active-hover-color: var(--hn-input-hover-color);
+
+}
+
+// Partial override 
+// @import '../../general-variables-css';
+:root
+{
+    --hn-bg: #1F89DC;
+    --hn-color: white;
+
+    --hn-item-bg: transparent;
+    --hn-item-color: var(--hn-color);
+    --hn-item-hover-bg: #4BA0E3;
+    --hn-item-hover-color: var(--hn-color);
+    
+    --hn-item-active-bg: rgba(0, 0, 0, 0.30);
+    --hn-item-active-color: rgba(255, 255, 255, 1.00);
+    --hn-item-active-hover-bg: var(--hn-item-hover-bg);
+    --hn-item-active-hover-color: var(--hn-item-hover-color);
+
+    --hn-item-active-child-bg: rgba(0, 0, 0, 0.20);
+    --hn-item-active-child-color: var(--hn-color);
+    --hn-item-active-child-hover-bg: var(--hn-item-hover-bg);
+    --hn-item-active-child-hover-color: var(--hn-item-hover-color);
+
+
+    --hn-overlay-bg: rgba(0, 0, 0, 0.40);
+
+}
+
+// Partial override
+// @import '../../navigation-menus/side/side-nav-variables-css';
+:root
+{
+    --hn-side-collapsed-input-size: 1rem;
+    --hn-side-collapsed-input-font-size: 1rem;
+    
+    --hn-side-collapsed-input-bg: var(--hn-input-bg);
+    --hn-side-collapsed-input-color: var(--hn-input-color);
+    --hn-side-collapsed-input-hover-bg: var(--hn-input-hover-bg);
+    --hn-side-collapsed-input-hover-color: var(--hn-input-hover-color);
+}
