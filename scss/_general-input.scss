@@ -4,7 +4,7 @@
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 // ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
 
-.hn-item
+.hn-item:not(.hn-item-disabled)
 {
     &:hover,
     &:hover > .hn-link
@@ -14,7 +14,7 @@
     }
 }
 
-.hn-item.hn-active
+.hn-item.hn-active:not(.hn-item-disabled)
 {
     &:hover,
     &:hover > .hn-link
@@ -24,7 +24,7 @@
     }
 }
 
-.hn-item.hn-active-child
+.hn-item.hn-active-child:not(.hn-item-disabled)
 {
     &:hover,
     &:hover > .hn-link
@@ -36,7 +36,7 @@
 
 .hn-menu:not(.hn-menu-no-focus)
 {
-    .hn-item
+    .hn-item:not(.hn-item-disabled)
     {
         &:focus,
         & > .hn-link:focus
@@ -46,7 +46,7 @@
         }
     }
 
-    .hn-item.hn-active
+    .hn-item.hn-active:not(.hn-item-disabled)
     {
         &:focus,
         & > .hn-link:focus
@@ -56,7 +56,7 @@
         }
     }
 
-    .hn-item.hn-active-child
+    .hn-item.hn-active-child:not(.hn-item-disabled)
     {
         &:focus,
         & > .hn-link:focus
