@@ -1,6 +1,12 @@
 ﻿@page
+@using System.IO;
 
-@foreach (var file in AppUrl.GetFiles("/+/" , "*.*", System.IO.SearchOption.AllDirectories)) 
+@foreach (var file in AppUrl.GetFiles("/+/", "*.*", System.IO.SearchOption.AllDirectories))
 {
-    <div><a href="@AppUrl.ConvertAppPathToUrl(file)">@AppUrl.ConvertAppPathToUrl(file)</a></div>
-}
+<div><a href="@AppUrl.ConvertAppPathToUrl(file)">@AppUrl.ConvertAppPathToUrl(file)</a></div>}
+
+@foreach (var file in Directory.GetFiles(Program.HyperNavDistPath, "*.*", SearchOption.AllDirectories))
+{
+    var url = file.Replace(Program.HyperNavDistPath, "/+/dist").Replace("\\", "/");
+
+<div><a href="@url">@url</a></div>}
