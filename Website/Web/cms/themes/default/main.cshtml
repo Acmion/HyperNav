@@ -1,0 +1,70 @@
+﻿@using System.Net.Http;
+@using Markdig;
+@using CommunicatorCms;
+@using CommunicatorCms.Core;
+@using CommunicatorCms.Core.Settings;
+@using CommunicatorCms.Core.Actions;
+@using CommunicatorCms.Core.Application.FileSystem;
+@using CommunicatorCms.Core.Application.Pages;
+
+@model AppPageModelAndBody
+@inject RequestState RequestState
+
+@{
+    var currentPage = await RequestState.GetCurrentPage();
+    var currentActiveTopPage = await App.Pages.GetByUrl(AppPath.GetUrlWithMaxNumberOfSlashes(currentPage.PageUrl, 2));
+    var a = 0;
+}
+
+@{
+    if (currentPage.Properties.Layout == "LandingPage")
+    {
+        @Model.Body
+
+        await currentPage.Render(this, this.Html, Model.Model);
+    }
+    else
+    {
+        <div class="container" style="padding-top: 7rem;">
+            <div class="columns">
+                @{
+
+                    if (currentPage.Properties.ShowSideNavigationMenu)
+                    {
+                        <div class="column col-3 col-md-12">
+                            <nav class="hyper-nav hn-side" style="width: 100%">
+                                <div class="hn-nav">
+                                    <div class="hn-section hn-section-body">
+                                        @{
+                                            @await App.Extensions.HyperNav.RenderNavigationItem(currentActiveTopPage, RequestState, "side-nav-cb", true, false, 0)
+
+                                            var topPages = await currentActiveTopPage.GetSubPages();
+
+                                            for (var i = 0; i < topPages.Count; i++)
+                                            {
+                                                @await App.Extensions.HyperNav.RenderNavigationItem(topPages[i], RequestState, "side-nav-cb" + i, true, false, int.MaxValue)
+                                            }
+
+                                        }
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    }
+                }
+                <div class="column col-md-12">
+                    @Model.Body
+
+                    @{
+                        await currentPage.Render(this, this.Html, Model.Model);
+                    }
+                </div>
+            </div>
+        </div>
+    }
+}
+
+
+
+
+

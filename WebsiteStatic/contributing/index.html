@@ -1,0 +1,655 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/bootstrap/dist/css/acmion-bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav.min.css" />
+
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/main.min.css" />
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-variables.min.css" />
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-extension.min.css" />
+
+<script src="https://cdn.acmion.com/external/css-vars-ponyfill/css-vars-ponyfill.js"></script>
+
+<script>
+    cssVars();
+</script>
+
+
+
+<title>
+    Contributing - HyperNav
+</title>
+
+<meta name="description" content="HyperNav, an interactive CSS only web navigation framework.">
+<meta name="keywords" content="css, navigation, web, html, framework, link">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+<link rel="manifest" href="/static/favicon/site.webmanifest">
+<link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#020202">
+<link rel="shortcut icon" href="/static/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#020202">
+<meta name="msapplication-config" content="/static/favicon/browserconfig.xml">
+<meta name="theme-color" content="#020202">
+<link rel="stylesheet" href="/static/lib/codemirror/lib/codemirror.css" />
+<link rel="stylesheet" href="/static/lib/codemirror/theme/twilight.css" />
+<link rel="stylesheet" href="/static/css/example-element.css" />
+<link rel="stylesheet" href="/static/css/main.css" />
+
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/negatronic-acmion/css/negatronic.css" /></head>
+
+<body>
+    <header>
+
+
+
+        <nav class="hn-menu hn-top hn-fixed hn-shadow">
+            <input type="checkbox" id="hn-top-nav-cb" class="hn-input-state hn-input-state-nav hn-hide-desktop">
+            <div class="hn-nav container-lg p-0">
+                <div class="hn-section hn-section-brand">
+                            <a class="hn-item" href="/">
+                                <span class="hn-link">
+                                    <span class="hn-icon hn-size-auto">
+                                        <img src='https://cdn.acmion.com/acmion/assets/hyper-nav/icon.svg' style='width: 3.2rem; margin-right: 0.4rem'>
+                                    </span>
+                                    <span class="hn-content">
+                                        <span style='font-weight: normal; font-size: 2.2rem; font-family: Negatronic;'>HyperNav</span>
+                                    </span>
+                                </span>
+                            </a>
+
+                    <div class="hn-spacer hn-hide-desktop">
+
+                    </div>
+                    <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-top-nav-cb">
+                        <span class="hn-link">
+                            <span class="hn-content">
+                                <span class="hn-input-active">
+                                    <i class="ri-close-line"></i>
+                                </span>
+                                <span class="hn-input-default">
+                                    <i class="ri-menu-line"></i>
+                                </span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <div class="hn-section hn-section-body">
+
+                <div style="flex: 1">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/">
+                                <span class="hn-content" data-hn-content="Home">
+                                    Home
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/about/">
+                                <span class="hn-content" data-hn-content="About">
+                                    About
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb1" class="hn-input-state hn-hide-desktop" >
+
+                    <div class="hn-item   " style=" ">
+                        <a class="hn-link" href="/documentation/">
+                                    <span class="hn-content" data-hn-content="Documentation">
+                                        Documentation
+                                    </span>
+                                    <span class="hn-spacer"></span>
+                                    <span class="hn-input hn-hide-mobile">
+                                        <span class="hn-input-default">
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                        <span class="hn-input-active">
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                    </span>
+
+                            
+                        </a>
+
+                                <label class="hn-input hn-hide-desktop" for="top-nav-cb1">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                        
+                    </div>
+
+                    <div class="hn-expand-body hn-expand-body-animation-delay  " style=" ">
+
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/usage/">
+                                <span class="hn-content" data-hn-content="Usage">
+                                    Usage
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/variables/">
+                                <span class="hn-content" data-hn-content="Variables">
+                                    Variables
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/theming/">
+                                <span class="hn-content" data-hn-content="Theming">
+                                    Theming
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb041" class="hn-input-state hn-hide-desktop" >
+
+                    <div class="hn-item   " style=" ">
+                        <a class="hn-link" href="/documentation/general/">
+                                    <span class="hn-content" data-hn-content="General">
+                                        General
+                                    </span>
+                                    <span class="hn-spacer"></span>
+                                    <span class="hn-input hn-hide-mobile">
+                                        <span class="hn-input-default">
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                        <span class="hn-input-active">
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                    </span>
+
+                            
+                        </a>
+
+                                <label class="hn-input hn-hide-desktop" for="top-nav-cb041">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                        
+                    </div>
+
+                    <div class="hn-expand-body hn-expand-body-animation-delay  " style="min-width: 200px ">
+
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/general/structure/">
+                                <span class="hn-content" data-hn-content="Menu Structure">
+                                    Menu Structure
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/general/input-item/">
+                                <span class="hn-content" data-hn-content="Input Item Structure">
+                                    Input Item Structure
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/general/nav-item/">
+                                <span class="hn-content" data-hn-content="Navigation Item">
+                                    Navigation Item
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/general/expand-item/">
+                                <span class="hn-content" data-hn-content="Expand Item">
+                                    Expand Item
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/general/utilities/">
+                                <span class="hn-content" data-hn-content="Utilities">
+                                    Utilities
+                                </span>
+                    </a>
+                </div>
+            
+                                </div>
+
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb051" class="hn-input-state hn-hide-desktop" >
+
+                    <div class="hn-item   " style=" ">
+                        <a class="hn-link" href="/documentation/top-nav/">
+                                    <span class="hn-content" data-hn-content="Top Navigation">
+                                        Top Navigation
+                                    </span>
+                                    <span class="hn-spacer"></span>
+                                    <span class="hn-input hn-hide-mobile">
+                                        <span class="hn-input-default">
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                        <span class="hn-input-active">
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                    </span>
+
+                            
+                        </a>
+
+                                <label class="hn-input hn-hide-desktop" for="top-nav-cb051">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                        
+                    </div>
+
+                    <div class="hn-expand-body hn-expand-body-animation-delay  " style="min-width: 200px ">
+
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/top-nav/basic/">
+                                <span class="hn-content" data-hn-content="Basic">
+                                    Basic
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/top-nav/modes/">
+                                <span class="hn-content" data-hn-content="Modes">
+                                    Modes
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/top-nav/animations/">
+                                <span class="hn-content" data-hn-content="Animations">
+                                    Animations
+                                </span>
+                    </a>
+                </div>
+            
+                                </div>
+
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb061" class="hn-input-state hn-hide-desktop" >
+
+                    <div class="hn-item   " style=" ">
+                        <a class="hn-link" href="/documentation/side-nav/">
+                                    <span class="hn-content" data-hn-content="Side Navigation">
+                                        Side Navigation
+                                    </span>
+                                    <span class="hn-spacer"></span>
+                                    <span class="hn-input hn-hide-mobile">
+                                        <span class="hn-input-default">
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                        <span class="hn-input-active">
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                    </span>
+
+                            
+                        </a>
+
+                                <label class="hn-input hn-hide-desktop" for="top-nav-cb061">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                        
+                    </div>
+
+                    <div class="hn-expand-body hn-expand-body-animation-delay  " style="min-width: 200px ">
+
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/side-nav/basic/">
+                                <span class="hn-content" data-hn-content="Basic">
+                                    Basic
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/side-nav/collapsible/">
+                                <span class="hn-content" data-hn-content="Collapsible">
+                                    Collapsible
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/documentation/side-nav/container/">
+                                <span class="hn-content" data-hn-content="Container">
+                                    Container
+                                </span>
+                    </a>
+                </div>
+            
+                                </div>
+
+                </div>
+            
+                                </div>
+
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item hn-active  " style=" ">
+                    <a class="hn-link" href="/contributing/">
+                                <span class="hn-content" data-hn-content="Contributing">
+                                    Contributing
+                                </span>
+                    </a>
+                </div>
+            
+            
+                <div style="flex: 0">
+                </div>
+
+
+                <div class="hn-item   " style=" ">
+                    <a class="hn-link" href="/demos/">
+                                <span class="hn-content" data-hn-content="Demos">
+                                    Demos
+                                </span>
+                    </a>
+                </div>
+            
+                            </div>
+            </div>
+            <label class="hn-overlay hn-overlay-nav hn-hide-desktop" for="hn-expand-button">
+            </label>
+        </nav>
+    </header>
+
+    <main>
+
+
+
+
+        <div class="container" style="padding-top: 7rem;">
+            <div class="row">
+                <div class="col">
+                    
+
+
+<h1 id="contributing">Contributing</h1>
+<p>All contributions to HyperNav, big or small, are greatly appreciated. This page
+lists examples of things that you could create or improve on. Changes should be
+submitted as pull requests on GitHub and so that the assets in the <code>dist</code> folder
+have been recompiled. All changes should be implemented and visually tested against
+the <a href="https://acmion.github.io/HyperNav/testing/complete.html">HyperNav Complete Demo</a>.
+The changes should also work on IE11.</p>
+<h2 id="github-issues">GitHub Issues</h2>
+<p>Document problems in the <a href="https://github.com/Acmion/HyperNav">GitHub repository</a>.</p>
+<h2 id="test-hypernav-on-various-browsers">Test HyperNav on Various Browsers</h2>
+<p>HyperNav has been tested on a limited amount of browsers. Test the
+<a href="https://acmion.github.io/HyperNav/testing/complete.html">HyperNav Complete Demo</a>
+on some browser and compare the behavior to that of Google Chrome. Report the
+findings as GitHub issues.</p>
+<h2 id="new-themes">New Themes</h2>
+<p>Create new themes for HyperNav.</p>
+<h2 id="new-demos">New Demos</h2>
+<p>Create new demos for HyperNav. The current demos are technical in nature and
+try to showcase as much as possible at once. This means that their user experience
+is not too good. The demos should be viewable as files in the browser, without
+spinning up a localhost server.</p>
+<h2 id="improve-the-build-process">Improve the Build Process</h2>
+<p>Currently HyperNav is compiled and minified with the standard SASS tooling. This
+results in somewhat larger CSS files than needed, for example, the same media
+queries appear several times in the minified files. The tooling should still
+be kept at a minimum. The tooling should also be crossplatform without any
+hassle (not like Bootstrap Ruby dependencies, which are painful to install on
+Windows machines).</p>
+<h2 id="create-npm-and-other-packages">Create NPM (and Other) Packages</h2>
+<p>Currently HyperNav must be downloaded or cloned from GitHub. NPM and other
+packages could improve the ease of use.</p>
+<h2 id="accessibility-guidelines">Accessibility Guidelines</h2>
+<p>Accessibility guidelines could be written for various devices.</p>
+<h2 id="improve-the-documentation">Improve the Documentation</h2>
+<p>The documentation of HyperNav could always be improved with more and better
+examples. The documentation is hosted in
+<a href="https://github.com/Acmion/HyperNav-Documentation">another GitHub repository</a>.</p>
+<h2 id="improve-the-demos">Improve the Demos</h2>
+<p>Currently parts of the HTML of the demos is just copied from one file to another, which
+makes maintenance painful. Perhaps some <code>iframe</code> action could help here?</p>
+<h2 id="create-enhancing-javascript">Create Enhancing JavaScript</h2>
+<p>HyperNav works without JavaScript, however, some enhancing JavaScript could
+be created as optional packages. See <a href="https://acmion.github.io/HyperNav/testing/nested-iconified-side-nav-menu-split-buttons.html">this demo</a>,
+which contains JavaScript that is not bundled with HyperNav for better user experience. For example,
+the keyboard accessibility is currently basic and could be significantly improved by allowing <code>labels</code>
+to be focused and the checkboxes controlled via JavaScript.</p>
+<h2 id="create-new-animations">Create new Animations</h2>
+<p>Some generic animations could be implemented for HyperNav. See the hover delay animation,
+which is implemented in <code>scss/navigation-menus/top/animations/_expand-body-delay-animation.scss</code>.</p>
+<h2 id="implement-different-coloring-for-hover-and-focus-states">Implement Different Coloring for Hover and Focus States</h2>
+<p>Currently the colors for both the <code>:hover</code> and <code>:focus</code> states are the
+same. Some use cases may require different colors depending on state, which
+is why this could be implemented. Adding a bunch of variable declarations and
+implementing them in SCSS should be enough (the current SCSS should already
+be logically correct, but the <code>:hover</code> and <code>:focus</code> styles should be duplicated
+and separated). The state <code>:focus:hover</code> should be the most important state.</p>
+<h2 id="implement-new-navigation-menu-types">Implement New Navigation Menu Types</h2>
+<p>Some navigation menu types that could be implemented are:</p>
+<p><strong>Horizontally Expanding Side Navigation Menu</strong></p>
+<p><img src="/static/img/horizontally-expanding-side-navigation-menu.png" alt="Horizontally Expanding Side Navigation Menu Visualization" title="Horizontally Expanding Side Navigation Menu Visualization" /></p>
+<p>The left image depicts the default state, while the right image depicts the state after expanding an item.
+Adding a class to <code>.hn-side</code> should be enough for this to work.</p>
+<p><strong>Hover Flyout Side Navigation Menu</strong></p>
+<p><img src="/static/img/hover-flyout-side-navigation-menu.png" alt="Hover Flyout Side Navigation Menu Visualization" title="Hover Flyout Side Navigation Menu Visualization" /></p>
+<p>The left image depicts the default state, while in the right image the item &quot;Top Navigation&quot; has been expanded
+and the &quot;General&quot; item is currently hovered. The hover has triggered a flyout menu. Hovering an already expanded
+item will not create a flyout. Adding a class to <code>.hn-side</code> should be enough for this to work.</p>
+<h2 id="simplify-the-scss">Simplify the SCSS</h2>
+<p>There might be some redundancies in the SCSS (for example, <code>:focus</code> selectors
+that can never be applied). These should be deleted.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+
+<div class="bg-gray" style="padding-top: 2rem; padding-bottom: 7rem">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>
+                    Developed by
+                </h2>
+                <a href="https://acmion.com">
+                    <img class="img-responsive" src="https://cdn.acmion.com/acmion/assets/acmion/logo.svg" style="height: 4rem" />
+                    <br />
+                    Acmion.com
+                </a>
+                
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="col-md-4">
+                <h2>
+                    GitHub
+                </h2>
+                <a href="https://github.com/Acmion/HyperNav/">
+                    HyperNav
+                </a>
+                <br />
+                <a href="https://github.com/Acmion/HyperNav-Documentation/">
+                    HyperNav Documentation
+                </a>
+
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="col-md-4">
+                <h2>
+                    Why HyperNav?
+                </h2>
+                <p>
+                    HyperNav is a CSS only web navigation menu framework that gives the
+                    developers tools to create complex and unopinionated navigation menus
+                    with ease.
+                </p>
+                
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</div><script src="/static/js/example-element.js"></script>
+<script src="/static/lib/codemirror/lib/codemirror.js"></script>
+<script src="/static/lib/codemirror/mode/xml/xml.js"></script>
+<script src="/static/lib/codemirror/mode/css/css.js"></script>
+<script src="/static/lib/iframe-resizer/js/iframeResizer.min.js"></script>
+
+<script>
+
+    initializeExampleElements();
+
+</script>    </footer>
+
+</body>
+
+</html>
+
+
+
+
+

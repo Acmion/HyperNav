@@ -1,0 +1,52 @@
+﻿@page
+@inject RequestState RequestState;
+
+@{
+    var activeThemeHeadContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeHeadFileName);
+    var defaultThemeHeadContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeHeadFileName);
+
+    var activeThemeContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeMainFileName);
+    var defaultThemeContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeMainFileName);
+
+    var activeThemeHeaderFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeHeaderFileName);
+    var defaultThemeHeaderFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeHeaderFileName);
+
+    var activeThemeFooterFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeFooterFileName);
+    var defaultThemeFooterFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeFooterFileName);
+
+    var headContent = await AppPage.LoadFromUrl(AppUrl.Join(UrlSettings.ContentGeneralUrl, "head"));
+}
+
+<html>
+<head>
+
+    @{
+        await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeHeadContentFileUrl, defaultThemeHeadContentFileUrl);
+
+        await headContent.Render(this, this.Html);
+    }
+</head>
+
+<body>
+    <header>
+        @{
+            await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeHeaderFileUrl, defaultThemeHeaderFileUrl);
+        }
+    </header>
+
+    <main>
+        @{
+            await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeContentFileUrl, defaultThemeContentFileUrl);
+        }
+    </main>
+
+    <footer>
+        @{
+            await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeFooterFileUrl, defaultThemeFooterFileUrl);
+        }
+    </footer>
+
+</body>
+
+</html>
+

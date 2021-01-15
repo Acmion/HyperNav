@@ -1,0 +1,284 @@
+﻿@functions
+{
+    public delegate IHtmlContent RenderNavigationItem(string icon, string content, string href, string cssClasses, string cssInline, bool topNav);
+    public delegate IHtmlContent RenderSplitExpandItem(string icon, string content, string href, string cssClasses, string cssInline, bool topNav, bool topLevel, 
+                                                       string id, string expandBodyCssClasses, string expandBodyCssInline, bool expandedByDefault, params IHtmlContent[] expandBodyContent);
+
+    public delegate Task<IHtmlContent> RenderCommunicatorCmsNavLayout(AppPage appPage, RequestState requestState, string cbIdPrefix, bool indicateActiveChild, bool topNav, bool topLevel, int maxDepth);
+
+    
+    private IHtmlContent RenderNavigationItemImplementation(string icon, string content, string href, string cssClasses, string cssInline, bool topNav)
+    {
+        return RazorHelper.Body
+        (
+            @<text>
+                <div class="hn-item @cssClasses" style="@cssInline">
+                    <a class="hn-link" href="@href">
+                        @{
+                            if (!string.IsNullOrEmpty(icon))
+                            {
+                                <span class="hn-icon">
+                                    @icon
+                                </span>
+                            }
+
+                            if (topNav)
+                            {
+                                <span class="hn-content" data-hn-content="@content">
+                                    @content
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="hn-content">
+                                    @content
+                                </span>
+                            }
+                        }
+                    </a>
+                </div>
+            </text>
+        );
+    }
+
+    private IHtmlContent RenderSplitExpandItemImplementation(string icon, string content, string href, string cssClasses, string cssInline, bool topNav, bool topLevel, 
+                                       string id, string expandBodyCssClasses, string expandBodyCssInline, bool expandedByDefault, params IHtmlContent[] expandBodyContent)
+    {
+        var checkedAttribute = expandedByDefault ? "checked" : "";
+        return RazorHelper.Body
+        (
+            @<text>
+                <div class="hn-expand">
+                    @{ 
+                        if (topNav)
+                        {
+                            <input type="checkbox" id="@id" class="hn-input-state hn-hide-desktop" @checkedAttribute>
+                        }
+                        else 
+                        {
+                            <input type="checkbox" id="@id" class="hn-input-state" @checkedAttribute>
+                        }
+                    }
+
+                    <div class="hn-item @cssClasses" style="@cssInline">
+                        <a class="hn-link" href="@href">
+                            @{
+                                if (!string.IsNullOrEmpty(icon))
+                                {
+                                    <span class="hn-icon">
+                                        @icon
+                                    </span>
+                                }
+
+                                if (topNav)
+                                {
+                                    <span class="hn-content" data-hn-content="@content">
+                                        @content
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="hn-content">
+                                        @content
+                                    </span>
+                                }
+
+                                if (topNav) 
+                                {
+                                    <span class="hn-spacer"></span>
+                                    <span class="hn-input hn-hide-mobile">
+                                        <span class="hn-input-default">
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                        <span class="hn-input-active">
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                    </span>
+                                }
+                            }
+
+                            
+                        </a>
+
+                        @{ 
+                            if (topNav)
+                            {
+                                <label class="hn-input hn-hide-desktop" for="@id">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            }
+                            else 
+                            {
+                                <label class="hn-input" for="@id">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            }
+                        }
+                        
+                    </div>
+
+                    <div class="hn-expand-body hn-expand-body-animation-delay @expandBodyCssClasses" style="@expandBodyCssInline">
+                        @{
+                            foreach (var ebc in expandBodyContent) 
+                            {
+                                Write(ebc);
+                            }
+                        }
+                    </div>
+
+                </div>
+            </text>
+        );
+    }
+
+    
+    private async Task<IHtmlContent> RenderCommunicatorCmsNavLayoutImplementation(AppPage appPage, RequestState requestState, string cbIdPrefix, bool indicateActiveChild, bool topNav, bool topLevel, int maxDepth)
+    {
+
+        if (!appPage.Properties.ShowInNavigationMenus)
+        {
+            return HtmlString.Empty;
+        }
+
+        var cbIdSuffix = 0;
+
+        var activeClass = "";
+        var expandedByDefault = false;
+
+        var layoutProperties = appPage.PropertiesNavItem.Top;
+        var layoutPropertiesShared = appPage.PropertiesNavItem.Shared;
+
+        var subPages = await appPage.GetSubPages();
+
+        if(!topNav)
+        {
+            layoutProperties = appPage.PropertiesNavItem.Side;
+        }
+
+
+        if (appPage.PageUrl == requestState.Url)
+        {
+            activeClass = "hn-active";
+
+            if(!topNav)
+            {
+                expandedByDefault = true;
+            }
+        }
+        else if (indicateActiveChild && appPage.PageUrl != "/" && AppPath.IsParentUrl(appPage.PageUrl, requestState.Url))
+        {
+            if(topNav)
+            {
+                activeClass = "hn-active-child";
+            }
+            else
+            {
+                expandedByDefault = true;
+                activeClass = "hn-active-child";
+            }
+        }
+
+        var processedUrl = string.IsNullOrEmpty(appPage.Properties.RedirectUrl) ? appPage.PageUrl : appPage.Properties.RedirectUrl;
+
+        return RazorHelper.Body
+        (
+            @<text>
+                <div style="flex: @layoutProperties.SpaceBefore.ToString(Program.AmericanCultureInfo)">
+                </div>
+
+                @{ 
+
+                    if (subPages.Count == 0 || maxDepth == 0)
+                    {
+                        Write
+                        (
+                            RenderNavigationItemImplementation
+                            (
+                                appPage.Properties.Icon,
+                                appPage.Properties.Title,
+                                processedUrl,
+                                activeClass + " " + layoutProperties.CssClasses + " " + layoutPropertiesShared.CssClasses,
+                                layoutProperties.CssInline + " " + layoutPropertiesShared.CssInline,
+                                topNav
+                            )
+                        );
+                    }
+                    else
+                    {
+                        maxDepth--;
+
+                        var childCbSuffix = 0;
+                        var expandBodyContent = new IHtmlContent[subPages.Count];
+                        for(var i = 0; i < subPages.Count; i++)
+                        {
+                            childCbSuffix++;
+                            expandBodyContent[i] = (await RenderCommunicatorCmsNavLayoutImplementation(subPages[i], requestState, cbIdPrefix + cbIdSuffix + childCbSuffix, indicateActiveChild, topNav, false, maxDepth));
+                        }
+
+                        cbIdSuffix++;
+
+                        Write
+                        (
+                            RenderSplitExpandItemImplementation
+                            (
+                                appPage.Properties.Icon,
+                                appPage.Properties.Title,
+                                processedUrl,
+                                activeClass + " " + layoutProperties.CssClasses + " " + layoutPropertiesShared.CssClasses,
+                                layoutProperties.CssInline + " " + layoutPropertiesShared.CssInline,
+                                topNav,
+                                topLevel,
+                                cbIdPrefix + cbIdSuffix,
+                                layoutProperties.ExpandCssClasses + " " + layoutPropertiesShared.ExpandCssClasses,
+                                layoutProperties.ExpandCssInline + " " + layoutPropertiesShared.ExpandCssInline,
+                                expandedByDefault,
+                                expandBodyContent
+                            )
+                        );
+                    }
+
+                    if (layoutProperties.SpaceAfter != 0)
+                    {
+                        <div style="flex: @layoutProperties.SpaceBefore.ToString(Program.AmericanCultureInfo)">
+                        </div>
+                    }
+                }
+
+            </text>
+        );
+    }
+}
+
+
+@functions
+{
+    public class HyperNav : AppExtension
+    {
+        public RenderNavigationItem RenderNavigationItem { get; }
+        public RenderSplitExpandItem RenderSplitExpandItem { get; }
+        public RenderCommunicatorCmsNavLayout RenderCommunicatorCmsNavLayout { get; }
+
+        public HyperNav(RenderNavigationItem renderNavigationItem,
+                        RenderSplitExpandItem renderSplitExpandItem,
+                        RenderCommunicatorCmsNavLayout renderCommunicatorCmsNavLayout) : base("HyperNav")
+        {
+            RenderNavigationItem = renderNavigationItem;
+            RenderSplitExpandItem = renderSplitExpandItem;
+            RenderCommunicatorCmsNavLayout = renderCommunicatorCmsNavLayout;
+        }
+    }
+}
+
+@{ 
+    App.ExtensionHandler.RegisterAppExtension(new HyperNav(RenderNavigationItemImplementation, RenderSplitExpandItemImplementation, RenderCommunicatorCmsNavLayoutImplementation));
+}

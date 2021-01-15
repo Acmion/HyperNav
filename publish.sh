@@ -1,0 +1,1 @@
+wget --recursive --no-host-directories --page-requisites --span-hosts --restrict-file-names=windows --no-parent --directory-prefix=WebsiteStatic --domains=localhost https://localhost:5001

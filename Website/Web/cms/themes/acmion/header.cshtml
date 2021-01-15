@@ -1,0 +1,71 @@
+﻿@using System.Net.Http;
+@using CommunicatorCms.Core.Settings;
+@using CommunicatorCms.Core.Actions;
+@using Utf8Json;
+@using CommunicatorCms.Core;
+@using CommunicatorCms;
+@using CommunicatorCms.Core.Application.FileSystem;
+@using CommunicatorCms.Core.Application.Pages;
+
+@inject RequestState RequestState;
+
+@{
+    var rootPage = await App.Pages.GetByUrl("/");
+    var activePage = await RequestState.GetCurrentPage();
+}
+
+@{
+    if (activePage.Properties.ShowTopNavigationMenu)
+    {
+        <nav class="hn-menu hn-top hn-fixed hn-shadow">
+            <input type="checkbox" id="hn-top-nav-cb" class="hn-input-state hn-input-state-nav hn-hide-desktop">
+            <div class="hn-nav container-lg p-0">
+                <div class="hn-section hn-section-brand">
+                    @{
+                        if (AppSettings.LogoIcon != "" || AppSettings.LogoContent != "")
+                        {
+                            <a class="hn-item" href="/">
+                                <span class="hn-link">
+                                    <span class="hn-icon hn-size-auto">
+                                        @Html.Raw(AppSettings.LogoIcon)
+                                    </span>
+                                    <span class="hn-content">
+                                        @Html.Raw(AppSettings.LogoContent)
+                                    </span>
+                                </span>
+                            </a>
+                        }
+                    }
+
+                    <div class="hn-spacer hn-hide-desktop">
+
+                    </div>
+                    <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-top-nav-cb">
+                        <span class="hn-link">
+                            <span class="hn-content">
+                                <span class="hn-input-active">
+                                    <i class="ri-close-line"></i>
+                                </span>
+                                <span class="hn-input-default">
+                                    <i class="ri-menu-line"></i>
+                                </span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <div class="hn-section hn-section-body">
+                    @{
+                        @await App.Extensions.HyperNav.RenderCommunicatorCmsNavLayout(rootPage, RequestState, "top-nav-cb", false, true, true, 0)
+                        foreach (var subPage in await rootPage.GetSubPages())
+                        {
+                            @await App.Extensions.HyperNav.RenderCommunicatorCmsNavLayout(subPage, RequestState, "top-nav-cb", true, true, true, int.MaxValue)
+                        }
+
+                    }
+                </div>
+            </div>
+            <label class="hn-overlay hn-overlay-nav hn-hide-desktop" for="hn-expand-button">
+            </label>
+        </nav>
+    }
+}

@@ -1,0 +1,76 @@
+﻿@using System.Net.Http;
+@using Markdig;
+@using CommunicatorCms;
+@using CommunicatorCms.Core;
+@using CommunicatorCms.Core.Settings;
+@using CommunicatorCms.Core.Actions;
+@using CommunicatorCms.Core.Application.FileSystem;
+@using CommunicatorCms.Core.Application.Pages;
+@using System.Diagnostics;
+
+@model AppPageModelAndBody
+@inject RequestState RequestState
+
+@{
+    var currentPage = await RequestState.GetCurrentPage();
+    var currentActiveTopPage = await App.Pages.GetByUrl(AppPath.GetUrlWithMaxNumberOfSlashes(currentPage.PageUrl, 2));
+}
+
+
+@{
+
+    if (currentPage.Properties.Layout == "LandingPage")
+    {
+        @Model.Body
+
+        await currentPage.Render(this, this.Html, Model.Model);
+    }
+    else
+    {
+        var renderElementCssClasses = "col";
+
+        if (currentPage.Properties.ShowSideNavigationMenu)
+        {
+            renderElementCssClasses = "col-md-8 col-lg-9";
+        }
+
+
+        <div class="container" style="padding-top: 7rem;">
+            <div class="row">
+                @{
+
+                    if (currentPage.Properties.ShowSideNavigationMenu)
+                    {
+                        <div class="col-md-4 col-lg-3">
+                            <nav class="hn-menu hn-side" style="width: 100%; position: sticky; top: 7rem">
+                                <div class="hn-nav">
+                                    <div class="hn-section hn-section-body">
+                                        @{
+                                            @await App.Extensions.HyperNav.RenderCommunicatorCmsNavLayout(currentActiveTopPage, RequestState, "side-nav-cb", false, false, true, 0)
+
+                                            var topPages = await currentActiveTopPage.GetSubPages();
+
+                                            for (var i = 0; i < topPages.Count; i++)
+                                            {
+                                                @await App.Extensions.HyperNav.RenderCommunicatorCmsNavLayout(topPages[i], RequestState, "side-nav-cb" + i, true, false, true, int.MaxValue)
+                                            }
+
+                                        }
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    }
+                }
+                <div class="@renderElementCssClasses">
+                    @Model.Body
+
+                    @{
+                        await currentPage.Render(this, this.Html, Model.Model);
+                    }
+                </div>
+            </div>
+        </div>
+    }
+
+}

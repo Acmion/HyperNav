@@ -1,0 +1,64 @@
+﻿@inject RequestState RequestState;
+
+@{
+    var t = this.GetType().BaseType;
+
+    var currentPage = await RequestState.GetCurrentPage();
+
+    var activeThemeHeadContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeHeadFileName);
+    var defaultThemeHeadContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeHeadFileName);
+
+    var activeThemeContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeMainFileName);
+    var defaultThemeContentFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeMainFileName);
+
+    var activeThemeHeaderFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeHeaderFileName);
+    var defaultThemeHeaderFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeHeaderFileName);
+
+    var activeThemeFooterFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.ActiveName, ThemeSettings.ThemeFooterFileName);
+    var defaultThemeFooterFileUrl = AppUrl.Join(UrlSettings.CmsThemesUrl, ThemeSettings.DefaultName, ThemeSettings.ThemeFooterFileName);
+
+    var headContent = await App.Pages.GetByUrl(AppUrl.Join(UrlSettings.ContentGeneralUrl, "head"));
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    @if (currentPage.Properties.RenderHead)
+    {
+        await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeHeadContentFileUrl, defaultThemeHeadContentFileUrl);
+
+        await headContent.Render(this, this.Html);
+    }
+</head>
+
+<body>
+    <header>
+        @if (currentPage.Properties.RenderHeader)
+        {
+            await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeHeaderFileUrl, defaultThemeHeaderFileUrl);
+        }
+    </header>
+
+    <main>
+        @if (currentPage.Properties.RenderMain)
+        {
+            await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeContentFileUrl, defaultThemeContentFileUrl, new AppPageModelAndBody(Model, RenderBody()));
+        }
+    </main>
+
+    <footer>
+        @if (currentPage.Properties.RenderFooter)
+        {
+            await Html.RenderActiveOrDefaultAsyncFromUrl(activeThemeFooterFileUrl, defaultThemeFooterFileUrl);
+        }
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+

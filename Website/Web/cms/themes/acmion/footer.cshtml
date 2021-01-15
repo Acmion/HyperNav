@@ -1,0 +1,14 @@
+﻿@using System.Net.Http;
+@using CommunicatorCms.Core.Settings;
+@using CommunicatorCms.Core.Actions;
+@using Utf8Json;
+@using CommunicatorCms.Core;
+@using CommunicatorCms;
+@using CommunicatorCms.Core.Application.FileSystem;
+
+@inject RequestState RequestState;
+
+@{
+    var footerContent = await AppPage.LoadFromUrl(AppUrl.Join(UrlSettings.ContentGeneralUrl, "footer"));
+    await footerContent.Render(this, this.Html);
+}

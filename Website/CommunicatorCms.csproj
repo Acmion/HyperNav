@@ -1,0 +1,125 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Actions\**" />
+    <Compile Remove="Assets\**" />
+    <Compile Remove="Data\**" />
+    <Compile Remove="WebSample\**" />
+    <Compile Remove="Web\extensions\**" />
+    <Compile Remove="Web\General\**" />
+    <Compile Remove="Web\Pages\**" />
+    <Compile Remove="Web\Preview\**" />
+    <Compile Remove="Web\themes\**" />
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="Actions\**" />
+    <Content Remove="Assets\**" />
+    <Content Remove="Data\**" />
+    <Content Remove="WebSample\**" />
+    <Content Remove="Web\extensions\**" />
+    <Content Remove="Web\General\**" />
+    <Content Remove="Web\Pages\**" />
+    <Content Remove="Web\Preview\**" />
+    <Content Remove="Web\themes\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="Actions\**" />
+    <EmbeddedResource Remove="Assets\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EmbeddedResource Remove="WebSample\**" />
+    <EmbeddedResource Remove="Web\extensions\**" />
+    <EmbeddedResource Remove="Web\General\**" />
+    <EmbeddedResource Remove="Web\Pages\**" />
+    <EmbeddedResource Remove="Web\Preview\**" />
+    <EmbeddedResource Remove="Web\themes\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="Actions\**" />
+    <None Remove="Assets\**" />
+    <None Remove="Data\**" />
+    <None Remove="WebSample\**" />
+    <None Remove="Web\extensions\**" />
+    <None Remove="Web\General\**" />
+    <None Remove="Web\Pages\**" />
+    <None Remove="Web\Preview\**" />
+    <None Remove="Web\themes\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Scripts\GitPushAllSubRepositories.x.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Web\cms\www\_index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Web\cms\www\_index.cshtml" />
+    <None Include="Web\content\actions\page\get\content\content0.cshtml" />
+    <None Include="Web\content\communicator-cms\extensions\test-extension\_initializer.cshtml" />
+    <None Include="Web\content\www\content0.cshtml" />
+    <None Include="Web\content\www\documentation\general\device\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\expand-item\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\general\device\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\general\expand-item\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\general\input-item\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\general\nav-item\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\general\structure\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\general\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\input-item\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\nav-item\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\structure\_index.cshtml" />
+    <None Include="Web\content\www\documentation\general\_index.cshtml" />
+    <None Include="Web\content\www\documentation\side-nav\basic\_index.cshtml" />
+    <None Include="Web\content\www\documentation\side-nav\collapsible\_index.cshtml" />
+    <None Include="Web\content\www\documentation\side-nav\content0.cshtml" />
+    <None Include="Web\content\www\documentation\side-nav\nested\_index.cshtml" />
+    <None Include="Web\content\www\documentation\side-nav\_index.cshtml" />
+    <None Include="Web\content\www\documentation\top-nav\animations\_index.cshtml" />
+    <None Include="Web\content\www\documentation\top-nav\basic\_index.cshtml" />
+    <None Include="Web\content\www\documentation\top-nav\content1.cshtml" />
+    <None Include="Web\content\www\documentation\top-nav\content2.cshtml" />
+    <None Include="Web\content\www\documentation\top-nav\modes\_index.cshtml" />
+    <None Include="Web\content\www\documentation\top-nav\toggleable-menu\_index.cshtml" />
+    <None Include="Web\content\www\documentation\top-nav\_index.cshtml" />
+    <None Include="Web\content\www\documentation\usage\_index.cshtml" />
+    <None Include="Web\content\www\documentation\variables\_index.cshtml" />
+    <None Include="Web\content\www\documentation\_index.cshtml" />
+    <None Include="Web\content\www\examples\content0.cshtml" />
+    <None Include="Web\content\www\examples\_index.cshtml" />
+    <None Include="Web\content\www\features\_index.cshtml" />
+    <None Include="Web\content\www\_index.cshtml" />
+    <None Include="Web\content\_general\footer\content0.cshtml" />
+    <None Include="Web\content\_general\head\meta.cshtml" />
+    <None Include="Web\content\_general\head\styles.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.18.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Utf8Json" Version="1.3.7" />
+    <PackageReference Include="YamlDotNet" Version="8.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Core\Application\Functions\" />
+    <Folder Include="Web\cms\extensions\hyper-nav\static\" />
+    <Folder Include="Web\cms\_general\footer\" />
+    <Folder Include="Web\cms\_general\head\" />
+    <Folder Include="Web\cms\_general\_rendering\" />
+    <Folder Include="Web\content\static\lib\" />
+    <Folder Include="Web\content\communicator-cms\themes\" />
+    <Folder Include="Web\content\themes\" />
+    <Folder Include="Web\content\_general\functions\" />
+  </ItemGroup>
+
+
+
+</Project>
