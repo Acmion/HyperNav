@@ -1,0 +1,614 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+
+<link rel="stylesheet" href="https://bootstrap.acmion.com/dist/css/acmion-bootstrap.min.css" />
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav-css-vars.min.css" />
+<link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav-without-css-vars.min.css" />
+
+<link rel="stylesheet" href="/Web/cms/themes/default-theme/css/main.css" />
+<link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+<script src="https://cdn.acmion.com/external/css-vars-ponyfill/css-vars-ponyfill.js"></script>
+
+<script>
+    cssVars();
+</script>
+
+
+
+<title>
+    Examples2 - HyperNav
+</title>
+
+<meta name="description" content="HyperNav, an interactive CSS only web navigation framework.">
+<meta name="keywords" content="css, navigation, web, html, framework, link">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+<link rel="manifest" href="/static/favicon/site.webmanifest">
+<link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#020202">
+<link rel="shortcut icon" href="/static/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#020202">
+<meta name="msapplication-config" content="/static/favicon/browserconfig.xml">
+<meta name="theme-color" content="#020202">
+<link rel="stylesheet" href="/static/lib/codemirror/lib/codemirror.css" />
+<link rel="stylesheet" href="/static/lib/codemirror/theme/twilight.css" />
+<link rel="stylesheet" href="/static/css/example-element.css" />
+<link rel="stylesheet" href="/static/css/main.css" /></head>
+
+<body>
+    <header>
+
+
+
+        <nav class="hyper-nav hn-top hn-fixed hn-top-shadow">
+            <input type="checkbox" id="hn-expand-button" class="hn-input-state hn-input-state-nav hn-hide-desktop">
+            <div class="hn-nav container-lg p-0">
+                <div class="hn-section hn-section-brand">
+                            <a class="hn-item" href="/">
+                                <span class="hn-link">
+                                    <span class="hn-icon hn-size-auto">
+                                        <img src='https://adamantica.com/projects/hyper-nav/icon.svg' style='width: 3.2rem; margin-right: 0.4rem'>
+                                    </span>
+                                    <span class="hn-content">
+                                        <span style='font-weight: normal; font-size: 2.2rem; font-family: Negatronic;'>HyperNav</span>
+                                    </span>
+                                </span>
+                            </a>
+
+                    <div class="hn-spacer hn-hide-desktop">
+
+                    </div>
+                    <label for="hn-expand-button" class="hn-item hn-input hn-input-nav hn-hide-desktop">
+                        <span class="hn-link">
+                            <span class="hn-content">
+                                <span class="hn-input-default">
+                                    <i class="ri-menu-line"></i>
+                                </span>
+                                <span class="hn-input-active">
+                                    <i class="ri-close-line"></i>
+                                </span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+                <div class="hn-section hn-section-body">
+
+                <div style="flex: 1">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/">
+                                    <span class="hn-content" data-hn-content="Home">
+                                        Home
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/features/">
+                                    <span class="hn-content" data-hn-content="Features">
+                                        Features
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb1" class="hn-input-state" >
+
+                            <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/">
+                                    <span class="hn-content" data-hn-content="Documentation">
+                                        Documentation
+                                    </span>
+                                </a>
+
+                                <label for="top-nav-cb1" class="hn-input">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body hn-expand-body-animation-delay  " style=" ">
+
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/usage/">
+                                    <span class="hn-content" data-hn-content="Usage">
+                                        Usage
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/variables/">
+                                    <span class="hn-content" data-hn-content="Variables with supoer long title 2 line min">
+                                        Variables with supoer long title 2 line min
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb131" class="hn-input-state" >
+
+                            <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/">
+                                    <span class="hn-content" data-hn-content="General">
+                                        General
+                                    </span>
+                                </a>
+
+                                <label for="top-nav-cb131" class="hn-input">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body hn-expand-body-animation-delay  " style=" ">
+
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/device/">
+                                    <span class="hn-content" data-hn-content="Device">
+                                        Device
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/input-item/">
+                                    <span class="hn-content" data-hn-content="Input Item">
+                                        Input Item
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/nav-item/">
+                                    <span class="hn-content" data-hn-content="Navigation Item">
+                                        Navigation Item
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/expand-item/">
+                                    <span class="hn-content" data-hn-content="Expand Item">
+                                        Expand Item
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/structure/">
+                                    <span class="hn-content" data-hn-content="Menu Structure">
+                                        Menu Structure
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb13161" class="hn-input-state" >
+
+                            <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/general/">
+                                    <span class="hn-content" data-hn-content="General">
+                                        General
+                                    </span>
+                                </a>
+
+                                <label for="top-nav-cb13161" class="hn-input">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body hn-expand-body-animation-delay  " style=" ">
+
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/general/device/">
+                                    <span class="hn-content" data-hn-content="Device">
+                                        Device
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/general/input-item/">
+                                    <span class="hn-content" data-hn-content="Input Item">
+                                        Input Item
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/general/nav-item/">
+                                    <span class="hn-content" data-hn-content="Navigation Item">
+                                        Navigation Item
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/general/expand-item/">
+                                    <span class="hn-content" data-hn-content="Expand Item">
+                                        Expand Item
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/general/general/structure/">
+                                    <span class="hn-content" data-hn-content="Menu Structure">
+                                        Menu Structure
+                                    </span>
+                                </a>
+                        </div>
+
+                                        </div>
+
+                        </div>
+
+                                        </div>
+
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb141" class="hn-input-state" >
+
+                            <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/top-nav/">
+                                    <span class="hn-content" data-hn-content="Top Navigation">
+                                        Top Navigation
+                                    </span>
+                                </a>
+
+                                <label for="top-nav-cb141" class="hn-input">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body hn-expand-body-animation-delay  " style="width: 300px ">
+
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/top-nav/basic/">
+                                    <span class="hn-content" data-hn-content="Basic">
+                                        Basic
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/top-nav/toggleable-menu/">
+                                    <span class="hn-content" data-hn-content="Toggleable Menu">
+                                        Toggleable Menu
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/top-nav/modes/">
+                                    <span class="hn-content" data-hn-content="Modes">
+                                        Modes
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/top-nav/animations/">
+                                    <span class="hn-content" data-hn-content="Animations">
+                                        Animations
+                                    </span>
+                                </a>
+                        </div>
+
+                                        </div>
+
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-expand">
+                            <input type="checkbox" id="top-nav-cb151" class="hn-input-state" >
+
+                            <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/side-nav/">
+                                    <span class="hn-content" data-hn-content="Side Navigation with suiper loing content several lines how does checkob">
+                                        Side Navigation with suiper loing content several lines how does checkob
+                                    </span>
+                                </a>
+
+                                <label for="top-nav-cb151" class="hn-input">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body hn-expand-body-animation-delay  " style=" ">
+
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/side-nav/basic/">
+                                    <span class="hn-content" data-hn-content="Basic">
+                                        Basic
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/side-nav/nested/">
+                                    <span class="hn-content" data-hn-content="Nested">
+                                        Nested
+                                    </span>
+                                </a>
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item   " style=" ">
+                                <a class="hn-link" href="/documentation/side-nav/collapsible/">
+                                    <span class="hn-content" data-hn-content="Collapsible">
+                                        Collapsible
+                                    </span>
+                                </a>
+                        </div>
+
+                                        </div>
+
+                        </div>
+
+                                        </div>
+
+                        </div>
+
+            
+                <div style="flex: 0">
+                </div>
+
+                        <div class="hn-item hn-active  " style=" ">
+                                <a class="hn-link" href="/examples/">
+                                    <span class="hn-content" data-hn-content="Examples2">
+                                        Examples2
+                                    </span>
+                                </a>
+                        </div>
+
+                            </div>
+            </div>
+            <label class="hn-overlay hn-overlay-nav hn-hide-desktop" for="hn-expand-button">
+            </label>
+        </nav>
+    </header>
+
+    <main>
+
+
+
+        <div class="container" style="padding-top: 7rem;">
+            <div class="columns">
+                <div class="column col-md-12">
+                    
+
+
+<h1>hello</h1>                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </main>
+
+    <footer>
+
+
+<div class="bg-gray" style="padding-top: 2rem; padding-bottom: 7rem">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>
+                    Developed by
+                </h2>
+                <a href="https://acmion.com">
+                    <img class="img-responsive" src="https://cdn.acmion.com/acmion/assets/acmion/logo.svg" style="height: 4rem" />
+                    <br />
+                    acmion.com
+                </a>
+                
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="col-md-3">
+                <h2>
+                    Credits
+                </h2>
+                <a href="https://picturepan2.github.io/spectre/">
+                    Spectre
+                </a>
+
+                <br />
+
+                <a href="https://bootswatch.com/">
+                    Bootswatch
+                </a>
+
+                <br />
+
+                <a href="https://jenil.github.io/bulmaswatch/">
+                    Bulmaswatch
+                </a>
+                
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="col-md-3">
+                <h2>
+                    GitHub
+                </h2>
+                <a href="https://github.com/Acmion/Spectreswatch/">
+                    Spectreswatch
+                </a>
+                
+                <br />
+                <br />
+                <br />
+            </div>
+            <div class="col-md-3">
+                <h2>
+                    Why Spectreswatch?
+                </h2>
+                <p>
+                    Spectreswatch brings new visual themes to Spectre. Spectre is a CSS only framework 
+                    (no JavaScript) that is supported on major browsers, including IE11. 
+                </p>
+                
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</div><script src="/static/js/example-element.js"></script>
+<script src="/static/lib/codemirror/lib/codemirror.js"></script>
+<script src="/static/lib/codemirror/mode/xml/xml.js"></script>
+<script src="/static/lib/codemirror/mode/css/css.js"></script>
+<script src="/static/lib/iframe-resizer/js/iframeResizer.min.js"></script>
+
+<script>
+
+    initializeExampleElements();
+
+</script>    </footer>
+
+</body>
+
+</html>
+
+
+
+
+

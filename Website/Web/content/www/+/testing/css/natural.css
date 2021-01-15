@@ -1,0 +1,39 @@
+#content-side-shadow-mobile
+{
+    display: none;
+    left: auto; 
+    right: 0; 
+    z-index: -1;
+}
+
+@media (max-width: 767px)
+{
+    #hn-side-sticky-container
+    {
+        position: fixed; 
+        top: 0;
+    }
+
+    #content-side-shadow
+    {
+        display: none;
+    }
+
+    #content-side-shadow-mobile
+    {
+        display: block;
+    }
+
+    main
+    {
+        margin-left: 4.4rem;;
+    }
+}
+
+@media not screen and (-ms-high-contrast: active), (-ms-high-contrast: none), (max-width: 767px)
+{
+    #hn-side-sticky-container
+    {
+        margin-top: var(--hn-top-height);
+    }
+}

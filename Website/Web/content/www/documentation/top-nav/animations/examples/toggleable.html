@@ -1,0 +1,454 @@
+
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-variables.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body style="min-height: 25rem;">
+    <nav class="hyper-nav hn-top hn-top-shadow" id="hnh">
+        <input type="checkbox" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="cb">
+
+        <div class="hn-nav">
+            <div class="hn-section hn-section-brand">
+                <div class="hn-item">
+                    <div class="hn-icon">
+                        <img src="https://adamantica.com/projects/hyper-nav/logo.svg" style="height: 3rem;" />
+                    </div>
+                </div>
+                <a class="hn-item">
+                    <span class="hn-icon">
+                        <i class="ri-home-3-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="Home">
+                        Home
+                    </span>
+                </a>
+                <a class="hn-item">
+                    <span class="hn-icon">
+                        <i class="ri-star-line"></i>
+                    </span>
+                    <span class="hn-content" data-hn-content="Favorites">
+                        Favorites
+                    </span>
+                </a>
+
+                <div class="hn-spacer"></div>
+
+                <label for="cb" class="hn-item hn-input hn-input-nav hn-hide-desktop">
+                    <span class="hn-icon">
+                        <span class="hn-input-default">
+                            <i class="ri-menu-line"></i>
+                        </span>
+                        <span class="hn-input-active">
+                            <i class="ri-close-line"></i>
+                        </span>
+                    </span>
+                </label>
+
+            </div>
+            <div class="hn-section hn-section-body">
+                <div class="hn-spacer"></div>
+
+                <a class="hn-item">
+                    <div class="hn-content" data-hn-content="Blog">
+                        Blog
+                    </div>
+                </a>
+
+                <div class="hn-expand">
+                    <input type="checkbox" class="hn-input-state" id="cb3">
+
+                    <div class="hn-item">
+                        <a class="hn-link">
+                            <div class="hn-content" data-hn-content="Dropdown R">
+                                Dropdown R
+                            </div>
+                        </a>
+
+                        <label class="hn-input hn-hide-mobile" for="cb3">
+                            <span class="hn-input-default">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-arrow-up-s-line"></i>
+                            </span>
+                        </label>
+
+                        <label class="hn-input hn-hide-desktop" for="cb3">
+                            <span class="hn-input-default">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-arrow-up-s-line"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="hn-expand-body" style="width: 20rem">
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Item 1">
+                                Item 1
+                            </div>
+                        </a>
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Item 2">
+                                Item 2
+                            </div>
+                        </a>
+                        <div class="hn-expand">
+                            <input type="checkbox" class="hn-input-state" id="cb4">
+
+                            <div class="hn-item">
+                                <a class="hn-link">
+                                    <div class="hn-content" data-hn-content="Dropdown R">
+                                        Dropdown R
+                                    </div>
+                                </a>
+
+                                <label class="hn-input hn-hide-mobile" for="cb4">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+
+                                <label class="hn-input hn-hide-desktop" for="cb4">
+                                    <span class="hn-input-default">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-arrow-up-s-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body">
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 1">
+                                        Item 1
+                                    </div>
+                                </a>
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 2">
+                                        Item 2
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="hn-expand hn-expand-left">
+                            <input type="checkbox" class="hn-input-state" id="cb456">
+
+                            <div class="hn-item">
+                                <a class="hn-link">
+                                    <div class="hn-content" data-hn-content="Dropdown L">
+                                        Dropdown L
+                                    </div>
+                                </a>
+
+                                <label class="hn-input hn-hide-mobile" for="cb456">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+
+                                <label class="hn-input hn-hide-desktop" for="cb456">
+                                    <span class="hn-input-default">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-arrow-up-s-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body">
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 1">
+                                        Item 1
+                                    </div>
+                                </a>
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 2">
+                                        Item 2
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hn-expand hn-expand-center">
+                    <input type="checkbox" class="hn-input-state" id="cb34">
+
+                    <div class="hn-item">
+                        <a class="hn-link">
+                            <div class="hn-content" data-hn-content="Dropdown C">
+                                Dropdown C
+                            </div>
+                        </a>
+
+                        <label class="hn-input" for="cb34">
+                            <span class="hn-input-default">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-arrow-up-s-line"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="hn-expand-body" style="width: 20rem">
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Item 1">
+                                Item 1
+                            </div>
+                        </a>
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Item 2">
+                                Item 2
+                            </div>
+                        </a>
+                        <div class="hn-expand">
+                            <input type="checkbox" class="hn-input-state" id="cb44">
+
+                            <div class="hn-item">
+                                <a class="hn-link">
+                                    <div class="hn-content" data-hn-content="Dropdown R">
+                                        Dropdown R
+                                    </div>
+                                </a>
+
+                                <label class="hn-input hn-hide-mobile" for="cb44">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+
+                                <label class="hn-input hn-hide-desktop" for="cb44">
+                                    <span class="hn-input-default">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-arrow-up-s-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body">
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 1">
+                                        Item 1
+                                    </div>
+                                </a>
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 2">
+                                        Item 2
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="hn-expand hn-expand-left">
+                            <input type="checkbox" class="hn-input-state" id="cb4564">
+
+                            <div class="hn-item">
+                                <a class="hn-link">
+                                    <div class="hn-content" data-hn-content="Dropdown L">
+                                        Dropdown L
+                                    </div>
+                                </a>
+
+                                <label class="hn-input hn-hide-mobile" for="cb4564">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+
+                                <label class="hn-input hn-hide-desktop" for="cb4564">
+                                    <span class="hn-input-default">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-arrow-up-s-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body">
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 1">
+                                        Item 1
+                                    </div>
+                                </a>
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 2">
+                                        Item 2
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hn-expand hn-expand-left">
+                    <input type="checkbox" class="hn-input-state" id="cb344">
+
+                    <div class="hn-item">
+                        <a class="hn-link">
+                            <div class="hn-content" data-hn-content="Dropdown C">
+                                Dropdown L
+                            </div>
+                        </a>
+
+                        <label class="hn-input" for="cb344">
+                            <span class="hn-input-default">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-arrow-up-s-line"></i>
+                            </span>
+                        </label>
+
+                    </div>
+
+                    <div class="hn-expand-body" style="width: 20rem">
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Item 1">
+                                Item 1
+                            </div>
+                        </a>
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Item 2">
+                                Item 2
+                            </div>
+                        </a>
+                        <div class="hn-expand">
+                            <input type="checkbox" class="hn-input-state" id="cb444">
+
+                            <div class="hn-expand-body">
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 1">
+                                        Item 1
+                                    </div>
+                                </a>
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 2">
+                                        Item 2
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="hn-expand hn-expand-left">
+                            <input type="checkbox" class="hn-input-state" id="cb45644">
+
+                            <div class="hn-item">
+                                <a class="hn-link">
+                                    <div class="hn-content" data-hn-content="Dropdown L">
+                                        Dropdown L
+                                    </div>
+                                </a>
+
+                                <label class="hn-input hn-hide-mobile" for="cb45644">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+
+                                <label class="hn-input hn-hide-desktop" for="cb45644">
+                                    <span class="hn-input-default">
+                                        <i class="ri-arrow-down-s-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-arrow-up-s-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body">
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 1">
+                                        Item 1
+                                    </div>
+                                </a>
+                                <a class="hn-item">
+                                    <div class="hn-content" data-hn-content="Item 2">
+                                        Item 2
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hn-expand hn-expand-mega">
+                    <input type="checkbox" class="hn-input-state" id="cb1">
+
+                    <div class="hn-item">
+                        <a class="hn-link">
+                            <span class="hn-content" data-hn-content="Mega Menu">
+                                Mega Menu
+                            </span>
+                        </a>
+                        <label class="hn-input" for="cb1">
+                            <span class="hn-input-default">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-arrow-up-s-line"></i>
+                            </span>
+                        </label>
+
+                    </div>
+
+                    <div class="hn-expand-body">
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Mega Menu Item 1">
+                                Mega Menu Item 1
+                            </div>
+                        </a>
+                        <a class="hn-item">
+                            <div class="hn-content" data-hn-content="Mega Menu Item 2">
+                                Mega Menu Item 2
+                            </div>
+                        </a>
+                    </div>
+
+                    <label for="cb1" class="hn-overlay hn-overlay-transparent hn-hide-mobile">
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <label for="cb" class="hn-overlay hn-overlay-nav">
+        </label>
+
+    </nav>
+</body>
+</html>
+
+
+

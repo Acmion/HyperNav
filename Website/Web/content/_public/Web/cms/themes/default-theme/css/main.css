@@ -1,0 +1,33 @@
+﻿:root
+{
+    --spacing: 2rem;
+}
+
+body
+{
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main
+{
+    flex-grow: 1;
+}
+
+footer
+{
+    background: var(--hn-bg);
+}
+
+.main-content
+{
+    padding: 0 var(--spacing);
+}
+
+.container
+{
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
+}

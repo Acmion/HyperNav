@@ -1,0 +1,74 @@
+.example
+{
+    background: rgba(30,30,30,1);
+    margin-bottom: 1rem;
+}
+
+    .example > iframe
+    {
+        width: 1px;
+        min-width: 100%;
+    }
+
+    .example > .CodeMirror
+    {
+        border-top: thick solid var(--primary-color);
+    }
+
+    .example > .buttons
+    {
+        padding: 1rem;
+    }
+
+    .example.only-code iframe,
+    .example.only-code .example-button-container
+    {
+        display: none !important;
+    }
+
+    /*
+    .example.side
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+        .example.side > iframe
+        {
+            height: unset !important;
+            width: 25% !important;
+            min-width: 0 !important;
+        }
+
+        .example.side > .CodeMirror
+        {
+            flex: 1;
+        }
+
+        .example.side > .buttons
+        {
+            flex-basis: 100%;
+        }
+    */
+
+
+.CodeMirror
+{
+    height: auto;
+}
+
+.CodeMirror-scroll
+{
+    min-height: 200px;
+    max-height: 400px;
+}
+
+.only-code .CodeMirror-scroll
+{
+    max-height: initial;
+}
+
+.CodeMirror-vscrollbar
+{
+    outline: none;
+}

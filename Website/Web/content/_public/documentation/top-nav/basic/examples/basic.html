@@ -1,0 +1,348 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-variables.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body style="min-height: 50rem">
+    <nav class="hn-menu hn-top hn-fixed">
+        <input type="checkbox" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="hn-nav-cb">
+
+        <div class="hn-nav">
+            <div class="hn-section hn-section-brand">
+                <div class="hn-item">
+                    <a id="hn-logo" class="hn-link" href="#none">
+                        <span class="hn-icon hn-size-auto" style="padding-right: 0.4rem">
+                            <img src="https://cdn.acmion.com/acmion/assets/hyper-nav/icon.svg" style="height: 3rem">
+                        </span>
+                        <span class="hn-content">
+                            <strong style="font-weight: 600;">
+                                HyperNav
+                            </strong>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hn-item">
+                    <a class="hn-link" href="#none">
+                        <span class="hn-content">
+                            Home
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hn-spacer">
+                </div>
+
+                <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-nav-cb">
+                    <span class="hn-link">
+                        <span class="hn-content">
+                            <span class="hn-input-active ">
+                                <i class="ri-close-line"></i>
+                            </span>
+                            <span class="hn-input-default">
+                                <i class="ri-menu-line"></i>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+
+            </div>
+            <div class="hn-section hn-section-body">
+
+                <div class="hn-spacer">
+                </div>
+
+                <div class="hn-item">
+                    <a class="hn-link" href="#none">
+                        <span class="hn-content">
+                            About
+                        </span>
+                    </a>
+                </div>
+
+                <div class="hn-expand hn-expand-mega">
+                    <input type="checkbox" class="hn-input-state" id="hn-countries-cb">
+
+                    <div class="hn-item">
+                        <a class="hn-link" href="#none">
+                            <div class="hn-content">
+                                Countries
+                            </div>
+                        </a>
+
+                        <label class="hn-input" for="hn-countries-cb">
+                            <span class="hn-input-default">
+                                <i class="ri-add-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-subtract-line"></i>
+                            </span>
+                        </label>
+
+                    </div>
+
+                    <div class="hn-expand-body">
+                        <div class="hn-link continent-container" style="align-items: flex-start;">
+                            <div class="continent-countries">
+                                <h3>
+                                    The Americas
+                                </h3>
+                                <ul>
+                                    <li>
+                                        United States of America
+                                    </li>
+                                    <li>
+                                        Canada
+                                    </li>
+                                    <li>
+                                        Mexico
+                                    </li>
+                                    <li>
+                                        Brazil
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="continent-countries">
+                                <h3>
+                                    Europe
+                                </h3>
+                                <ul>
+                                    <li>
+                                        United Kingdom
+                                    </li>
+                                    <li>
+                                        France
+                                    </li>
+                                    <li>
+                                        Germany
+                                    </li>
+                                    <li>
+                                        Sweden
+                                    </li>
+                                    <li>
+                                        Norway
+                                    </li>
+                                    <li>
+                                        Finland
+                                    </li>
+                                    <li>
+                                        Greece
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="continent-countries">
+                                <h3>
+                                    Asia
+                                </h3>
+                                <ul>
+                                    <li>
+                                        Japan
+                                    </li>
+                                    <li>
+                                        Thailand
+                                    </li>
+                                    <li>
+                                        South Korea
+                                    </li>
+                                    <li>
+                                        Vietnam
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="hn-expand hn-expand-left">
+                    <input type="checkbox" class="hn-input-state" id="hn-products-cb">
+
+                    <div class="hn-item">
+                        <a class="hn-link" href="#none">
+                            <div class="hn-content">
+                                Products
+                            </div>
+                        </a>
+
+                        <label class="hn-input hn-hide-mobile" for="hn-products-cb">
+                            <span class="hn-input-default">
+                                <i class="ri-add-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-subtract-line"></i>
+                            </span>
+                        </label>
+
+                        <label class="hn-input hn-hide-desktop" for="hn-products-cb">
+                            <span class="hn-input-default">
+                                <i class="ri-arrow-down-s-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-arrow-up-s-line"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="hn-expand-body" style="width: 200px">
+                        <div class="hn-item">
+                            <a class="hn-link" href="#none">
+                                <span class="hn-content">
+                                    Sledgehammers
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="hn-item">
+                            <a class="hn-link" href="#none">
+                                <span class="hn-content">
+                                    Screwdrivers
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="hn-expand hn-expand-left">
+                            <input type="checkbox" class="hn-input-state" id="hn-power-tools-cb">
+
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <div class="hn-content">
+                                        Power Tools
+                                    </div>
+                                </a>
+
+                                <label class="hn-input" for="hn-power-tools-cb">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body">
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Drills
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Chainsaws
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hn-expand hn-expand-left">
+                    <input type="checkbox" class="hn-input-state" id="hn-shipping-cb">
+
+                    <div class="hn-item hn-active-child">
+                        <a class="hn-link" href="#none">
+                            <div class="hn-content">
+                                Shipping
+                            </div>
+                        </a>
+
+                        <label class="hn-input" for="hn-shipping-cb">
+                            <span class="hn-input-default">
+                                <i class="ri-add-line"></i>
+                            </span>
+                            <span class="hn-input-active">
+                                <i class="ri-subtract-line"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="hn-expand-body" style="width: 200px">
+                        <div class="hn-item hn-active">
+                            <a class="hn-link" href="#none">
+                                <span class="hn-content">
+                                    National
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-item">
+                            <a class="hn-link" href="#none">
+                                <span class="hn-content">
+                                    International
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-item">
+                            <a class="hn-link" href="#none">
+                                <span class="hn-content">
+                                    Extraterrestial
+                                </span>
+                            </a>
+                        </div>
+                        <div class="hn-expand hn-expand-left">
+                            <input type="checkbox" class="hn-input-state" id="hn-shipping-solutions-cb">
+
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <div class="hn-content">
+                                        Solutions
+                                    </div>
+                                </a>
+
+                                <label class="hn-input" for="hn-shipping-solutions-cb">
+                                    <span class="hn-input-default">
+                                        <i class="ri-add-line"></i>
+                                    </span>
+                                    <span class="hn-input-active">
+                                        <i class="ri-subtract-line"></i>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <div class="hn-expand-body hn-expand-body-animation-delay">
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Truck
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Airplane
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Starship
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <label class="hn-overlay" for="hn-nav-cb">
+        </label>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+﻿@using CommunicatorCms.Core;
+@using CommunicatorCms.Core.Settings;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject RequestState RequestState;
+
+@{
+    var currentPage = await RequestState.GetCurrentPage();
+}
+
+<title>
+    @currentPage.Properties.Title - @AppSettings.Title
+</title>
+
+<meta name="description" content="HyperNav, an interactive CSS only web navigation framework.">
+<meta name="keywords" content="css, navigation, web, html, framework, link">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png" asp-append-version="true">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png" asp-append-version="true">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png" asp-append-version="true">
+<link rel="manifest" href="/static/favicon/site.webmanifest" asp-append-version="true">
+<link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#020202" asp-append-version="true">
+<link rel="shortcut icon" href="/static/favicon/favicon.ico" asp-append-version="true">
+<meta name="msapplication-TileColor" content="#020202">
+<meta name="msapplication-config" content="/static/favicon/browserconfig.xml">
+<meta name="theme-color" content="#020202">

@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-variables.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body>
+    <!-- The default HyperNav container. -->
+    <nav class="hn-menu hn-top" id="hnh">
+
+        <!--
+            Radio buttons that control the currently selected mode.
+            Radio buttons have to be used instead of checkboxes, because
+            only one mode should be active at one time.
+
+            The number of usable modes is finite, but can be controlled with the
+            SCSS variable $hn-mode-count (default value = 4). The mode classes use
+            the following syntax:
+
+            hn-input-mode-{x},
+            hn-input-state-mode-{x},
+            where {x} is the number of the mode and starts from 0.
+
+            The class hn-input-mode-{x} should be given to the input element that controls
+            the visibility of a mode and the class hn-input-state-mode-{x} should be
+            given to the corresponding input element state.
+
+            IMPORTANT: The name attribute of the checkboxes should be the same. 
+        -->
+
+        <!-- The standard HyperNav menu toggle state. -->
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="mcb">
+
+        <!-- The mode states. -->
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-0" id="scb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-1" id="ucb">
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-mode-2" id="ecb">
+
+        <!-- 
+            The none state, which is needed as radio buttons can not be unpressed. 
+            Thus, this state acts as a reset.
+        -->
+        <input type="radio" name="hn-top-state" class="hn-input-state hn-input-state-none" id="none">
+
+        <!-- Standard HyperNav content. -->
+        <div class="hn-nav">
+            <div class="hn-section hn-section-brand">
+
+                <!--
+                    An asymmetric input item for the menu toggle.
+                    This is needed because we are using radio buttons and not
+                    a checkbox.
+                -->
+                <div class="hn-item hn-input hn-input-nav hn-hide-desktop">
+
+                    <!-- Expand the navigation menu on mobile devices. -->
+                    <label class="hn-icon hn-input-default" for="mcb">
+                        <!-- Icon here. -->
+                    </label>
+
+                    <!-- Close the navigation menu on mobile devices. -->
+                    <label class="hn-icon hn-input-active" for="none">
+                        <!-- Icon here. -->
+                    </label>
+                </div>
+
+                <!-- Input item for mode 0. Note the class hn-input-mode-0. -->
+                <label for="scb" class="hn-item hn-input hn-input-mode-0">
+                    <!-- Content here. -->
+                </label>
+
+                <!-- Input item for mode 1. Note the class hn-input-mode-1. -->
+                <label for="ucb" class="hn-item hn-input hn-input-mode-1">
+                    <!-- Content here. -->
+                </label>
+
+                <!-- Input item for mode 2. Note the class hn-input-mode-2. -->
+                <label for="ecb" class="hn-item hn-input hn-input-mode-2">
+                    <!-- Content here. -->
+                </label>
+
+            </div>
+        </div>
+
+        <!--
+            The container for a mode. 
+            Note: The class hn-mode-0 is important. This class is used to control visibility.
+        -->
+        <div class="hn-mode hn-mode-0">
+
+            <!-- 
+                The mode top bar. 
+                This will be positioned above the standard top navigation bar. 
+            -->
+            <div class="hn-mode-top">
+
+                <!-- 
+                    The mode top bar content. 
+                    The content could be anything, but this is an example of a HyperNav menu.
+                -->
+                <div class="hn-nav">
+                    <!--
+                        Standard HyperNav content here. 
+                        It is recommended to only insert hn-section-brand content here. This is after all
+                        only the top bar content (which is what the hn-section-brand is for).
+                    -->
+                </div>
+            </div>
+
+            <!-- 
+                The mode content. 
+                This will be positioned directly below the top bar. 
+            -->
+            <div class="hn-mode-content">
+
+                <!--
+                    The content could be anything, but this is an example of a HyperNav menu.
+                -->
+                <div class="hn-nav">
+                    <!--
+                        Standard HyperNav content here.
+                        It is recommended to only insert hn-section-body-content here, due to the positioning.
+                    --> 
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

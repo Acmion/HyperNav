@@ -1,0 +1,14 @@
+@page
+
+@{ 
+    var fileUrls = AppUrl.GetFiles("/documentation", "*.*", System.IO.SearchOption.AllDirectories);
+    foreach (var fu in fileUrls) 
+    {
+        <a href="@AppUrl.ConvertToVirtualUrl(fu)">
+            @AppUrl.ConvertToVirtualUrl(fu)
+        </a>
+
+    }
+
+
+}

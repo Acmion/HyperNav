@@ -1,0 +1,22 @@
+html
+{
+    font-size: 10px;
+}
+
+body
+{
+    margin: 0;
+    background: rgba(40, 40, 40, 1);
+    height: 5rem;
+}
+
+body, button, input, select, textarea
+{
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+:root
+{
+    --link-color: rgb(36, 115, 255);
+    --link-color-dark: rgb(11, 99, 255);
+}

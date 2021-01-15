@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-variables.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body>
+    <nav class="hn-menu hn-top">
+
+        <!-- The hamburger menu state. Note the id. -->
+        <input type="checkbox" class="hn-input-state hn-input-state-nav" id="cb">
+
+        <div class="hn-nav">
+            <div class="hn-section hn-section-brand">
+                <!-- Navigation content that is visible regardless of device size comes here. -->
+
+                <!-- The actual input element for the hamburger. Note that the element is hidden on desktop. -->
+                <!-- Note the for attribute, which matches with the id above.. -->
+                <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="cb">
+                    <span class="hn-icon">
+                        <span class="hn-input-default">
+                            <!-- Content that is visible when the input state element is in its default state. -->
+                        </span>
+                        <span class="hn-input-active">
+                            <!-- Content that is visible when the input state element is in its activated state. -->
+                        </span>
+                    </span>
+                </label>
+            </div>
+            <div class="hn-section hn-section-body">
+                <!-- Navigation content that is hidden behind a menu toggle on mobile devices comes here. -->
+            </div>
+        </div>
+
+        <!-- The overlay. Note the for attribute, which matches with the id above. -->
+        <label class="hn-overlay" for="cb">
+        </label>
+    </nav>
+</body>
+
+</html>

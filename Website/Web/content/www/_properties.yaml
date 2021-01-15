@@ -1,0 +1,8 @@
+Title: Home
+
+Layout: LandingPage
+ShowSideNavigationMenu: False
+
+SubPageOrder:
+  - about
+  - documentation

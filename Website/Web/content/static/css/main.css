@@ -1,0 +1,34 @@
+:root
+{
+    --overlay-color: rgba(255, 255, 255, 0.04);
+    --overlay-color-dark: rgba(255, 255, 255, 0.02);
+    --overlay-color-light: rgba(255, 255, 255, 0.08);
+}
+
+table ul
+{
+    list-style: none;
+}
+
+.section:nth-child(2n)
+{
+    background: var(--overlay-color);
+}
+
+.overlay-button
+{
+    height: 100%;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    background: var(--overlay-color);
+}
+
+    .overlay-button:hover
+    {
+        background: var(--overlay-color-light);
+    }
+
+iframe
+{
+    height: 0;
+}

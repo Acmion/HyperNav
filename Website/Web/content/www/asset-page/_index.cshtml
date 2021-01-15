@@ -1,0 +1,6 @@
+﻿@page
+
+@foreach (var file in AppUrl.GetFiles("/+/" , "*.*", System.IO.SearchOption.AllDirectories)) 
+{
+    <div><a href="@AppUrl.ConvertAppPathToUrl(file)">@AppUrl.ConvertAppPathToUrl(file)</a></div>
+}

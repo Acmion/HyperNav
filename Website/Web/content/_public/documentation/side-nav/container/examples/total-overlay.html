@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-variables.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body style="min-height: 50rem">
+
+    <nav class="hn-menu hn-top hn-fixed">
+        <div class="hn-nav">
+            <div class="hn-section hn-section-brand">
+                <div class="hn-item">
+                    <a id="hn-logo" class="hn-link" href="#none">
+                        <span class="hn-icon hn-size-auto" style="padding-right: 0.4rem">
+                            <img src="https://cdn.acmion.com/acmion/assets/hyper-nav/icon.svg" style="height: 3rem">
+                        </span>
+                        <span class="hn-content">
+                            <strong style="font-weight: 600;">
+                                HyperNav
+                            </strong>
+                        </span>
+                    </a>
+                </div>
+
+
+                <!-- The side container state element. -->
+                <input type="checkbox" class="hn-input-state hn-input-state-side-container" id="hn-side-container-cb-1">
+
+                <!-- The side container toggle. Note the matching ids. -->
+                <label class="hn-item hn-input hn-input-side-container" for="hn-side-container-cb-1">
+                    <span class="hn-link">
+                        <span class="hn-content">
+                            Side Menu Total Overlay Toggle
+                        </span>
+                    </span>
+                </label>
+
+                <!-- The side container. -->
+                <div class="hn-side-container hn-side-container-fixed">
+                    <nav class="hn-menu hn-side" style="width: 25rem;">
+                        <div class="hn-nav">
+                            <div class="hn-section hn-section-brand">
+                                <div class="hn-item">
+                                    <a class="hn-link" href="#none">
+                                        <span class="hn-content">
+                                            Vehicles
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="hn-expand hn-no-hover">
+                                    <input type="checkbox" class="hn-input-state" id="hn-pickups-cb">
+
+                                    <label class="hn-item hn-input" for="hn-pickups-cb">
+                                        <span class="hn-link">
+                                            <span class="hn-content">
+                                                Pickups
+                                            </span>
+                                        </span>
+                                        <span class="hn-input">
+                                            <span class="hn-input-default">
+                                                <i class="ri-add-line"></i>
+                                            </span>
+                                            <span class="hn-input-active">
+                                                <i class="ri-subtract-line"></i>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <div class="hn-expand-body">
+                                        <div class="hn-item">
+                                            <a class="hn-link" href="#none">
+                                                <span class="hn-content">
+                                                    Huge
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="hn-item">
+                                            <a class="hn-link" href="#none">
+                                                <span class="hn-content">
+                                                    Medium
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hn-expand hn-no-hover">
+                                    <input type="checkbox" class="hn-input-state" id="hn-motorcycles-cb">
+
+                                    <label class="hn-item hn-input" for="hn-motorcycles-cb">
+                                        <span class="hn-link">
+                                            <span class="hn-content">
+                                                Motorcycles
+                                            </span>
+                                        </span>
+                                        <span class="hn-input">
+                                            <span class="hn-input-default">
+                                                <i class="ri-add-line"></i>
+                                            </span>
+                                            <span class="hn-input-active">
+                                                <i class="ri-subtract-line"></i>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <div class="hn-expand-body">
+                                        <div class="hn-item">
+                                            <a class="hn-link" href="#none">
+                                                <span class="hn-content">
+                                                    Classic
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="hn-item">
+                                            <a class="hn-link" href="#none">
+                                                <span class="hn-content">
+                                                    Modern
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hn-expand hn-no-hover">
+                                    <input type="checkbox" class="hn-input-state" id="hn-bicycles-cb">
+
+                                    <label class="hn-item hn-input" for="hn-bicycles-cb">
+                                        <span class="hn-link">
+                                            <span class="hn-content">
+                                                Bicycles
+                                            </span>
+                                        </span>
+                                        <span class="hn-input">
+                                            <span class="hn-input-default">
+                                                <i class="ri-add-line"></i>
+                                            </span>
+                                            <span class="hn-input-active">
+                                                <i class="ri-subtract-line"></i>
+                                            </span>
+                                        </span>
+                                    </label>
+
+                                    <div class="hn-expand-body hn-no-hover">
+                                        <div class="hn-item">
+                                            <a class="hn-link" href="#none">
+                                                <span class="hn-content">
+                                                    Mountain Bikes
+                                                </span>
+                                            </a>
+                                        </div>
+                                        <div class="hn-item">
+                                            <a class="hn-link" href="#none">
+                                                <span class="hn-content">
+                                                    City Bikes
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </nav>
+
+                    <label class="hn-overlay" for="hn-side-container-cb-1">
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+    </nav>
+
+
+</body>
+
+</html>

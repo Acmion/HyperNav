@@ -1,0 +1,5 @@
+﻿Title: HyperNav
+LogoIcon: "<img src='https://cdn.acmion.com/acmion/assets/hyper-nav/icon.svg' style='width: 3.2rem; margin-right: 0.4rem'>"
+LogoContent: "<span style='font-weight: normal; font-size: 2.2rem; font-family: Negatronic;'>HyperNav</span>"
+Version: 1.0.0
+LinuxLocalHostPort: 8000

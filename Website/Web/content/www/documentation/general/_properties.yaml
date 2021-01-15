@@ -1,0 +1,7 @@
+Title: General
+
+SubPageOrder:
+    - structure
+    - input-item
+    - nav-item
+    - expand-item

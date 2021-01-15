@@ -1,0 +1,327 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/static/css/example-page.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/external/remixicon/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/hyper-nav/dist/hyper-nav.min.css" />
+    <link rel="stylesheet" href="https://cdn.acmion.com/acmion/communicator-cms/themes/acmion/dist/hyper-nav-variables.min.css" />
+    <link rel="stylesheet" href="/Web/cms/themes/default-theme/css/hyper-nav-override.css" />
+
+    <script src="/static/lib/iframe-resizer/js/iframeResizer.contentWindow.js"></script>
+
+</head>
+
+<body style="min-height: 50rem">
+    <div style="display: flex; height: 100%">
+        <nav class="hn-menu hn-side hn-height-100">
+            <!-- The collapsible state element. -->
+            <input type="checkbox" class="hn-input-state hn-input-state-nav hn-hide-mobile" id="hn-desktop-side-cb" checked="">
+            <input type="checkbox" class="hn-input-state hn-input-state-nav hn-hide-desktop" id="hn-mobile-side-cb" checked="">
+
+            <div class="hn-nav">
+                <div class="hn-section hn-section-brand">
+
+                    <!-- The collapsible state input element. -->
+                    <label class="hn-item hn-input hn-input-nav hn-hide-desktop" for="hn-mobile-side-cb">
+                        <span class="hn-link">
+                            <span class="hn-icon">
+                                <span class="hn-input-default">
+                                    <i class="ri-logout-box-r-line"></i>
+                                </span>
+                                <span class="hn-input-active">
+                                    <i class="ri-logout-box-line"></i>
+                                </span>
+                            </span>
+                            <span class="hn-content">
+                                Collapse
+                            </span>
+                        </span>
+                    </label>
+                    <label class="hn-item hn-input hn-input-nav hn-hide-mobile" for="hn-desktop-side-cb">
+                        <span class="hn-link">
+                            <span class="hn-icon">
+                                <span class="hn-input-default">
+                                    <i class="ri-logout-box-r-line"></i>
+                                </span>
+                                <span class="hn-input-active">
+                                    <i class="ri-logout-box-line"></i>
+                                </span>
+                            </span>
+                            <span class="hn-content">
+                                Collapse
+                            </span>
+                        </span>
+                    </label>
+
+                    <div class="hn-item">
+                        <a class="hn-link" href="#none">
+                            <span class="hn-icon">
+                                <i class="ri-rocket-2-line"></i>
+                            </span>
+                            <span class="hn-content">
+                                Space Exploration
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="hn-expand">
+                        <input type="checkbox" class="hn-input-state" id="hn-nebulas-cb">
+
+                        <label class="hn-item hn-input" for="hn-nebulas-cb">
+                            <span class="hn-link">
+                                <span class="hn-icon">
+                                    <i class="ri-cloud-line"></i>
+                                </span>
+                                <span class="hn-content">
+                                    Nebulas
+                                </span>
+                            </span>
+                            <span class="hn-input">
+                                <span class="hn-input-default">
+                                    <i class="ri-add-line"></i>
+                                </span>
+                                <span class="hn-input-active">
+                                    <i class="ri-subtract-line"></i>
+                                </span>
+                            </span>
+                        </label>
+
+                        <div class="hn-expand-body">
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <span class="hn-icon">
+                                        O
+                                    </span>
+                                    <span class="hn-content">
+                                        The Orion Nebula
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <span class="hn-icon">
+                                        H
+                                    </span>
+                                    <span class="hn-content">
+                                        The Helix Nebula
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <span class="hn-icon">
+                                        R
+                                    </span>
+                                    <span class="hn-content">
+                                        The Ring Nebula
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hn-expand">
+                        <input type="checkbox" class="hn-input-state" id="hn-stars-cb">
+
+                        <label class="hn-item hn-input" for="hn-stars-cb">
+                            <span class="hn-link">
+                                <span class="hn-icon">
+                                    <i class="ri-sun-line"></i>
+                                </span>
+                                <span class="hn-content">
+                                    Stars
+                                </span>
+                            </span>
+                            <span class="hn-input">
+                                <span class="hn-input-default">
+                                    <i class="ri-add-line"></i>
+                                </span>
+                                <span class="hn-input-active">
+                                    <i class="ri-subtract-line"></i>
+                                </span>
+                            </span>
+                        </label>
+
+                        <div class="hn-expand-body">
+                            <div class="hn-expand">
+                                <input type="checkbox" class="hn-input-state" id="hn-stars-milky-way-cb">
+
+                                <label class="hn-item hn-input" for="hn-stars-milky-way-cb">
+                                    <span class="hn-link">
+                                        <span class="hn-icon">
+                                            M
+                                        </span>
+                                        <span class="hn-content">
+                                            Milky Way
+                                        </span>
+                                    </span>
+                                    <span class="hn-input">
+                                        <span class="hn-input-default">
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                        <span class="hn-input-active">
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                    </span>
+                                </label>
+
+                                <div class="hn-expand-body">
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-icon">
+                                                S
+                                            </span>
+                                            <span class="hn-content">
+                                                The Sun
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-icon">
+                                                P
+                                            </span>
+                                            <span class="hn-content">
+                                                Proxima Centauri
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hn-expand">
+                                <input type="checkbox" class="hn-input-state" id="hn-stars-other-cb">
+
+                                <label class="hn-item hn-input" for="hn-stars-other-cb">
+                                    <span class="hn-link">
+                                        <span class="hn-icon">
+                                            O
+                                        </span>
+                                        <span class="hn-content">
+                                            Other
+                                        </span>
+                                    </span>
+                                    <span class="hn-input">
+                                        <span class="hn-input-default">
+                                            <i class="ri-add-line"></i>
+                                        </span>
+                                        <span class="hn-input-active">
+                                            <i class="ri-subtract-line"></i>
+                                        </span>
+                                    </span>
+                                </label>
+
+                                <div class="hn-expand-body">
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-icon">
+                                                R
+                                            </span>
+                                            <span class="hn-content">
+                                                R136a1
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-icon">
+                                                S
+                                            </span>
+                                            <span class="hn-content">
+                                                Stephenson 2-18
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="hn-item">
+                                        <a class="hn-link" href="#none">
+                                            <span class="hn-icon">
+                                                U
+                                            </span>
+                                            <span class="hn-content">
+                                                UY Scuti
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hn-item">
+                        <a class="hn-link" href="#none">
+                            <span class="hn-icon">
+                                M
+                            </span>
+                            <div class="hn-content">
+                                Multiline Item - Item with content that is multiple lines
+                                long
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="hn-expand">
+                        <input type="checkbox" class="hn-input-state" id="hn-multiline-cb">
+
+                        <div class="hn-item">
+                            <a class="hn-link" href="#none">
+                                <span class="hn-icon">
+                                    W
+                                </span>
+                                <div class="hn-content">
+                                    Multiline Dropdown - Dropdown menu with content that is multiple lines
+                                    long
+                                </div>
+                            </a>
+
+                            <label class="hn-input" for="hn-multiline-cb">
+                                <span class="hn-input-default">
+                                    <i class="ri-add-line"></i>
+                                </span>
+                                <span class="hn-input-active">
+                                    <i class="ri-subtract-line"></i>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="hn-expand-body hn-expand-body-animation-delay">
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <span class="hn-icon">
+                                        A
+                                    </span>
+                                    <span class="hn-content">
+                                        Alpha
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <span class="hn-icon">
+                                        B
+                                    </span>
+                                    <span class="hn-content">
+                                        Bravo
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="hn-item">
+                                <a class="hn-link" href="#none">
+                                    <span class="hn-icon">
+                                        C
+                                    </span>
+                                    <span class="hn-content">
+                                        Charlie
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>
