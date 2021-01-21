@@ -150,16 +150,21 @@
         }
     }
 
+    @include hn-mobile
+    {
+        & .hn-section-body .hn-content
+        {
+            align-items: flex-start;
+        }
+    }
+
     & .hn-icon
     {
         justify-content: flex-start;
         width: $hn-top-icon-width;
     }
 
-    & .hn-section-body .hn-content
-    {
-        align-items: flex-start;
-    }
+    
 
     
 }
