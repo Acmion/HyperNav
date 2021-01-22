@@ -7,8 +7,8 @@
         transition: all 0s 0.2s;
     }
 
-    // Always show on hover
-    .hn-top .hn-expand:hover > .hn-expand-body-animation-delay
+    // Show on hover
+    .hn-top .hn-expand:not(:hover):hover > .hn-expand-body-animation-delay
     {
         visibility: visible !important;
     }
