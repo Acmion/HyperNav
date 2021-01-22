@@ -8,7 +8,7 @@
     }
 
     // Show on hover
-    .hn-top .hn-expand:not(:hover):hover > .hn-expand-body-animation-delay
+    .hn-top .hn-expand:not(.hn-no-hover):hover > .hn-expand-body-animation-delay
     {
         visibility: visible !important;
     }
