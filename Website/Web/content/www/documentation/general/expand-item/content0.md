@@ -2,10 +2,8 @@
 
 This page documents the expand item in HyperNav. 
 These items are expandable sub menus, which can take the form of
-mega menus and dropdowns. These items should not be nested within 
-`.hn-section-brand` as they will not work correctly on mobile devices. 
-Additionally, this page documents several types of items, which should
-not be mixed on a website for the best user experience.
+mega menus and dropdowns. This page documents several types of items,
+which should not be mixed on a website for the best user experience.
 
 ## Full Button
 

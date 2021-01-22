@@ -2,7 +2,7 @@
 {
     @include hn-mobile
     {
-        $expand-selector: '.hn-expand-body';
+        $expand-selector: '.hn-section:not(.hn-section-brand) .hn-expand-body';
 
         @for $i from 1 through $hn-nesting-max-depth  
         {

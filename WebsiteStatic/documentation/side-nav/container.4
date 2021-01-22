@@ -21,7 +21,7 @@
 
 
 <title>
-    Expand Item - HyperNav
+    Container - HyperNav
 </title>
 
 <meta name="description" content="HyperNav, an interactive CSS only web navigation framework.">
@@ -197,7 +197,7 @@
                 <div class="hn-expand">
                             <input type="checkbox" id="top-nav-cb041" class="hn-input-state hn-hide-desktop" >
 
-                    <div class="hn-item hn-active-child  " style=" ">
+                    <div class="hn-item   " style=" ">
                         <a class="hn-link" href="/documentation/general/">
                                     <span class="hn-content" data-hn-content="General">
                                         General
@@ -271,7 +271,7 @@
                 </div>
 
 
-                <div class="hn-item hn-active  " style=" ">
+                <div class="hn-item   " style=" ">
                     <a class="hn-link" href="/documentation/general/expand-item/">
                                 <span class="hn-content" data-hn-content="Expand Item">
                                     Expand Item
@@ -385,7 +385,7 @@
                 <div class="hn-expand">
                             <input type="checkbox" id="top-nav-cb061" class="hn-input-state hn-hide-desktop" >
 
-                    <div class="hn-item   " style=" ">
+                    <div class="hn-item hn-active-child  " style=" ">
                         <a class="hn-link" href="/documentation/side-nav/">
                                     <span class="hn-content" data-hn-content="Side Navigation">
                                         Side Navigation
@@ -446,7 +446,7 @@
                 </div>
 
 
-                <div class="hn-item   " style=" ">
+                <div class="hn-item hn-active  " style=" ">
                     <a class="hn-link" href="/documentation/side-nav/container/">
                                 <span class="hn-content" data-hn-content="Container">
                                     Container
@@ -564,9 +564,9 @@
 
 
                 <div class="hn-expand">
-                            <input type="checkbox" id="side-nav-cb31" class="hn-input-state" checked>
+                            <input type="checkbox" id="side-nav-cb31" class="hn-input-state" >
 
-                    <div class="hn-item hn-active-child  " style=" ">
+                    <div class="hn-item   " style=" ">
                         <a class="hn-link" href="/documentation/general/">
                                     <span class="hn-content">
                                         General
@@ -631,7 +631,7 @@
                 </div>
 
 
-                <div class="hn-item hn-active  " style=" ">
+                <div class="hn-item   " style=" ">
                     <a class="hn-link" href="/documentation/general/expand-item/">
                                 <span class="hn-content">
                                     Expand Item
@@ -734,9 +734,9 @@
 
 
                 <div class="hn-expand">
-                            <input type="checkbox" id="side-nav-cb51" class="hn-input-state" >
+                            <input type="checkbox" id="side-nav-cb51" class="hn-input-state" checked>
 
-                    <div class="hn-item   " style=" ">
+                    <div class="hn-item hn-active-child  " style=" ">
                         <a class="hn-link" href="/documentation/side-nav/">
                                     <span class="hn-content">
                                         Side Navigation
@@ -788,7 +788,7 @@
                 </div>
 
 
-                <div class="hn-item   " style=" ">
+                <div class="hn-item hn-active  " style=" ">
                     <a class="hn-link" href="/documentation/side-nav/container/">
                                 <span class="hn-content">
                                     Container
@@ -808,52 +808,24 @@
                     
 
 
-<h1 id="expand-item">Expand Item</h1>
-<p>This page documents the expand item in HyperNav.
-These items are expandable sub menus, which can take the form of
-mega menus and dropdowns. This page documents several types of items,
-which should not be mixed on a website for the best user experience.</p>
-<h2 id="full-button">Full Button</h2>
-<p>A full button expand item. Clicking or hovering the button toggles the dropdown menu.</p>
-<div class="example" data-src="examples/full-button.html"></div>
-<h2 id="split-button">Split Button</h2>
-<p>A split button expand item. The item also works as a link, if not clicked on the plus sign.
-Clicking the plus sign or hovering the button toggles the dropdown menu.</p>
-<div class="example" data-src="examples/split-button.html"></div>
-<h2 id="non-hoverable-buttons">Non-Hoverable Buttons</h2>
-<p>A full and a split button expand item that will not toggle the dropdown menu on hover. This is
-achieved by adding the class <code>.hn-no-hover</code> to the <code>.hn-expand</code> element.</p>
-<div class="example" data-src="examples/non-hoverable-button.html"></div>
-<h2 id="non-clickable-desktop-buttons">Non-Clickable Desktop Buttons</h2>
-<p>A full and a split button expand item that will only toggle on hover in the desktop view.
-Clicking the split button anywhere on desktop will trigger navigation.
-The buttons work as above in the mobile view. The behavior is
-achieved by using the utility classes <code>.hn-hide-mobile</code> and <code>.hn-hide-desktop</code> as well
-as some additional HTML content.</p>
-<div class="example" data-src="examples/non-clickable-desktop-button.html"></div>
-<h2 id="mega-menu">Mega Menu</h2>
-<p>A full and a split button mega menu expand item. Mega menus are created by
-adding the class <code>.hn-expand-mega</code> to the <code>.hn-expand</code> element. Custom content
-can be wrapped within a <code>div</code> with class <code>.hn-link</code>, which results in the same
-spacing as otherwise in HyperNav.</p>
-<div class="example" data-src="examples/mega-menu-button.html"></div>
-<h2 id="dropdown-placement">Dropdown Placement</h2>
-<p>You can change the placement of the dropdown menu with the following classes:</p>
-<ul>
-<li><code>.hn-expand-left</code>: The expand item expands to the left.</li>
-<li><code>.hn-expand-center</code>: The expand item expands so that it is aligned to the center.</li>
-</ul>
-<p>These classes should be added to the <code>.hn-expand</code> element.</p>
-<div class="example" data-src="examples/dropdown-placement.html"></div>
-<h2 id="nesting">Nesting</h2>
-<p>To nest the menus in HyperNav, just add an expand item within the <code>.hn-expand-body</code> element.
-The nesting depth is not limited, however, the maximum indentation level is by default 3.
-This is controlled by the SCSS only variable <code>$hn-nesting-max-depth</code>.</p>
-<div class="example" data-src="examples/nesting.html"></div>
-<h2 id="active-child-state">Active Child State</h2>
-<p>If an expand item has an active child (on any level of depth), then the class <code>.hn-active-child</code>
-should be added to the <code>.hn-item</code> directly below <code>.hn-expand</code>.</p>
-<div class="example" data-src="examples/active-child.html"></div>
+<h1 id="container">Container</h1>
+<p>You might want to wrap the side navigation menu within an
+overlay container. This page shows some ways on how to
+achieve this. All examples on this page have placed the
+side menu toggle control within a HyperNav top navigation
+menu. Additionally, the class <code>.hn-no-hover</code> has been
+applied to all expand items, to fix unwanted hover toggles.
+However, placing the side menu toggle control within a HyperNav
+top navigation menu is not necessary.</p>
+<h2 id="total-overlay-container">Total Overlay Container</h2>
+<p>This container overlays all the content of a webpage. Note the class
+<code>.hn-side-container-fixed</code>.</p>
+<div class="example side" data-src="examples/total-overlay.html"></div>
+<h2 id="top-offsetted-container">Top Offsetted Container</h2>
+<p>This container is offsetted so that it overlays everything except the
+top navigation menu. Note the class <code>.hn-side-container-top-offset</code> on
+both <code>.hn-side-container</code> and on its associated overlay.</p>
+<div class="example side" data-src="examples/top-offsetted-overlay.html"></div>
                 </div>
             </div>
         </div>

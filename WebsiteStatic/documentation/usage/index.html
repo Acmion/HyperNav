@@ -826,6 +826,36 @@ is just a combination of the files mentioned above.</p>
 <p>CSS variables are not supported on IE11, but <a href="https://github.com/jhildenbiddle/css-vars-ponyfill">css-vars-ponyfill</a>
 exists for this. For IE11 compatibility you should either use this library or you should convert all CSS variables
 to SCSS variables.</p>
+<h2 id="expand-menu-content-flashing-fix">Expand Menu Content Flashing Fix</h2>
+<p>In certain cases the content of an expand menu may flash on initial navigation to a site that uses HyperNav.
+This behavior may be related to a browser bug or something else and probably occurs when the site loads too
+fast. See for example this demo: <a href="/+/testing/no-js.html">/+/testing/no-js.html</a>, where the contents of the
+&quot;Shipping&quot; menu briefly flash if the site is loaded without utilizing the cache. Luckily, the fix is simple,
+either add a <code>script</code> tag with an arbitrary JavaScript instruction or add a <code>style</code> tag that explicitly
+disables this behavior (this can not reliably be bundled into HyperNav itself).</p>
+<p>The JavaScript alternative:</p>
+<pre><code>&lt;head&gt;
+    &lt;!-- Some stuff here. --&gt;
+
+    &lt;!-- Fix below. --&gt;
+    &lt;script&gt;
+        var a = 0;
+    &lt;/script&gt;
+&lt;/head&gt;
+</code></pre>
+<p>The CSS alternative:</p>
+<pre><code>&lt;head&gt;
+    &lt;!-- Some stuff here. --&gt;
+
+    &lt;!-- Fix below. --&gt;
+    &lt;style&gt;
+        .hn-expand-body
+        {
+            visibility: hidden;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+</code></pre>
                 </div>
             </div>
         </div>

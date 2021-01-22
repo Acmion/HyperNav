@@ -156,6 +156,61 @@
         {
             align-items: flex-start;
         }
+
+
+
+        // Special rules for hn-section-brand, so that dropdown menus are supported on mobile.
+        & .hn-section-brand .hn-expand > .hn-expand-body
+        {
+            top: 0;
+            left: 100%;
+            position: absolute;
+            width: initial;
+        }
+        
+        & > .hn-nav > .hn-section-brand > .hn-expand > .hn-item.hn-input,
+        & > .hn-nav > .hn-section-brand > .hn-expand > .hn-item > .hn-input
+        {
+            & > .hn-input-default,
+            & > .hn-input-active
+            {
+                height: $hn-top-height;
+            }
+        }
+
+        & > .hn-nav .hn-section-brand .hn-expand > .hn-expand-body
+        {
+            border: $hn-top-desktop-expand-body-border;
+            background: $hn-top-desktop-expand-body-bg;
+        }
+
+        & > .hn-nav .hn-section-brand .hn-expand-body
+        {
+            box-shadow: $hn-top-desktop-expand-body-shadow;
+        }
+        & .hn-section-brand .hn-expand.hn-expand-left > .hn-expand-body
+        {
+            right: 100%;
+            left: auto;
+        }
+
+        & .hn-section-brand > .hn-expand > .hn-expand-body
+        {
+            top: 100%;
+            left: 0%;
+        }
+        
+        & .hn-section-brand > .hn-expand.hn-expand-left > .hn-expand-body
+        {
+            right: 0;
+            left: auto;
+        }
+
+        & .hn-section-brand > .hn-expand.hn-expand-center > .hn-expand-body
+        {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
     }
 
     & .hn-icon
