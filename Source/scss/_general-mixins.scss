@@ -68,7 +68,7 @@
     {
         // Focus does not help, bc .hn-expand is not focusable
         .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:not(.hn-no-hover):hover > .hn-expand-body,
-        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand:focus-within > .hn-expand-body
+        .hn-top .hn-nav:not(.hn-mode-content) .hn-expand > .hn-expand-body:focus-within
         {
             @content;
         }
