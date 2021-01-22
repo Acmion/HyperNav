@@ -1,0 +1,1 @@
+cp -r ./Source/dist ./WebsiteStatic/+/dist

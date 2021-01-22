@@ -14,7 +14,7 @@
     }
 
     // Show on focus-within
-    .hn-top .hn-expand:focus-within > .hn-expand-body-animation-delay
+    .hn-top .hn-expand > .hn-expand-body-animation-delay:focus-within
     {
         visibility: visible !important;
     }
