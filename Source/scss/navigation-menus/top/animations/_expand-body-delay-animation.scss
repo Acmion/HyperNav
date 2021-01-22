@@ -13,6 +13,12 @@
         visibility: visible !important;
     }
 
+    // Show on focus-within
+    .hn-top .hn-expand:focus-within > .hn-expand-body-animation-delay
+    {
+        visibility: visible !important;
+    }
+
     // Show also on input checked
     .hn-top .hn-expand > .hn-input-state:not(.hn-hide-desktop):checked ~ .hn-expand-body-animation-delay
     {
