@@ -1,5 +1,5 @@
-$hn-mobile-breakpoint: 767px;
-$hn-desktop-breakpoint: 768px;
+$hn-mobile-breakpoint: 767px !default;
+$hn-desktop-breakpoint: $hn-mobile-breakpoint + 1;
 
 $hn-base-z-index: 1000;
 $hn-mode-z-index: $hn-base-z-index + 1000000;

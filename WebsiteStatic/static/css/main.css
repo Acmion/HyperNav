@@ -32,3 +32,14 @@ iframe
 {
     height: 0;
 }
+
+.hn-top .hn-item 
+{
+    display: flex;
+    align-items: center;
+}
+
+.hn-top .hn-input-active, .hn-top .hn-input-default 
+{
+    height: auto !important;
+}
